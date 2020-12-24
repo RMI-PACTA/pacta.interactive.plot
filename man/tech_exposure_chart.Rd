@@ -18,6 +18,3 @@ tech_exposure_chart(.data, width = NULL, height = NULL, ...)
 \description{
 The \code{tech_exposure_chart} function creates an interactive tech exposure chart in an htmlwidget
 }
-\examples{
-
-}

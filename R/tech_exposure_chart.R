@@ -8,8 +8,6 @@
 #' @description
 #' The `tech_exposure_chart` function creates an interactive tech exposure chart in an htmlwidget
 #'
-#' @examples
-#'
 #' @md
 #' @export
 
