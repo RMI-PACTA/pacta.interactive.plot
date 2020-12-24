@@ -19,7 +19,10 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://2degreesinvesting.github.io/r2dii.interactive, https://github.com/2DegreesInvesting/r2dii.interactive
 BugReports: https://github.com/2DegreesInvesting/r2dii.interactive/issues
+Depends: R (>= 3.5.0)
 Imports: 
     dplyr,
     jsonlite,
-    r2d3
+    magrittr,
+    r2d3,
+    rlang
