@@ -24,6 +24,9 @@ tech_exposure_chart <-
         system.file("hide_styles.css", package = "r2dii.interactive")
         )
 
+    op <- options(r2d3.shadow = FALSE)
+    on.exit(options(op), add = TRUE)
+
     r2d3::r2d3(
       data = .data,
       script = system.file("render_tech_exposure.js", package = "r2dii.interactive"),
