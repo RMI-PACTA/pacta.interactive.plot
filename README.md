@@ -9,51 +9,63 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
+[![Codecov test
+coverage](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive?branch=master)
+[![R-CMD-check](https://github.com/2DegreesInvesting/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions)
 <!-- badges: end -->
 
 The goal of r2dii.interactive is to …
 
 ## Installation
 
-You can install the released version of r2dii.interactive from
-[CRAN](https://CRAN.R-project.org) with:
+<!--
+You can install the released version of r2dii.interactive from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("r2dii.interactive")
 ```
+-->
+
+You can install the development version of r2dii.interactive from
+[GitHub](https://github.com/2DegreesInvesting/r2dii.interactive) with:
+
+``` r
+devtools::install_github("2DegreesInvesting/r2dii.interactive")
+```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example usage:
 
 ``` r
 library(r2dii.interactive)
-## basic example code
+
+load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+
+tech_exposure <-
+  as_tech_exposure_data(
+    investor_name = investor_name,
+    portfolio_name = portfolio_name,
+    start_year = start_year,
+    peer_group = peer_group,
+    equity_results_portfolio = equity_results_portfolio,
+    bonds_results_portfolio = bonds_results_portfolio,
+    indices_equity_results_portfolio = indices_equity_results_portfolio,
+    indices_bonds_results_portfolio = indices_bonds_results_portfolio,
+    peers_equity_results_portfolio = peers_equity_results_portfolio,
+    peers_bonds_results_portfolio = peers_bonds_results_portfolio,
+    green_techs = green_techs,
+    select_scenario = select_scenario,
+    select_scenario_auto = select_scenario_auto,
+    select_scenario_shipping = select_scenario_shipping,
+    select_scenario_other = select_scenario_other,
+    all_tech_levels = all_tech_levels,
+    equity_market_levels = equity_market_levels,
+    dataframe_translations = dataframe_translations,
+    language_select = "EN"
+  )
+
+tech_exposure_chart(tech_exposure)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<img src="man/figures/README-example-1.png" width="100%" />
