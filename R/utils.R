@@ -91,7 +91,7 @@ translate_column_contents <-
       dplyr::select(-.data$id_column)
 
     suffix <- ""
-    if (inplace) { suffix <- "_translation" }
+    if (!inplace) { suffix <- "_translation" }
     new_column <- paste0(column, suffix)
 
     data %>%
