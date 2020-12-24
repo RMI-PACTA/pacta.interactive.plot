@@ -1,4 +1,6 @@
-to_jsonp <-
+#' @importFrom jsonlite toJSON
+
+to_json <-
   function(x,
            obj_name,
            pretty = FALSE,
@@ -12,152 +14,91 @@ to_jsonp <-
 
 
 export_data_utf8 <-
-  function(data, data_id) {
-    json_data <- to_jsonp(data, data_id)
+  function(.data) {
+    json_data <- to_json(.data)
     utf8 <- enc2utf8(json_data)
     return(utf8)
   }
 
 
-translate <-
-  function(
-    value_to_extract,
-    language_select = "EN",
-    translations = translation_list
-  ){
+#' @import dplyr
 
-    translations$value[translations$label == value_to_extract]
+choose_dictionary_language <-
+  function(data, language) {
+    .data <- NULL
+    language <- tolower(language)
 
-
-  }
-
-
-# dataframe language translation functions--------------------------------------
-
-choose_dictionary_language <- function(data, language){
-  language <- tolower(language)
-
-  key_values <- data %>%
-    dplyr::transmute(
-      id_data,
-      id_column,
-      translate_key = key,
-      translate_value = .data[[language]]
-    )
-
-  key_values
-}
-
-
-translate_df_contents <- function(data,
-                                  dictionary,
-                                  inplace = FALSE){
-
-  data_object_name <- rlang::expr_text(
-    rlang::enexpr(data)
-  )
-
-  if (!(data_object_name %in% dictionary$id_data)) {
-    rlang::abort(
-      class = "dataset not in dictionary",
-      glue::glue("the dataset {data_object_name} is not defined in translation dictionary.")
-    )
-  }
-
-  dictionary_subset <- dictionary %>%
-    filter(
-      id_data == data_object_name
-    ) %>%
-    transmute(
-      id_column,
-      translate_key,
-      translate_value
-    )
-
-  columns <- unique(dictionary_subset$id_column)
-
-  for (column in columns) {
-
-    data <- translate_column_contents(
-      data,
-      dictionary_subset,
-      column,
-      inplace
-    )
-
-  }
-
-  data
-
-}
-
-
-translate_column_contents <- function(data,
-                                      dictionary,
-                                      column,
-                                      inplace = FALSE){
-
-  dictionary_column <- dictionary %>%
-    filter(id_column == column) %>%
-    select(-id_column)
-
-  if (inplace){
-    new_column <- column
-  } else {
-    new_column <- glue::glue(column, "_translation")
-  }
-
-  data %>%
-    left_join(
-      dictionary_column,
-      by = rlang::set_names("translate_key", column)
-    ) %>%
-    mutate(
-      !!new_column := ifelse(
-        is.na(translate_value),
-        .data[[!!column]],
-        translate_value
+    key_values <- data %>%
+      dplyr::transmute(
+        .data$id_data,
+        .data$id_column,
+        translate_key = .data$key,
+        translate_value = .data[[language]]
       )
-    ) %>%
-    select(-translate_value)
-}
 
-
-translate_df_headers <- function(data, language_select, dictionary){
-
-  language <- tolower(language_select)
-
-  data_object_name <- rlang::expr_text(
-    rlang::enexpr(data)
-  )
-
-  if (!(data_object_name %in% dictionary$id_data)) {
-    rlang::abort(
-      class = "dataset not in dictionary",
-      glue::glue("the dataset {data_object_name} is not defined in translation dictionary.")
-    )
+    key_values
   }
 
-  column_tibble <- tibble(column_name = names(data))
 
-  dictionary_subset <- dictionary %>%
-    filter(
-      id_data == data_object_name
-    ) %>%
-    transmute(
-      id_column,
-      .data[[!!language]]
-    )
+#' @import dplyr
 
-  translated_headers <- dictionary_subset %>%
-    left_join(column_tibble, by = c(id_column = "column_name"))
+translate_df_contents <-
+  function(data, dictionary, inplace = FALSE) {
+    .data <- NULL
 
-  names(data) <- translated_headers[[language]]
+    data_object_name <- rlang::expr_text(rlang::enexpr(data))
 
-  data
-}
+    if (!(data_object_name %in% dictionary$id_data)) {
+      rlang::abort(
+        class = "dataset not in dictionary",
+        paste0("the dataset ", data_object_name, " is not defined in translation dictionary.")
+      )
+    }
+
+    dictionary_subset <-
+      dictionary %>%
+      dplyr::filter(.data$id_data == data_object_name) %>%
+      dplyr::transmute(.data$id_column,
+                       .data$translate_key,
+                       .data$translate_value)
+
+    columns <- unique(dictionary_subset$id_column)
+
+    for (column in columns) {
+      data <-
+        translate_column_contents(
+          data,
+          dictionary_subset,
+          column,
+          inplace
+        )
+    }
+    data
+  }
 
 
-replace_contents <- function(data, display_currency){
-  data %>% mutate(across(.fns = ~ gsub("_CUR_", display_currency, .x)))
-}
+#' @import dplyr
+#' @importFrom magrittr %>%
+#' @importFrom rlang := !!
+
+translate_column_contents <-
+  function(data, dictionary, column, inplace = FALSE) {
+    .data <- NULL
+
+    dictionary_column <-
+      dictionary %>%
+      dplyr::filter(.data$id_column == column) %>%
+      dplyr::select(-.data$id_column)
+
+    suffix <- ""
+    if (inplace) { suffix <- "_translation" }
+    new_column <- paste0(column, suffix)
+
+    data %>%
+      dplyr::left_join(dictionary_column,
+                by = rlang::set_names("translate_key", column)) %>%
+      dplyr::mutate(!!new_column := ifelse(is.na(.data$translate_value),
+                                    .data[[!!column]],
+                                    .data$translate_value)) %>%
+      dplyr::select(-.data$translate_value)
+  }
