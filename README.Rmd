@@ -1,5 +1,6 @@
 ---
 output: github_document
+always_allow_html: yes
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -74,3 +75,10 @@ tech_exposure <-
 
 tech_exposure_chart(tech_exposure)
 ```
+
+```{r, echo = FALSE}
+interactive_chart <- tech_exposure_chart(tech_exposure)
+r2d3::save_d3_html(interactive_chart, file = "example.html", selfcontained = TRUE)
+```
+
+<iframe src="example.html" width="100%" height="900" style="border:thin solid black;"></iframe>
