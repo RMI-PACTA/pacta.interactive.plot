@@ -7,7 +7,7 @@ class techexposure {
     } else {
       container_div = container;
     }
-
+    
     d3.select(container_div).attr("chart_type", "techexposure");
     d3.select(container_div).attr("chart_type_data_download", "techexposure"); //matching the names in the export/ folder
 
@@ -38,7 +38,7 @@ class techexposure {
     hover_over_asset = (typeof labels.port_label === 'undefined') ? " of assets under management<br>" : labels.hover_over_asset,
     hover_over_sec = (typeof labels.hover_over_sec === 'undefined') ? {before_sec: " of ", after_sec: " sector"} : labels.hover_over_sec,
     hover_over_low_carbon = (typeof labels.hover_over_low_carbon === 'undefined') ? {before_sec: "Low-carbon ", after_sec: " technologies<br>"} : labels.hover_over_low_carbon;
-
+    
     // settings
     const ttl_width = 700;
     let margin = {top: 40, right: 140, bottom: 40, left: 10};
@@ -47,7 +47,7 @@ class techexposure {
     const bar_gap = 12;
     const sector_gap = 10;
     const portfolio_label_offset = 25;
-
+    
     // determine left margin based on portfolio name
     //const portfolio_name = data.filter(d => d.this_portfolio)[0].portfolio_name;
     const portfolio_name = port_label;
@@ -69,7 +69,7 @@ class techexposure {
     class_selector.addEventListener("change", change_class);
     class_names.forEach(class_name => class_selector.add(new Option(class_name, class_name)));
     class_selector.options[Math.max(class_names.indexOf(default_class), 0)].selected = 'selected';
-
+    
     // benchmark selector
     let benchmark_selector = document.createElement("select");
     benchmark_selector.classList = "techexposure_benchmark_selector inline_text_dropdown";
@@ -99,7 +99,7 @@ class techexposure {
     let market_selector = document.createElement("select");
     market_selector.classList = "time_line_market_selector inline_text_dropdown";
     market_selector.addEventListener("change", update);
-
+    
     // create bottom filters
     let filtersdiv = document.createElement("div");
     filtersdiv.style.width = this.ttl_width + "px";
@@ -111,13 +111,13 @@ class techexposure {
     let y_sector = d3.scaleBand();
     let y_port = d3.scaleBand();
     let x = d3.scaleLinear();
-
+    
     function num_format(num) {
       num = Math.round( ( num + Number.EPSILON ) * 1000 ) / 10;
       if (num < 0.1) {
         return "< 0.1%"
       }
-      return num + "%"
+      return num + "%"      
     }
 
     const tooltip = d3.select(chart_div)
@@ -136,7 +136,7 @@ class techexposure {
       .attr("height", "100%")
       .attr("fill", "white")
     ;
-
+  
     let legend_group = svg.append("g").attr("class", "legend_group");
 
     svg = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -153,7 +153,7 @@ class techexposure {
     function findLongestName(data) {
       let longest_name_length = d3.max(data, d=>d.technology_translation.length);
       let long_test_label = new Array(longest_name_length).join("a")
-      return long_test_label;
+      return long_test_label; 
     };
 
     function orderLegendDataIfPossible(legend_data_unordered, legend_order) {
@@ -179,15 +179,15 @@ class techexposure {
         return legend_data
       }
     }
-
-
+    
+    
     function change_class() {
       let selected_class = class_selector.value;
       let selected_benchmark = benchmark_selector.value;
       let selected_market = (typeof market_selector.value === "undefined") ? 'Global' : market_selector.value;
-
+      
       let subdata = data.filter(d => d.asset_class_translation == class_selector.value);
-
+      
       // reset the market selector for the selected asset class
       market_selector.length = 0;
 
@@ -195,36 +195,36 @@ class techexposure {
       market_names.forEach(market_name => market_selector.add(new Option(market_name, market_name)));
       market_selector.options[Math.max(0, market_names.indexOf(selected_market))].selected = 'selected';
       resize_inline_text_dropdown(null, market_selector);
-
+      
       subdata = subdata.filter(d => d.equity_market_translation == market_selector.value);
-
+      
       // reset selectors based on current asset class selection
       let benchmark_names = d3.map(subdata.filter(d => !d.this_portfolio), d => d.portfolio_name).keys().sort();
       benchmark_selector.length = 0;
       benchmark_names.forEach(benchmark_name => benchmark_selector.add(new Option(benchmark_name, benchmark_name)));
       benchmark_selector.options[Math.max(benchmark_names.indexOf(selected_benchmark), 0)].selected = 'selected';
-
+      
       benchmark_selector.dispatchEvent(new Event('change'));
-
+      
       //d3.select(chart_div).select("svg").selectAll("g > *").remove()
     }
-
-
+    
+    
     function update() {
-
+      
       // filter out unselected asset class
       let subdata = data.filter(d => d.asset_class_translation == class_selector.value);
-
+      
       // filter out unselected equity markets
       subdata = subdata.filter(d => d.equity_market_translation == market_selector.value);
-
+      
       // filter out unselected benchmarks
       subdata = subdata.filter(d => d.this_portfolio == true | d.portfolio_name == benchmark_selector.value);
-
+      
       // filter out sectors from the benchmark that do not exist in the portfolio
       let port_sectors = d3.map(subdata.filter(d => d.this_portfolio == true), d => d.ald_sector_translation).keys();
       subdata = subdata.filter(d => port_sectors.includes(d.ald_sector_translation));
-
+      
       // determine height based on number of sectors in portfolio
       let height = (port_sectors.length * (((bar_width + bar_gap) * 2) + sector_gap));
       d3.select(chart_div).select("svg").attr("height", height + margin.top + margin.bottom);
@@ -245,14 +245,14 @@ class techexposure {
         margin.right_new = label_width+30;
         width = ttl_width - margin.right_new - margin.left;
       };
-
+  
       y_sector.range([0, height]).domain(port_sectors);
       y_port.range([0, (bar_width + bar_gap) * 2]).domain([true, false]);
       x.range([0, width])
       .domain([0, (+percent_selector.value == 1 ? 1 : d3.max(subdata.map(d => (d.cumsum + d.plan_carsten))))]).nice();
-
+      
       let t = d3.transition().duration(500);
-
+      
       let bars = bars_group.selectAll("rect").data(subdata);
       bars.exit().transition(t).attr("width", 0).remove();
       bars.enter()
@@ -278,7 +278,7 @@ class techexposure {
         .attr("x", d => +percent_selector.value == 1 ? x(d.sector_cumprcnt) : x(d.cumsum))
         .attr("width", d => +percent_selector.value == 1 ? x(d.sector_prcnt) : x(d.plan_carsten))
       ;
-
+      
       let green_bars = green_group.selectAll("rect").data(subdata);
       green_bars.exit().transition(t).attr("width", 0).remove();
       green_bars.enter()
@@ -305,7 +305,7 @@ class techexposure {
         .attr("x", d => +percent_selector.value == 1 ? x(d.sector_cumprcnt) : x(d.cumsum))
         .attr("width", d => +percent_selector.value == 1 ? x(d.sector_prcnt) : x(d.plan_carsten))
       ;
-
+      
       let sector_labels = sector_labels_grp.selectAll(".sector_label").data(port_sectors);
       sector_labels.exit().remove();
       sector_labels.enter()
@@ -322,7 +322,7 @@ class techexposure {
         .attr("transform", d => "translate(0," + y_sector(d) + ") " + "translate(-5," + (bar_width + (bar_gap / 2)) + ") rotate(-90)")
         .text(d => d)
       ;
-
+      
       let port_labels = port_labels_grp.selectAll(".portfolio_label")
         .data(port_sectors.map(d => { return [{ ald_sector_translation: d, this_portfolio: true}, { ald_sector_translation: d, this_portfolio: false}] }).flat())
       ;
@@ -351,7 +351,7 @@ class techexposure {
         .attr("transform", "translate(" + 0 + "," + (height - 20) + ")")
         .call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(".0%")))
       ;
-
+      
       legend_group.attr("transform","translate(" + (width + margin.left + 20) + ",5)");
 
       let legend_data_unordered = subdata.filter(d => d.sector_prcnt > 0)
@@ -393,7 +393,7 @@ class techexposure {
           .attr("x", 0)
           .attr("y", (d,i) => i * 17 + d.sector_shift * sector_gap_legend + 20)
         ;
-
+        
       legend_group.selectAll("text")
           .data(legend_data)
           .enter()
@@ -418,37 +418,37 @@ class techexposure {
           .attr("x", 0)
           .attr("y", (d,i) => tech_in_prev_sectors[i] * 17 + 6 + i * sector_gap_legend)
         ;
-
+        
     }
-
-
+    
+    
     function mouseover(d) {
       tooltip
-        .html(tech_id2name(d.technology) + "<br>" +
-              num_format(d.plan_carsten) + hover_over_asset +
+        .html(tech_id2name(d.technology) + "<br>" + 
+              num_format(d.plan_carsten) + hover_over_asset + 
               num_format(d.sector_prcnt) + hover_over_sec.before_sec + d.ald_sector + hover_over_sec.after_sec
              )
         .style("display", "inline-block")
     }
-
-
+    
+    
     function mouseover_green(d) {
       tooltip
-        .html(hover_over_low_carbon.before_sec + tech_id2name(d.ald_sector) + hover_over_low_carbon.after_sec +
-              num_format(d.green_sum) + hover_over_asset +
+        .html(hover_over_low_carbon.before_sec + tech_id2name(d.ald_sector) + hover_over_low_carbon.after_sec + 
+              num_format(d.green_sum) + hover_over_asset + 
               num_format(d.green_prcnt) + hover_over_sec.before_sec + d.ald_sector + hover_over_sec.after_sec
              )
         .style("display", "inline-block")
     }
-
-
+    
+    
     function mousemove(d) {
       tooltip
         .style("left", d3.event.pageX + 10 + "px")
         .style("top", d3.event.pageY - 20 + "px")
     }
-
-
+    
+    
     function mouseout(d) {
       tooltip.style("display", "none")
     }
