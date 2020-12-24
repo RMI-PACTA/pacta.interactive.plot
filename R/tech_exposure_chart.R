@@ -18,10 +18,8 @@ tech_exposure_chart <-
     dependencies <-
       list(
         system.file("techexposure.js", package = "r2dii.interactive"),
-        system.file("initialize_charts.js", package = "r2dii.interactive"),
         system.file("jquery-3.5.1.js", package = "r2dii.interactive"),
-        system.file("text_dropdown_jiggle.js", package = "r2dii.interactive"),
-        system.file("get_graph_labels.js", package = "r2dii.interactive")
+        system.file("text_dropdown_jiggle.js", package = "r2dii.interactive")
         )
 
     r2d3::r2d3(
