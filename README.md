@@ -69,6 +69,3 @@ tech_exposure_chart(tech_exposure)
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
-
-<iframe src="example.html" width="100%" height="900" style="border:thin solid black;">
-</iframe>
