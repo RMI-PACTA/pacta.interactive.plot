@@ -37,6 +37,34 @@ tech_exposure_chart <-
   }
 
 
+#' Convert raw data into a tech exposure data frame
+#'
+#' @param investor_name investor_name
+#' @param portfolio_name portfolio_name
+#' @param start_year start_year
+#' @param peer_group peer_group
+#' @param equity_results_portfolio equity_results_portfolio
+#' @param bonds_results_portfolio bonds_results_portfolio
+#' @param indices_equity_results_portfolio indices_equity_results_portfolio
+#' @param indices_bonds_results_portfolio indices_bonds_results_portfolio
+#' @param peers_equity_results_portfolio peers_equity_results_portfolio
+#' @param peers_bonds_results_portfolio peers_bonds_results_portfolio
+#' @param green_techs green_techs
+#' @param select_scenario select_scenario
+#' @param select_scenario_auto select_scenario_auto
+#' @param select_scenario_shipping select_scenario_shipping
+#' @param select_scenario_other select_scenario_other
+#' @param all_tech_levels all_tech_levels
+#' @param equity_market_levels equity_market_levels
+#' @param dataframe_translations dataframe_translations
+#' @param language_select two letter code for language (single string; default = "EN")
+#'
+#' @description
+#' The `as_tech_exposure_data` function converts raw data into a tech exposure data frame
+#'
+#' @import dplyr
+#' @export
+
 as_tech_exposure_data <-
   function(
     investor_name,
