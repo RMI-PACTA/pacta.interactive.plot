@@ -1,6 +1,6 @@
 class techexposure {
 
-  constructor(container, data, labels, opts) {
+  constructor(container, data, labels,opts) {
     let container_div;
     if (typeof container === "string") {
       container_div = document.querySelector(container);
