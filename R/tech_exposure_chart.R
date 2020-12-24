@@ -87,7 +87,7 @@ as_tech_exposure_data <-
     dataframe_translations,
     language_select = "EN"
   ) {
-    require("dplyr", quietly = TRUE)
+    .data <- NULL
 
     portfolio <-
       list(`Listed Equity` = equity_results_portfolio,
@@ -95,92 +95,93 @@ as_tech_exposure_data <-
       dplyr::bind_rows(.id = 'asset_class') %>%
       dplyr::filter(investor_name == !!investor_name,
                     portfolio_name == !!portfolio_name) %>%
-      dplyr::filter(!is.na(ald_sector))
+      dplyr::filter(!is.na(.data$ald_sector))
 
     asset_classes <-
       portfolio %>%
-      dplyr::pull(asset_class) %>%
+      dplyr::pull(.data$asset_class) %>%
       unique()
 
     equity_sectors <-
       portfolio %>%
-      dplyr::filter(asset_class == "Listed Equity") %>%
-      dplyr::pull(ald_sector) %>%
+      dplyr::filter(.data$asset_class == "Listed Equity") %>%
+      dplyr::pull(.data$ald_sector) %>%
       unique()
 
     bonds_sectors <-
       portfolio %>%
-      dplyr::filter(asset_class == 'Corporate Bonds') %>%
-      dplyr::pull(ald_sector) %>%
+      dplyr::filter(.data$asset_class == 'Corporate Bonds') %>%
+      dplyr::pull(.data$ald_sector) %>%
       unique()
 
     indices <-
       list(`Listed Equity` = indices_equity_results_portfolio,
            `Corporate Bonds` = indices_bonds_results_portfolio) %>%
       dplyr::bind_rows(.id = 'asset_class') %>%
-      dplyr::filter(asset_class %in% asset_classes) %>%
-      dplyr::filter(asset_class == 'Listed Equity' & ald_sector %in% equity_sectors |
-                      asset_class == 'Corporate Bonds' & ald_sector %in% bonds_sectors)
+      dplyr::filter(.data$asset_class %in% asset_classes) %>%
+      dplyr::filter(.data$asset_class == 'Listed Equity' & .data$ald_sector %in% equity_sectors |
+                      .data$asset_class == 'Corporate Bonds' & .data$ald_sector %in% bonds_sectors)
 
     peers <-
       list(`Listed Equity` = peers_equity_results_portfolio,
            `Corporate Bonds` = peers_bonds_results_portfolio) %>%
       dplyr::bind_rows(.id = 'asset_class') %>%
       dplyr::as_tibble() %>%
-      dplyr::filter(asset_class %in% asset_classes) %>%
-      dplyr::filter(asset_class == 'Listed Equity' & ald_sector %in% equity_sectors |
-                      asset_class == 'Corporate Bonds' & ald_sector %in% bonds_sectors) %>%
-      dplyr::filter(investor_name == peer_group)
+      dplyr::filter(.data$asset_class %in% asset_classes) %>%
+      dplyr::filter(.data$asset_class == 'Listed Equity' & .data$ald_sector %in% equity_sectors |
+                      .data$asset_class == 'Corporate Bonds' & .data$ald_sector %in% bonds_sectors) %>%
+      dplyr::filter(investor_name == !!peer_group)
 
     techexposure_data <-
       dplyr::bind_rows(portfolio, peers, indices) %>%
-      dplyr::filter(allocation == 'portfolio_weight') %>%
-      dplyr::filter(scenario == dplyr::if_else(ald_sector == "Automotive", select_scenario_auto,
-                                               dplyr::if_else(ald_sector == "Shipping", select_scenario_shipping,
-                                                              dplyr::if_else(ald_sector %in% c("Cement", "Steel", "Aviation"), select_scenario_other,
+      dplyr::filter(.data$allocation == 'portfolio_weight') %>%
+      dplyr::filter(.data$scenario == dplyr::if_else(.data$ald_sector == "Automotive", select_scenario_auto,
+                                               dplyr::if_else(.data$ald_sector == "Shipping", select_scenario_shipping,
+                                                              dplyr::if_else(.data$ald_sector %in% c("Cement", "Steel", "Aviation"), select_scenario_other,
                                                  select_scenario)))) %>%
-      dplyr::filter(scenario_geography == dplyr::if_else(ald_sector == 'Power', 'GlobalAggregate', 'Global')) %>%
-      dplyr::filter(year == start_year) %>%
-      dplyr::filter(equity_market == "GlobalMarket") %>%
-      dplyr::mutate(green = technology %in% green_techs) %>%
-      dplyr::group_by(asset_class, equity_market, portfolio_name, ald_sector) %>%
-      dplyr::arrange(asset_class,  portfolio_name,
-                     factor(technology, levels = all_tech_levels), dplyr::desc(green)) %>%
-      dplyr::mutate(sector_sum = sum(plan_carsten)) %>%
-      dplyr::mutate(sector_prcnt = plan_carsten / sum(plan_carsten)) %>%
-      dplyr::mutate(sector_cumprcnt = cumsum(sector_prcnt)) %>%
-      dplyr::mutate(sector_cumprcnt = dplyr::lag(sector_cumprcnt, default = 0)) %>%
-      dplyr::mutate(cumsum = cumsum(plan_carsten)) %>%
+      dplyr::filter(.data$scenario_geography == dplyr::if_else(.data$ald_sector == 'Power', 'GlobalAggregate', 'Global')) %>%
+      dplyr::filter(.data$year == !!start_year) %>%
+      dplyr::filter(.data$equity_market == "GlobalMarket") %>%
+      dplyr::mutate(green = .data$technology %in% !!green_techs) %>%
+      dplyr::group_by(.data$asset_class, .data$equity_market, .data$portfolio_name, .data$ald_sector) %>%
+      dplyr::arrange(.data$asset_class, .data$portfolio_name,
+                     factor(.data$technology, levels = !!all_tech_levels), dplyr::desc(.data$green)) %>%
+      dplyr::mutate(sector_sum = sum(.data$plan_carsten)) %>%
+      dplyr::mutate(sector_prcnt = .data$plan_carsten / sum(.data$plan_carsten)) %>%
+      dplyr::mutate(sector_cumprcnt = cumsum(.data$sector_prcnt)) %>%
+      dplyr::mutate(sector_cumprcnt = dplyr::lag(.data$sector_cumprcnt, default = 0)) %>%
+      dplyr::mutate(cumsum = cumsum(.data$plan_carsten)) %>%
       dplyr::mutate(cumsum = dplyr::lag(cumsum, default = 0)) %>%
       dplyr::ungroup() %>%
-      dplyr::group_by(asset_class, equity_market, portfolio_name, ald_sector, green) %>%
-      dplyr::mutate(green_sum = sum(plan_carsten)) %>%
-      dplyr::mutate(green_prcnt = sum(plan_carsten) / sector_sum) %>%
+      dplyr::group_by(.data$asset_class, .data$equity_market, .data$portfolio_name, .data$ald_sector, .data$green) %>%
+      dplyr::mutate(green_sum = sum(.data$plan_carsten)) %>%
+      dplyr::mutate(green_prcnt = sum(.data$plan_carsten) / .data$sector_sum) %>%
       dplyr::ungroup() %>%
-      dplyr::mutate(this_portfolio = portfolio_name == !!portfolio_name) %>%
+      dplyr::mutate(this_portfolio = .data$portfolio_name == !!portfolio_name) %>%
       dplyr::mutate(equity_market = dplyr::case_when(
-        equity_market == 'GlobalMarket' ~ 'Global Market',
-        equity_market == 'DevelopedMarket' ~ 'Developed Market',
-        equity_market == 'EmergingMarket' ~ 'Emerging Market',
-        TRUE ~ equity_market)
+        .data$equity_market == 'GlobalMarket' ~ 'Global Market',
+        .data$equity_market == 'DevelopedMarket' ~ 'Developed Market',
+        .data$equity_market == 'EmergingMarket' ~ 'Emerging Market',
+        TRUE ~ .data$equity_market)
       ) %>%
       dplyr::mutate(portfolio_name = dplyr::case_when(
-        portfolio_name == 'pensionfund' ~ 'Pension Fund',
-        portfolio_name == 'assetmanager' ~ 'Asset Manager',
-        portfolio_name == 'bank' ~ 'Bank',
-        portfolio_name == 'insurance' ~ 'Insurance',
-        TRUE ~ portfolio_name)
+        .data$portfolio_name == 'pensionfund' ~ 'Pension Fund',
+        .data$portfolio_name == 'assetmanager' ~ 'Asset Manager',
+        .data$portfolio_name == 'bank' ~ 'Bank',
+        .data$portfolio_name == 'insurance' ~ 'Insurance',
+        TRUE ~ .data$portfolio_name)
       ) %>%
-      dplyr::arrange(asset_class, factor(equity_market, levels = equity_market_levels), dplyr::desc(this_portfolio), portfolio_name,
-              factor(technology, levels = all_tech_levels), dplyr::desc(green)) %>%
-      dplyr::select(asset_class, equity_market, portfolio_name, this_portfolio, ald_sector, technology,
-             plan_carsten, sector_sum, sector_prcnt, cumsum, sector_cumprcnt,
-             green, green_sum, green_prcnt)
+      dplyr::arrange(.data$asset_class, factor(.data$equity_market, levels = !!equity_market_levels), dplyr::desc(.data$this_portfolio), .data$portfolio_name,
+              factor(.data$technology, levels = !!all_tech_levels), dplyr::desc(.data$green)) %>%
+      dplyr::select(.data$asset_class, .data$equity_market, .data$portfolio_name, .data$this_portfolio, .data$ald_sector, .data$technology,
+                    .data$plan_carsten, .data$sector_sum, .data$sector_prcnt, .data$cumsum, .data$sector_cumprcnt,
+                    .data$green, .data$green_sum, .data$green_prcnt)
 
-    dictionary <- choose_dictionary_language(
-      dataframe_translations,
-      language = language_select
-    )
+    dictionary <-
+      choose_dictionary_language(
+        dataframe_translations,
+        language = language_select
+        )
 
     techexposure_data <- translate_df_contents(techexposure_data, dictionary)
 
