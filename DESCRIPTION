@@ -20,4 +20,6 @@ RoxygenNote: 7.1.1
 URL: https://2degreesinvesting.github.io/r2dii.interactive, https://github.com/2DegreesInvesting/r2dii.interactive
 BugReports: https://github.com/2DegreesInvesting/r2dii.interactive/issues
 Imports: 
+    dplyr,
+    jsonlite,
     r2d3
