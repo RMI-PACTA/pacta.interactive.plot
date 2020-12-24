@@ -1,0 +1,395 @@
+
+
+/* add line under the chapter numbers */
+.level1 .header-section-number {
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+
+/* add lines under the level1 chapter titles */
+.level1 h1 { border-bottom: 1px solid; }
+
+
+/* change width of left sidebar */
+.book .book-summary { width: 250px; }
+.book.with-summary .book-header.fixed { left: 250px; }
+.book.with-summary .book-body { left: 250px; }
+
+/* put tldr text in a box */
+.tldr {
+  border-style: solid;
+  border-color:  #ededed;/*fCOLOR! #1b324 dark blue*/
+  background:  	white;
+  font-style: italic;
+  /* opacity: 0.5;*/
+  border-width: 0px 3px 1px 0px;
+  /* border-radius: 4px;*/
+  padding: 20px;
+  width: 100%
+}
+
+
+/* put methodology text in a box */
+.method {
+  border-style: solid;
+  border-color:  grey;/*fCOLOR! #1b324 dark blue*/
+  background:  	#d3d3d3;
+  font-style: italic;
+  /* opacity: 0.5;*/
+  border-width: 0px 3px 1px 0px;
+  border-radius: 4px;
+  padding: 20px;
+  width: 100%
+}
+
+
+
+
+/* put disclaimer text in a box */
+.disclaimer {
+  border-style: dashed;
+  border-color:  #d3d3d3;
+  background:  white;
+    /* opacity: 0.5;*/
+  border-width: 0px 0px 0px 3px;
+  /* border-radius: 4px;*/
+  padding: 20px;
+  width: 100%
+}
+
+
+/* put keyquestion text in a box */
+.keyquestion {
+  border-style: solid;
+  border-color: #d3d3d3; /*COLOR! #8b0000dark red*/
+  background:  	white;
+  font-style: italic;
+  /* opacity: 0.5;*/
+  border-width: 1px 0px 0px 3px;
+  /* border-radius: 4px;*/
+  padding: 20px;
+  width: 100%
+}
+
+/* add styling to spans that have a tippy tooltip */
+.hovertext {
+  /* font-weight: bold; */
+  text-decoration: underline;
+}
+
+/* no data notice */
+.nodatanotice {
+  margin: 50px;
+  outline: 2px solid black;
+  padding: 10px;
+}
+
+/************************************************/
+/* styles for interactive charts ****************/
+
+div.d3chart {
+  font-family: sans-serif;
+  font-size: 0.9em;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+div.d3chart .chart_title {
+  font-family: sans-serif;
+  font-size: 1.0em;
+  text-align: center;
+}
+
+div.d3chart .chart_filters {
+  font-family: sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 10px;
+}
+
+div.d3chart .chart_caption {
+  font-family: sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+div.d3chart .chart_source {
+  font-family: sans-serif;
+  font-size: 0.7em;
+  font-style: italic;
+  padding-top: 5px;
+}
+
+div.d3chart svg {
+/*   border: 1px dashed; */
+  background-color: white;
+}
+
+div.d3chart > * {
+  display: block;
+  margin: 0 auto;
+}
+
+div.d3chart div.d3tooltip {
+  opacity: 0.9;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid;
+  font-family: sans-serif;
+  /* position: absolute; */
+  position: fixed; /* position must be fixed to work in Gitbook */
+}
+
+div.d3chart svg text {
+  font-family: sans-serif;
+}
+
+div.d3chart.tech_exposure {
+  font-size: 0.6em;
+}
+
+div.d3chart#taxonomy_pie {
+  font-size: 0.6em;
+}
+
+div.d3chart.PieExploded {
+/*   font-size: 0.7em; */
+}
+
+div.d3chart.WaffleChart {
+  font-size: 1.4em;
+}
+
+div.d3chart.stacked_bars .axis .domain {
+  display: none;
+}
+
+
+/* d3 data_table styling */
+
+div.d3chart.data_table table,
+div.d3chart.data_table th,
+div.d3chart.data_table td {
+  border-collapse: collapse;
+  padding: 8px;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+  font-size: 1em;
+}
+
+div.d3chart.data_table table tr {
+  background-color: #fff !important;
+}
+
+div.d3chart.data_table table tr:hover {
+  background-color: #f5f5f5 !important;
+}
+
+
+/* sectors color palette */
+div.d3chart svg .Automotive {
+  fill: #78C4D6;
+}
+
+div.d3chart svg .Aviation {
+  fill: #00c082;
+}
+
+div.d3chart svg .Cement {
+  fill: #c1b358;
+}
+
+div.d3chart svg .Coal {
+  fill: #4e3b37;
+}
+
+div.d3chart svg [class*='Oil&Gas'] {
+  fill: #181716;
+}
+
+div.d3chart svg .Power {
+  fill: #a63603;
+}
+
+div.d3chart svg .Shipping {
+  fill: #574099;
+}
+
+div.d3chart svg .Steel {
+  fill: #a63d57;
+}
+
+
+
+/* technologies color palette */
+div.d3chart svg .Automotive[class*='Electric'] {
+  fill: #548995
+}
+
+div.d3chart svg .Automotive[class*='Electric_HDV'] {
+  fill: #609cab
+}
+
+div.d3chart svg .Automotive.FuelCell {
+  fill: #6cb0c0
+}
+
+div.d3chart svg .Automotive.Hybrid {
+  fill: #78c4d6
+}
+
+div.d3chart svg .Automotive.Hybrid_HDV {
+  fill: #93cfde
+}
+
+div.d3chart svg .Automotive.ICE {
+  fill: #aedbe6
+ } 
+
+div.d3chart svg .Automotive.ICE_HDV {
+  fill: #c9e7ee
+}
+
+div.d3chart svg .Power.CoalCap {
+  fill: #7A2701
+}
+
+div.d3chart svg .Power.OilCap {
+  fill: #a63603
+}
+
+div.d3chart svg .Power.GasCap {
+  fill: #e6550d
+}
+
+div.d3chart svg .Power.NuclearCap {
+  fill: #fd8d3c
+}
+
+div.d3chart svg .Power.HydroCap {
+  fill: #fdbe85
+}
+
+div.d3chart svg .Power.RenewablesCap {
+  fill: #feedde
+}
+
+div.d3chart svg [class*='Oil&Gas'].Gas {
+  fill: #b9b5b0
+}
+
+div.d3chart svg [class*='Oil&Gas'].Oil {
+  fill: #181716
+}
+
+div.d3chart svg [class*='Fossil Fuels'].Gas {
+  fill: #b9b5b0
+}
+
+div.d3chart svg [class*='Fossil Fuels'].Oil {
+  fill: #181716
+}
+
+div.d3chart svg [class*='Fossil Fuels'].Coal {
+  fill: #4e3b37
+}
+
+div.d3chart svg .Aviation.Freight {
+  fill: #00865b
+}
+
+div.d3chart svg .Aviation.Mix {
+  fill: #66d9b4
+}
+
+div.d3chart svg .Aviation.Other {
+  fill: #b2ecd9
+}
+
+div.d3chart svg .Aviation.Passenger {
+  fill:  #00c082
+}
+
+div.d3chart svg .Cement.Grinding {
+  fill: #f2e06e
+}
+
+div.d3chart svg .Cement[class*='Integrated facility'] {
+  fill:  #c1b358
+}
+
+div.d3chart svg .Steel[class*='Ac-Electric Arc Furnace'] {
+  fill: #a63d57
+}
+
+div.d3chart svg .Steel[class*='Bof Shop'] {
+  fill: #c98a9a
+}
+
+div.d3chart svg .Steel[class*='Dc-Electric Arc Furnace'] {
+  fill: #b76378 
+
+}
+
+div.d3chart svg .Steel[class*='Open Hearth Meltshop'] {
+  fill: #dbb1bb
+}
+
+div.d3chart svg .Shipping[class*='A Grade'] {
+  fill: #2b204c
+}
+
+div.d3chart svg .Shipping[class*='B Grade'] {
+  fill: #3c2c6b
+}
+
+div.d3chart svg .Shipping[class*='C Grade'] {
+  fill: #574099
+}
+
+div.d3chart svg .Shipping[class*='D Grade'] {
+  fill: #7866ad
+}
+
+div.d3chart svg .Shipping[class*='E Grade'] {
+  fill: #8a7ead
+}
+
+div.d3chart svg .Shipping[class*='F Grade'] {
+  fill: #9a8cc1
+}
+
+div.d3chart svg .Shipping[class*='No Grade'] {
+  fill: #ddd8ea
+}
+
+div.d3chart svg .Shipping[class*='U Grade'] {
+  fill: #bbb2d6
+}
+
+
+
+/* beta label */
+.beta_label {
+  color: black;
+  font-weight: bold;
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: white;
+  font-size: 24px;
+  line-height: 1.0;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  transform: rotate(-35deg);
+  position: relative;
+  display: block;
+  z-index: 999;
+  top: 200px;
+  left: 100px;
+  width: 600px;
+}

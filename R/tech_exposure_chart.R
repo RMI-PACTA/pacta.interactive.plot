@@ -17,9 +17,17 @@ tech_exposure_chart <-
   function(.data, width = NULL, height = NULL, ...) {
     .data <- export_data_utf8(.data)
 
+    dependencies <-
+      list(
+        system.file("techexposure.js", package = "r2dii.interactive"),
+        system.file("text_dropdown_jiggle.js", package = "r2dii.interactive")
+        )
+
     r2d3::r2d3(
       data = .data,
-      script = system.file("techexposure.js", package = "r2dii.interactive"),
+      script = system.file("render_tech_exposure.js", package = "r2dii.interactive"),
+      dependencies = dependencies,
+      css = system.file("2dii_gitbook_style.css", package = "r2dii.interactive"),
       d3_version = 4,
       width = width,
       height = height,
