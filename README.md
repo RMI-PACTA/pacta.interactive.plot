@@ -35,7 +35,7 @@ devtools::install_github("2DegreesInvesting/r2dii.interactive")
 
 ## Example
 
-This is a basic example usage:
+This is a basic example usage of tech\_exposure\_chart():
 
 ``` r
 library(r2dii.interactive)
@@ -68,4 +68,30 @@ tech_exposure <-
 tech_exposure_chart(tech_exposure)
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+This is a basic example usage of trajectory\_alignment\_chart():
+
+``` r
+library(r2dii.interactive)
+
+load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+
+trajectory_alignment_data <-
+  as_trajectory_alignment_data(
+    investor_name = investor_name,
+    portfolio_name = portfolio_name,
+    peer_group = peer_group,
+    equity_results_portfolio = equity_results_portfolio,
+    bonds_results_portfolio = bonds_results_portfolio,
+    indices_equity_results_portfolio = indices_equity_results_portfolio,
+    indices_bonds_results_portfolio = indices_bonds_results_portfolio,
+    peers_equity_results_portfolio = peers_equity_results_portfolio,
+    peers_bonds_results_portfolio = peers_bonds_results_portfolio,
+    tech_roadmap_sectors = tech_roadmap_sectors,
+    scen_geo_levels = scen_geo_levels,
+    all_tech_levels = all_tech_levels,
+    dataframe_translations = dataframe_translations,
+    language_select = "EN"
+  )
+
+trajectory_alignment_chart(trajectory_alignment_data)
+```

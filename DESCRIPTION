@@ -25,4 +25,5 @@ Imports:
     jsonlite,
     magrittr,
     r2d3,
-    rlang
+    rlang,
+    tidyr
