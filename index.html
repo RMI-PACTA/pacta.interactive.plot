@@ -89,7 +89,7 @@ install.packages("r2dii.interactive")
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>This is a basic example usage:</p>
+<p>This is a basic example usage of tech_exposure_chart():</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span>
 
@@ -119,7 +119,31 @@ install.packages("r2dii.interactive")
   <span class="op">)</span>
 
 <span class="fu"><a href="reference/tech_exposure_chart.html">tech_exposure_chart</a></span><span class="op">(</span><span class="va">tech_exposure</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-example-1.png" width="100%"></p>
+<p>This is a basic example usage of trajectory_alignment_chart():</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span>
+
+<span class="va">trajectory_alignment_data</span> <span class="op">&lt;-</span>
+  <span class="fu"><a href="reference/as_trajectory_alignment_data.html">as_trajectory_alignment_data</a></span><span class="op">(</span>
+    investor_name <span class="op">=</span> <span class="va">investor_name</span>,
+    portfolio_name <span class="op">=</span> <span class="va">portfolio_name</span>,
+    peer_group <span class="op">=</span> <span class="va">peer_group</span>,
+    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,
+    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,
+    indices_equity_results_portfolio <span class="op">=</span> <span class="va">indices_equity_results_portfolio</span>,
+    indices_bonds_results_portfolio <span class="op">=</span> <span class="va">indices_bonds_results_portfolio</span>,
+    peers_equity_results_portfolio <span class="op">=</span> <span class="va">peers_equity_results_portfolio</span>,
+    peers_bonds_results_portfolio <span class="op">=</span> <span class="va">peers_bonds_results_portfolio</span>,
+    tech_roadmap_sectors <span class="op">=</span> <span class="va">tech_roadmap_sectors</span>,
+    scen_geo_levels <span class="op">=</span> <span class="va">scen_geo_levels</span>,
+    all_tech_levels <span class="op">=</span> <span class="va">all_tech_levels</span>,
+    dataframe_translations <span class="op">=</span> <span class="va">dataframe_translations</span>,
+    language_select <span class="op">=</span> <span class="st">"EN"</span>
+  <span class="op">)</span>
+
+<span class="fu"><a href="reference/trajectory_alignment_chart.html">trajectory_alignment_chart</a></span><span class="op">(</span><span class="va">trajectory_alignment_data</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
   </div>
