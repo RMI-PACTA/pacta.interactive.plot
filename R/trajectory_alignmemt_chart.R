@@ -17,12 +17,12 @@ trajectory_alignment_chart <-
 
     dependencies <-
       list(
-        system.file("trajectory_alignment.js", package = "r2dii.interactive"),
-        system.file("d3-array.v2.min.js", package = "r2dii.interactive"),
-        system.file("jquery-3.5.1.js", package = "r2dii.interactive"),
-        system.file("text_dropdown_jiggle.js", package = "r2dii.interactive"),
-        system.file("2dii_gitbook_style.css", package = "r2dii.interactive"),
-        system.file("hide_styles.css", package = "r2dii.interactive")
+        system.file("js/trajectory_alignment.js", package = "r2dii.interactive"),
+        system.file("js/d3-array.v2.min.js", package = "r2dii.interactive"),
+        system.file("js/jquery-3.5.1.js", package = "r2dii.interactive"),
+        system.file("js/text_dropdown_jiggle.js", package = "r2dii.interactive"),
+        system.file("css/2dii_gitbook_style.css", package = "r2dii.interactive"),
+        system.file("css/hide_styles.css", package = "r2dii.interactive")
         )
 
     op <- options(r2d3.shadow = FALSE)
