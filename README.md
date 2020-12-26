@@ -95,3 +95,33 @@ trajectory_alignment_data <-
 
 trajectory_alignment_chart(trajectory_alignment_data)
 ```
+
+This is a basic example usage of peer\_comparison\_chart():
+
+``` r
+library(r2dii.interactive)
+
+load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+
+peer_comparison_data <-
+  as_peer_comparison_data(
+    investor_name = investor_name,
+    portfolio_name = portfolio_name,
+    peer_group = peer_group,
+    start_year = start_year,
+    equity_results_portfolio = equity_results_portfolio,
+    bonds_results_portfolio = bonds_results_portfolio,
+    indices_equity_results_portfolio = indices_equity_results_portfolio,
+    indices_bonds_results_portfolio = indices_bonds_results_portfolio,
+    peers_equity_results_user = peers_equity_results_user,
+    peers_bonds_results_user = peers_bonds_results_user,
+    select_scenario = select_scenario,
+    select_scenario_auto = select_scenario_auto,
+    select_scenario_shipping = select_scenario_shipping,
+    select_scenario_other = select_scenario_other,
+    dataframe_translations = dataframe_translations,
+    language_select = "EN"
+  )
+
+peer_comparison_chart(peer_comparison_data)
+```
