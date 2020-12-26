@@ -144,6 +144,33 @@ install.packages("r2dii.interactive")
   <span class="op">)</span>
 
 <span class="fu"><a href="reference/trajectory_alignment_chart.html">trajectory_alignment_chart</a></span><span class="op">(</span><span class="va">trajectory_alignment_data</span><span class="op">)</span></code></pre></div>
+<p>This is a basic example usage of peer_comparison_chart():</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span>
+
+<span class="va">peer_comparison_data</span> <span class="op">&lt;-</span>
+  <span class="fu"><a href="reference/as_peer_comparison_data.html">as_peer_comparison_data</a></span><span class="op">(</span>
+    investor_name <span class="op">=</span> <span class="va">investor_name</span>,
+    portfolio_name <span class="op">=</span> <span class="va">portfolio_name</span>,
+    peer_group <span class="op">=</span> <span class="va">peer_group</span>,
+    start_year <span class="op">=</span> <span class="va">start_year</span>,
+    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,
+    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,
+    indices_equity_results_portfolio <span class="op">=</span> <span class="va">indices_equity_results_portfolio</span>,
+    indices_bonds_results_portfolio <span class="op">=</span> <span class="va">indices_bonds_results_portfolio</span>,
+    peers_equity_results_user <span class="op">=</span> <span class="va">peers_equity_results_user</span>,
+    peers_bonds_results_user <span class="op">=</span> <span class="va">peers_bonds_results_user</span>,
+    select_scenario <span class="op">=</span> <span class="va">select_scenario</span>,
+    select_scenario_auto <span class="op">=</span> <span class="va">select_scenario_auto</span>,
+    select_scenario_shipping <span class="op">=</span> <span class="va">select_scenario_shipping</span>,
+    select_scenario_other <span class="op">=</span> <span class="va">select_scenario_other</span>,
+    dataframe_translations <span class="op">=</span> <span class="va">dataframe_translations</span>,
+    language_select <span class="op">=</span> <span class="st">"EN"</span>
+  <span class="op">)</span>
+
+<span class="fu"><a href="reference/peer_comparison_chart.html">peer_comparison_chart</a></span><span class="op">(</span><span class="va">peer_comparison_data</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
   </div>

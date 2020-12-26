@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • r2dii.interactive</title>
+<title>Convert raw data into a peer comparison data frame — as_peer_comparison_data • r2dii.interactive</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Convert raw data into a peer comparison data frame — as_peer_comparison_data" />
+<meta property="og:description" content="The as_peer_comparison_data function converts raw data into a peer comparison data frame" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,72 +106,107 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Convert raw data into a peer comparison data frame</h1>
+    <small class="dont-index">Source: <a href='https://github.com/2DegreesInvesting/r2dii.interactive/blob/master/R/peer_comparison_chart.R'><code>R/peer_comparison_chart.R</code></a></small>
+    <div class="hidden name"><code>as_peer_comparison_data.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>The <code>as_peer_comparison_data</code> function converts raw data into a peer comparison data frame</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>as_peer_comparison_data</span><span class='op'>(</span>
+  <span class='va'>investor_name</span>,
+  <span class='va'>portfolio_name</span>,
+  <span class='va'>peer_group</span>,
+  <span class='va'>start_year</span>,
+  <span class='va'>equity_results_portfolio</span>,
+  <span class='va'>bonds_results_portfolio</span>,
+  <span class='va'>indices_equity_results_portfolio</span>,
+  <span class='va'>indices_bonds_results_portfolio</span>,
+  <span class='va'>peers_equity_results_portfolio</span>,
+  <span class='va'>peers_bonds_results_portfolio</span>,
+  <span class='va'>select_scenario</span>,
+  <span class='va'>select_scenario_auto</span>,
+  <span class='va'>select_scenario_shipping</span>,
+  <span class='va'>select_scenario_other</span>,
+  <span class='va'>dataframe_translations</span>,
+  language_select <span class='op'>=</span> <span class='st'>"EN"</span>
+<span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="as_peer_comparison_data.html">as_peer_comparison_data()</a></code> </p>
-        </td>
-        <td><p>Convert raw data into a peer comparison data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="as_tech_exposure_data.html">as_tech_exposure_data()</a></code> </p>
-        </td>
-        <td><p>Convert raw data into a tech exposure data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="as_trajectory_alignment_data.html">as_trajectory_alignment_data()</a></code> </p>
-        </td>
-        <td><p>Convert raw data into a trajectory alignment data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="peer_comparison_chart.html">peer_comparison_chart()</a></code> </p>
-        </td>
-        <td><p>Create an interactive peer comparison chart in an htmlwidget</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="tech_exposure_chart.html">tech_exposure_chart()</a></code> </p>
-        </td>
-        <td><p>Create an interactive tech exposure chart in an htmlwidget</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="trajectory_alignment_chart.html">trajectory_alignment_chart()</a></code> </p>
-        </td>
-        <td><p>Create an interactive trajectory alignment chart in an htmlwidget</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>investor_name</th>
+      <td><p>investor_name</p></td>
+    </tr>
+    <tr>
+      <th>portfolio_name</th>
+      <td><p>portfolio_name</p></td>
+    </tr>
+    <tr>
+      <th>peer_group</th>
+      <td><p>peer_group</p></td>
+    </tr>
+    <tr>
+      <th>start_year</th>
+      <td><p>start_year</p></td>
+    </tr>
+    <tr>
+      <th>equity_results_portfolio</th>
+      <td><p>equity_results_portfolio</p></td>
+    </tr>
+    <tr>
+      <th>bonds_results_portfolio</th>
+      <td><p>bonds_results_portfolio</p></td>
+    </tr>
+    <tr>
+      <th>indices_equity_results_portfolio</th>
+      <td><p>indices_equity_results_portfolio</p></td>
+    </tr>
+    <tr>
+      <th>indices_bonds_results_portfolio</th>
+      <td><p>indices_bonds_results_portfolio</p></td>
+    </tr>
+    <tr>
+      <th>peers_equity_results_portfolio</th>
+      <td><p>peers_equity_results_portfolio</p></td>
+    </tr>
+    <tr>
+      <th>peers_bonds_results_portfolio</th>
+      <td><p>peers_bonds_results_portfolio</p></td>
+    </tr>
+    <tr>
+      <th>select_scenario</th>
+      <td><p>select_scenario</p></td>
+    </tr>
+    <tr>
+      <th>select_scenario_auto</th>
+      <td><p>select_scenario_auto</p></td>
+    </tr>
+    <tr>
+      <th>select_scenario_shipping</th>
+      <td><p>select_scenario_shipping</p></td>
+    </tr>
+    <tr>
+      <th>select_scenario_other</th>
+      <td><p>select_scenario_other</p></td>
+    </tr>
+    <tr>
+      <th>dataframe_translations</th>
+      <td><p>dataframe_translations</p></td>
+    </tr>
+    <tr>
+      <th>language_select</th>
+      <td><p>two letter code for language (single string; default = "EN")</p></td>
+    </tr>
     </table>
-  </div>
 
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
