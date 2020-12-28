@@ -1,0 +1,472 @@
+id_data,id_column,key,en,de,fr
+data_included_table,Asset Class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_included_table,Asset Class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_included_table,Asset Class,Funds,Funds,Fonds,Fonds
+data_included_table,Asset Class,Other Asset Classes,Other Asset Classes,Andere Asset-Klassen,Autres classes d'actifs
+data_included_table,Asset Class,Unknown,Unknown,Unbekannt,Inconnu
+data_included_table,Asset Class,Total,Total,Gesamt,Total
+data_included_table,Asset Class,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Corporate Bonds,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Corporate Bonds,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Unternehmensanleihen,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Obligations d'entreprises
+data_included_table,Asset Class,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Other Asset Classes,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Other Asset Classes,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Andere Asset-Klassen,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Autres classes d'actifs
+data_included_table,Asset Class,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Listed Equity,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Listed Equity,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Aktien,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Actions cotées
+data_included_table,Asset Class,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Unknown,&nbsp;&nbsp;&nbsp;&nbsp;Funds - Unknown,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Unbekannt,&nbsp;&nbsp;&nbsp;&nbsp;Fonds - Inconnu
+data_included_table,Asset Class,Funds - Corporate Bonds,Funds - Corporate Bonds,Fonds - Unternehmensanleihen,Fonds - Obligations d'entreprises
+data_included_table,Asset Class,Funds - Other Asset Classes,Funds - Other Asset Classes,Fonds - Andere Asset-Klassen,Fonds - Autres classes d'actifs
+data_included_table,Asset Class,Funds - Listed Equity,Funds - Listed Equity,Fonds - Aktien,Fonds - Actions cotées
+data_included_table,Asset Class,Funds - Unknown,Funds - Unknown,Fonds - Unbekannt,Fonds - Inconnu
+data_included_table,Included,Yes,Yes,Ja,Oui
+data_included_table,Included,No,No,Nein,Non
+data_value_pie_equity,key,Automotive,Automotive,Automobilindustrie,Automobile
+data_value_pie_equity,key,Aviation,Aviation,Luftfahrt,Aviation
+data_value_pie_equity,key,Cement,Cement,Zement,Ciment
+data_value_pie_equity,key,Coal,Coal,Kohle,Charbon
+data_value_pie_equity,key,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_value_pie_equity,key,Power,Power,Energie,Power
+data_value_pie_equity,key,Shipping,Shipping,Schifffahrt,Expédition
+data_value_pie_equity,key,Steel,Steel,Stahl,Acier
+data_value_pie_equity,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_value_pie_equity,key,Energy,Energy,Energie,Énergie
+data_value_pie_equity,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
+data_value_pie_equity,key,Communications,Communications,Mitteilungen,Communications
+data_value_pie_equity,key,Consumer Disrectionary,Consumer Disrectionary,Konsumentenverweigerer,Consommation discrète
+data_value_pie_equity,key,Industrials,Industrials,Industrielle,Industrie
+data_value_pie_equity,key,Financials,Financials,Finanzen,Finances
+data_value_pie_equity,key,Utilities,Utilities,Versorgungsunternehmen,Utilities
+data_value_pie_equity,key,Materials,Materials,Materialien,Matériel
+data_value_pie_equity,key,Technology,Technology,Technologie,Technologie
+data_value_pie_equity,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
+data_value_pie_bonds,key,Automotive,Automotive,Automobilindustrie,Automobile
+data_value_pie_bonds,key,Aviation,Aviation,Luftfahrt,Aviation
+data_value_pie_bonds,key,Cement,Cement,Zement,Ciment
+data_value_pie_bonds,key,Coal,Coal,Kohle,Charbon
+data_value_pie_bonds,key,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_value_pie_bonds,key,Power,Power,Energie,Power
+data_value_pie_bonds,key,Shipping,Shipping,Schifffahrt,Expédition
+data_value_pie_bonds,key,Steel,Steel,Stahl,Acier
+data_value_pie_bonds,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_value_pie_bonds,key,Energy,Energy,Energie,Énergie
+data_value_pie_bonds,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
+data_value_pie_bonds,key,Communications,Communications,Mitteilungen,Communications
+data_value_pie_bonds,key,Consumer Disrectionary,Consumer Disrectionary,Konsumentenverweigerer,Consommation discrète
+data_value_pie_bonds,key,Industrials,Industrials,Industrielle,Industrie
+data_value_pie_bonds,key,Financials,Financials,Finanzen,Finances
+data_value_pie_bonds,key,Utilities,Utilities,Versorgungsunternehmen,Utilities
+data_value_pie_bonds,key,Materials,Materials,Materialien,Matériel
+data_value_pie_bonds,key,Technology,Technology,Technologie,Technologie
+data_value_pie_bonds,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
+data_emissions_pie_equity,key,Automotive,Automotive,Automobilindustrie,Automobile
+data_emissions_pie_equity,key,Aviation,Aviation,Luftfahrt,Aviation
+data_emissions_pie_equity,key,Cement,Cement,Zement,Ciment
+data_emissions_pie_equity,key,Coal,Coal,Kohle,Charbon
+data_emissions_pie_equity,key,Oil&Gas,Oil&Gas,Öl&Gas,Pétrole et gaz
+data_emissions_pie_equity,key,Power,Power,Energie,Power
+data_emissions_pie_equity,key,Shipping,Shipping,Schifffahrt,Expédition
+data_emissions_pie_equity,key,Steel,Steel,Stahl,Acier
+data_emissions_pie_equity,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_emissions_pie_equity,key,Cement&Steel,Cement&Steel,Zement&Stahl,Ciment et acier
+data_emissions_pie_equity,key,Communications,Communications,Mitteilungen,Communications
+data_emissions_pie_equity,key,Consumer Discretionary,Consumer Discretionary,Diskretionäre Verbraucher,Consommation discrétionnaire
+data_emissions_pie_equity,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_emissions_pie_equity,key,Financials,Financials,Finanzen,Finances
+data_emissions_pie_equity,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
+data_emissions_pie_equity,key,Other Energy,Other Energy,Andere Energie,Autres énergies
+data_emissions_pie_equity,key,Other Industrials,Other Industrials,Andere Industrielle,Autres secteurs industriels
+data_emissions_pie_equity,key,Other Materials,Other Materials,Andere Materialien,Autres matériels
+data_emissions_pie_equity,key,Other Utilities,Other Utilities,Andere Versorgungsunternehmen,Autres services publics
+data_emissions_pie_equity,key,Technology,Technology,Technologie,Technologie
+data_emissions_pie_equity,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
+data_emissions_pie_bonds,key,Automotive,Automotive,Automobilindustrie,Automobile
+data_emissions_pie_bonds,key,Aviation,Aviation,Luftfahrt,Aviation
+data_emissions_pie_bonds,key,Cement,Cement,Zement,Ciment
+data_emissions_pie_bonds,key,Coal,Coal,Kohle,Charbon
+data_emissions_pie_bonds,key,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_emissions_pie_bonds,key,Power,Power,Energie,Power
+data_emissions_pie_bonds,key,Shipping,Shipping,Schifffahrt,Expédition
+data_emissions_pie_bonds,key,Steel,Steel,Stahl,Acier
+data_emissions_pie_bonds,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_emissions_pie_bonds,key,Cement&Steel,Cement & Steel,Zement & Stahl,Ciment et acier
+data_emissions_pie_bonds,key,Communications,Communications,Mitteilungen,Communications
+data_emissions_pie_bonds,key,Consumer Discretionary,Consumer Discretionary,Diskretionäre Verbraucher,Consommation discrétionnaire
+data_emissions_pie_bonds,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_emissions_pie_bonds,key,Financials,Financials,Finanzen,Finances
+data_emissions_pie_bonds,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
+data_emissions_pie_bonds,key,Other Energy,Other Energy,Andere Energie,Autres énergies
+data_emissions_pie_bonds,key,Other Industrials,Other Industrials,Andere Industrielle,Autres secteurs industriels
+data_emissions_pie_bonds,key,Other Materials,Other Materials,Andere Materialien,Autres matériels
+data_emissions_pie_bonds,key,Other Utilities,Other Utilities,Andere Versorgungsunternehmen,Autres services publics
+data_emissions_pie_bonds,key,Technology,Technology,Technologie,Technologie
+data_emissions_pie_bonds,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
+techexposure_data,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+techexposure_data,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+techexposure_data,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
+techexposure_data,equity_market,Developed Market,Developed Market,Entwickelter Markt,Marché développé
+techexposure_data,equity_market,Emerging Market,Emerging Market,Aufstrebender Markt,Marché émergent
+techexposure_data,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+techexposure_data,ald_sector,Coal,Coal,Kohle,Charbon
+techexposure_data,ald_sector,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+techexposure_data,ald_sector,Power,Power,Energie,Power
+techexposure_data,ald_sector,Steel,Steel,Stahl,Acier
+techexposure_data,ald_sector,Cement,Cement,Zement,Ciment
+techexposure_data,ald_sector,Aviation,Aviation,Luftfahrt,Aviation
+techexposure_data,ald_sector,Shipping,Shipping,Schifffahrt,Expédition
+techexposure_data,technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+techexposure_data,technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+techexposure_data,technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+techexposure_data,technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+techexposure_data,technology,OilCap,Oil Power,Öl-Power,Pétrole
+techexposure_data,technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+techexposure_data,technology,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+techexposure_data,technology,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+techexposure_data,technology,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+techexposure_data,technology,Oil,Oil,Öl,Pétrole
+techexposure_data,technology,Gas,Gas,Gas,Gaz
+techexposure_data,technology,Electric_HDV,HDV: Electric,HDV: Elektrisches,HDV : électrique
+techexposure_data,technology,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+techexposure_data,technology,Hybrid_HDV,HDV: Hybrid,HDV: Hybridantrieb,HDV : Hybride
+techexposure_data,technology,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor,HDV : ICE
+techexposure_data,technology,Coal,Coal,Kohle,Charbon
+techexposure_data,technology,Freight,Freight,Fracht,Fret
+techexposure_data,technology,Passenger,Passenger,Passagier,Passager
+techexposure_data,technology,Mix,Mix,Mischen,Mix
+techexposure_data,technology,Other,Other,Andere,Autres
+techexposure_data,technology,Integrated Facility,Integrated Facility,Integrierte Anlage,Facilité intégrée
+techexposure_data,technology,Grinding,Grinding,Schleifen,Broyage
+techexposure_data,technology,Ac-Electric Arc Furnace,Ac-Electric Arc Furnace,AC-Elektrolichtbogenofen,AC - Four à arc électrique
+techexposure_data,technology,Dc-Electric Arc Furnace,Dc-Electric Arc Furnace,DC-Elektrolichtbogenofen,DC - Four à arc électrique
+techexposure_data,technology,Bof Shop,Basic Oxygen Furnace,LD-Verfahren,Procédé LD
+techexposure_data,technology,Open Hearth Meltshop,Open hearth furnace,Schmelzbetrieb mit offenem Herd,Procédé Martin-Siemens
+techexposure_future_data,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+techexposure_future_data,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+techexposure_future_data,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
+techexposure_future_data,equity_market,Developed Market,Developed Market,Entwickelter Markt,Marché développé
+techexposure_future_data,equity_market,Emerging Market,Emerging Market,Aufstrebender Markt,Marché émergent
+techexposure_future_data,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+techexposure_future_data,ald_sector,Fossil Fuels,Fossil Fuels,Fossile Brennstoffe,Combustibles fossiles
+techexposure_future_data,ald_sector,Power,Power,Energie,Power
+techexposure_future_data,technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+techexposure_future_data,technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+techexposure_future_data,technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+techexposure_future_data,technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+techexposure_future_data,technology,OilCap,Oil Power,Öl-Power,Pétrole
+techexposure_future_data,technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+techexposure_future_data,technology,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+techexposure_future_data,technology,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+techexposure_future_data,technology,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+techexposure_future_data,technology,Oil,Oil,Öl,Pétrole
+techexposure_future_data,technology,Gas,Gas,Gas,Gaz
+techexposure_future_data,technology,Electric_HDV,HDV: Electric,HDV: Elektrisches,HDV : électrique
+techexposure_future_data,technology,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+techexposure_future_data,technology,Hybrid_HDV,HDV: Hybrid,HDV: Hybridantrieb,HDV : Hybride
+techexposure_future_data,technology,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor,HDV : ICE
+techexposure_future_data,technology,Coal,Coal,Kohle,Charbon
+techexposure_future_data,technology,Freight,Freight,Fracht,Fret
+techexposure_future_data,technology,Passenger,Passenger,Passagier,Passager
+techexposure_future_data,technology,Mix,Mix,Mischen,Mix
+techexposure_future_data,val_type,Portfolio,Portfolio,Portfolio,Portefeuille
+techexposure_future_data,val_type,Aligned Portfolio,Aligned Portfolio,Ausgerichtetes Portfolio,Portefeuille aligné
+techexposure_future_data,val_type,Aligned Benchmark,Aligned Benchmark,Ausgerichteter Benchmark,Repère aligné
+techexposure_future_data,val_type,Benchmark,Benchmark,Benchmark,Benchmark
+data_map,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_map,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_map,option,Gas,Gas,Gas,Gaz
+data_map,option,Oil,Oil,Öl,Pétrole
+data_map,option,All Power,All Power,Alle Energie,Tout pouvoir
+data_map,option,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_map,option,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_map,option,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_map,option,All Automotive,All Automotive,Alle Automobilindustrie,Tous les secteurs de l'automobile
+data_map,option,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+data_map,option,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+data_map,option,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_map,option,OilCap,Oil Power,Öl-Power,Pétrole
+data_map,option,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+data_map,option,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+data_map,option,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor Fahrzeuge,HDV : ICE
+data_map,option,FuelCell,LDV: Fuel Cell,LDV: Brennstoffzellen,LDV: Pile à combustible
+data_map,option,Electric_HDV,HDV: Electric,HDV: Elektrische Fahrzeuge,HDV : Électrique
+data_map,option,Hybrid_HDV,HDV: Hybrid,HDV: Hybrid Fahrzeuge,HDV : Hybride
+data_map,option,Coal,Coal,Kohle,Charbon
+data_map,option,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_map,option,Oil and Condensate,Oil and Condensate,Öl und Kondensat,Pétrole et condensats
+data_map,option,All Coal,All Coal,Alle Kohle,Tout le charbon
+data_map,option,Metallurgical,Metallurgical,Metallurgische Kohle,Métallurgie
+data_map,option,Thermal,Thermal,Thermische Kohle,Thermique
+data_map,option,Thermal & Metallurgical,Thermal & Metallurgical,Thermische und Metallurgische Kohle,Thermique et métallurgique
+data_map,option,Aviation,Aviation,Luftfahrt,Aviation
+data_map,option,All Aviation,All Aviation,Alle Luftfahrt,Aviation
+data_map,option,Freight,Freight,Freight,Fracht
+data_map,option,Passenger,Passenger,Passenger,Passagier
+data_map,option,Cement,Cement,Zement,Ciment
+data_map,option,All Cement,All Cement,Alle Zement,Ciment
+data_map,option,Grinding,Grinding,Schleifen,Broyage
+data_map,option,Integrated Facility,Integrated Facility,Integrierte Anlage,Facilité intégrée
+data_map,option,Steel,Steel,Stahl,Acier
+data_map,option,All Steel,All Steel,Alle Stahl,Acier
+data_map,option,Ac-Electric Arc Furnace,Ac-Electric Arc Furnace,AC-Elektrolichtbogenofen,AC - Four à arc électrique
+data_map,option,Dc-Electric Arc Furnace,Dc-Electric Arc Furnace,DC-Elektrolichtbogenofen,DC - Four à arc électrique
+data_map,option,Bof Shop,Basic Oxygen Furnace,LD-Verfahren,Procédé LD
+data_map,option,Open Hearth Meltshop,Open hearth furnace,Schmelzbetrieb mit offenem Herd,Procédé Martin-Siemens
+data_map,unit,m3 per day,m3 per day,Kubikmeter pro Tag,m3 par jour
+data_map,unit,boe per day,boe per day,Barrel Öläquivalent pro Tag,boe par jour
+data_map,unit,MW,MW,MW,MW
+data_map,unit,cars produced,cars produced,produzierte Autos,voitures produites
+data_map,unit,vehicles produced,cars produced,produzierte Autos,voitures produites
+data_map,unit,GJ,GJ,GJ,GJ
+data_map,unit,tons of coal,tons of coal,Tonnen Kohle,tonnes de charbon
+data_map,unit,tons of steel,tons of steel,Tonnen Stahl,tonnes de Acier
+data_map,unit,tons of cement,tons of cement,Tonnen Zement,tonnes de Ciment
+data_map,unit,active planes,active planes,aktive Flugzeuge,avions actifs
+data_map,group,Automotive,Automotive,Automobilindustrie,Automobile
+data_map,group,Coal,Coal,Kohle,Charbon
+data_map,group,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_map,group,Power,Power,Energie,Power
+data_map,group,Aviation,Aviation,Luftfahrt,Aviation
+data_map,group,Cement,Cement,Zement,Ciment
+data_map,group,Steel,Steel,Stahl,Acier
+data_greenbrown_bubble,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_greenbrown_bubble,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_greenbrown_bubble,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
+data_greenbrown_bubble,equity_market,Developed Market,Developed Market,Entwickelter Markt,Marché développé
+data_greenbrown_bubble,equity_market,Emerging Market,Emerging Market,Aufstrebender Markt,Marché émergent
+data_trajectory_alignment,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_trajectory_alignment,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_trajectory_alignment,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
+data_trajectory_alignment,equity_market,Developed Market,Developed Market,Entwickelter Markt,Marché développé
+data_trajectory_alignment,equity_market,Emerging Market,Emerging Market,Aufstrebender Markt,Marché émergent
+data_trajectory_alignment,scenario_geography,Global,Global,Global,Global
+data_trajectory_alignment,scenario_geography,Global Aggregate,Global Aggregate,Globales Aggregat,Agrégat mondial
+data_trajectory_alignment,allocation,Portfolio Weight,Portfolio Weight,Portfolio-Gewichtung,Poids du portefeuille
+data_trajectory_alignment,allocation,Ownership Weight,Ownership Weight,Gewicht des Eigentums,Poids de la propriété
+data_trajectory_alignment,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_trajectory_alignment,ald_sector,Coal,Coal,Kohle,Charbon
+data_trajectory_alignment,ald_sector,Oil&Gas,Oil&Gas,Öl&Gas,Pétrole et gaz
+data_trajectory_alignment,ald_sector,Power,Power,Energie,Power
+data_trajectory_alignment,technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_trajectory_alignment,technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_trajectory_alignment,technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_trajectory_alignment,technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_trajectory_alignment,technology,OilCap,Oil Power,Öl-Power,Pétrole
+data_trajectory_alignment,technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_trajectory_alignment,technology,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+data_trajectory_alignment,technology,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+data_trajectory_alignment,technology,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+data_trajectory_alignment,technology,Oil,Oil,Öl,Pétrole
+data_trajectory_alignment,technology,Gas,Gas,Gas,Gaz
+data_trajectory_alignment,technology,FuelCell,LDV: Fuel Cell,LDV: Brennstoffzellen,LDV: Pile à combustible
+data_trajectory_alignment,technology,Electric_HDV,HDV: Electric,HDV: Elektrisches,HDV : électrique
+data_trajectory_alignment,technology,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+data_trajectory_alignment,technology,Hybrid_HDV,HDV: Hybrid,HDV: Hybridantrieb,HDV : Hybride
+data_trajectory_alignment,technology,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor,HDV : ICE
+data_trajectory_alignment,technology,Coal,Coal,Kohle,Charbon
+data_trajectory_alignment,unit,number of cars,number of cars,Anzahl der Autos,nombre de voitures
+data_trajectory_alignment,unit,GJ/a,GJ/a,GJ pro Jahr,GJ/a
+data_trajectory_alignment,unit,MW,MW,MW,MW
+data_trajectory_alignment,unit,t/a,t/a,Tonnen pro Jahr,t/a
+data_trajectory_alignment,scenario,production,production,Produktion,production
+data_portfolio_bubble,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_portfolio_bubble,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_portfolio_bubble,allocation,Portfolio Weight,Portfolio Weight,Portfolio-Gewichtung,Poids du portefeuille
+data_portfolio_bubble,allocation,Ownership Weight,Ownership Weight,Gewicht des Eigentums,Poids de la propriété
+data_portfolio_bubble,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
+data_portfolio_bubble,equity_market,Developed Market,Developed Market,Entwickelter Markt,Marché développé
+data_portfolio_bubble,equity_market,Emerging Market,Emerging Market,Aufstrebender Markt,Marché émergent
+data_portfolio_bubble,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_portfolio_bubble,ald_sector,Coal,Coal,Kohle,Charbon
+data_portfolio_bubble,ald_sector,Oil&Gas,Oil&Gas,Öl&Gas,Pétrole et gaz
+data_portfolio_bubble,ald_sector,Power,Power,Energie,Power
+data_emissions,allocation,portfolio_weight,Portfolio Weight,Portfolio-Gewichtung,Poids du portefeuille
+data_emissions,allocation,ownership_weight,Ownership Weight,Gewicht des Eigentums,Poids de la propriété
+data_emissions,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_emissions,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_emissions,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
+data_emissions,equity_market,Developed Market,Developed Market,Entwickelter Markt,Marché développé
+data_emissions,equity_market,Emerging Market,Emerging Market,Aufstrebender Markt,Marché émergent
+data_emissions,sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_emissions,sector,Coal,Coal,Kohle,Charbon
+data_emissions,sector,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_emissions,sector,Power,Power,Energie,Power
+data_emissions,sector,Cement,Cement,Zement,Ciment
+data_emissions,sector,Steel,Steel,Stahl,Acier
+data_emissions,sector,Aviation,Aviation,Luftfahrt,Aviation
+data_emissions,sector,Shipping,Shipping,Schifffahrt,Expédition
+data_emissions,unit,tons of CO2 per km per cars produced,tons of CO2 per km per cars produced,Tonnen CO2 pro km pro produziertem Auto,tonnes de CO2 par km et par voiture produite
+data_emissions,unit,tons of CO2 per tones of cement,tons of CO2 per tones of cement,Tonnen CO2 pro Tonne Zement,tonnes de CO2 par tonne de ciment
+data_emissions,unit,tons of CO2 per GJ,tons of CO2 per GJ,Tonnen CO2 pro GJ,tonnes de CO2 par GJ
+data_emissions,unit,tons of CO2 per MWh,tons of CO2 per MWh,Tonnen CO2 pro MWh,tonnes de CO2 par MWh
+data_emissions,unit,tons of CO2 per tons of steel,tons of CO2 per tons of steel,tons of CO2 prp Tonne Stahl,tonnes de CO2 par tonne d'acier
+data_emissions,unit,tons of CO2 per passenger km per active planes,tons of CO2 per passenger km per active planes,Tonnen CO2 pro Passagierkilometer pro aktivem Flugzeug,tonnes de CO2 par passager/km par avion en activité
+data_emissions,unit,tons of CO2 per tons of coal,tons of CO2 per tons of coal,Tonnen CO2 pro Tonnen Kohle,tonnes de CO2 par tonne de charbon
+data_stress_test_bar_chart,asset_class,Bonds,Bonds,Unternehmensanleihen,Obligations
+data_stress_test_bar_chart,asset_class,Equity,Equity,Aktien,Équité
+data_stress_test_bar_chart,reference,After Transition,After Transition,Nach dem Ãœbergang,Après la transition
+data_stress_test_table,asset_class,Bonds,Bonds,Unternehmensanleihen,Obligations
+data_stress_test_table,asset_class,Equity,Equity,Aktien,Équité
+data_stress_test_table,name_portfolio_part,Total,Total,Gesamt,Total
+data_stress_test_table,name_portfolio_part,Analyzed climate relevant,Analyzed climate relevant,Analysierte klimarelevante,Analyse pertinente pour le climat
+data_stress_test_sectors,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_stress_test_sectors,ald_sector,Coal,Coal,Kohle,Charbon
+data_stress_test_sectors,ald_sector,Oil&Gas,Oil&Gas,Öl&Gas,Pétrole et gaz
+data_stress_test_sectors,ald_sector,Power,Power,Energie,Power
+data_stress_test_sectors,ald_sector,Business Services,Business Services,Dienstleistungen für Unternehmen,Services aux entreprises
+data_stress_test_sectors,ald_sector,Consumer Cyclicals,Consumer Cyclicals,Zyklische Verbraucher,Les cycles de consommation
+data_stress_test_sectors,ald_sector,Consumer Non-Cyclicals,Consumer Non-Cyclicals,Nicht-zyklische Verbraucher,Produits de consommation non cycliques
+data_stress_test_sectors,ald_sector,Consumer Services,Consumer Services,Dienstleistungen für Verbraucher,Services aux consommateurs
+data_stress_test_sectors,ald_sector,Energy,Energy,Energie,Énergie
+data_stress_test_sectors,ald_sector,Finance,Finance,Finanzen,Finance
+data_stress_test_sectors,ald_sector,Healthcare,Healthcare,Gesundheitswesen,Soins de santé
+data_stress_test_sectors,ald_sector,Industrials,Industrials,Industrielle,Industrie
+data_stress_test_sectors,ald_sector,Non-Energy Materials,Non-Energy Materials,Nicht-energetische Materialien,Matériaux non énergétiques
+data_stress_test_sectors,ald_sector,Technology,Technology,Technologie,Technologie
+data_stress_test_sectors,ald_sector,Telecommunications,Telecommunications,Telekommunikation,Télécommunications
+data_stress_test_sectors,ald_sector,Utilities,Utilities,Versorgungsunternehmen,Services publics
+data_stress_test_sectors,ald_sector,Other,Other,Andere,Autres
+data_stress_test_sectors,technology,Electric,Electric,Elektrische Fahrzeuge,Électrique
+data_stress_test_sectors,technology,Hybrid,Hybrid,Hybrid Fahrzeuge,Hybride
+data_stress_test_sectors,technology,ICE,ICE,Verbrennungsmotor Fahrzeuge,ICE
+data_stress_test_sectors,technology,Coal,Coal,Kohle,Charbon
+data_stress_test_sectors,technology,Gas,Gas,Gas,Gaz
+data_stress_test_sectors,technology,Oil,Oil,Öl,Pétrole
+data_stress_test_sectors,technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_stress_test_sectors,technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_stress_test_sectors,technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_stress_test_sectors,technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_stress_test_sectors,technology,OilCap,Oil Power,Öl-Power,Pétrole
+data_stress_test_sectors,technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_stress_test_sectors,technology,Business Services,Business Services,Dienstleistungen für Unternehmen,Services aux entreprises
+data_stress_test_sectors,technology,Consumer Goods,Consumer Goods,Konsumgüter,Biens de consommation
+data_stress_test_sectors,technology,Consumer Retail,Consumer Retail,Verbraucher-Einzelhandel,Consommation au détail
+data_stress_test_sectors,technology,Consumer Vehicles and Parts,Consumer Vehicles and Parts,Konsumfahrzeuge und Teile,Véhicules de consommation et pièces détachées
+data_stress_test_sectors,technology,Miscellaneous Retail,Miscellaneous Retail,Diverses Einzelhandel,Commerce de détail divers
+data_stress_test_sectors,technology,Food and Staples Retail,Food and Staples Retail,Lebensmittel- und Grundnahrungsmittel-Einzelhandel,Vente au détail de denrées alimentaires et de produits de base
+data_stress_test_sectors,technology,Food and Tobacco Production,Food and Tobacco Production,Lebensmittel- und Tabakproduktion,Production de denrées alimentaires et de tabac
+data_stress_test_sectors,technology,Hospitality Services,Hospitality Services,Gastfreundschaft,Services d'accueil
+data_stress_test_sectors,technology,Media and Publishing Services,Media and Publishing Services,Medien- und Verlagsdienste,Médias et services de publication
+data_stress_test_sectors,technology,Downstream and Midstream Energy,Downstream and Midstream Energy,Downstream- und Midstream-Energie,Énergie en aval et en milieu de chaîne
+data_stress_test_sectors,technology,Integrated Oil and Gas Exploration and Production,Integrated Oil and Gas Exploration and Production,Integrierte Öl- und Gasexploration und -produktion,Exploration et production intégrées de pétrole et de gaz
+data_stress_test_sectors,technology,Upstream Energy,Upstream Energy,Vorgelagerte Energie,Énergie en amont
+data_stress_test_sectors,technology,Banking,Banking,Bankwesen,Banque
+data_stress_test_sectors,technology,Insurance,Insurance,Versicherung,Assurance
+data_stress_test_sectors,technology,Investment Services,Investment Services,Investitionsdienste,Services d'investissement
+data_stress_test_sectors,technology,Real Estate,Real Estate,Immobilien,Immobilier
+data_stress_test_sectors,technology,Specialty Finance and Services,Specialty Finance and Services,Spezialgebiete Finanzen und Dienstleistungen,Finance et services spécialisés
+data_stress_test_sectors,technology,Healthcare Equipment,Healthcare Equipment,Ausrüstung für das Gesundheitswesen,Équipements de soins de santé
+data_stress_test_sectors,technology,Industrial Manufacturing,Industrial Manufacturing,Industrielle Fertigung,Fabrication industrielle
+data_stress_test_sectors,technology,Industrial Services,Industrial Services,Industrielle Dienstleistungen,Services industriels
+data_stress_test_sectors,technology,"Chemical, Plastic and Rubber Materials","Chemical, Plastic and Rubber Materials","Chemische, Kunststoff- und Gummimaterialien","Matériaux chimiques, plastiques et caoutchoucs"
+data_stress_test_sectors,technology,Manufactured Products,Manufactured Products,Hergestellte Produkte,Produits manufacturés
+data_stress_test_sectors,technology,Mining and Mineral Products,Mining and Mineral Products,Bergbau und Mineralprodukte,Mines et produits minéraux
+data_stress_test_sectors,technology,Electronic Components and Manufacturing,Electronic Components and Manufacturing,Elektronische Komponenten und Fertigung,Composants électroniques et fabrication
+data_stress_test_sectors,technology,Hardware,Hardware,Hardware,Matériel
+data_stress_test_sectors,technology,Software and Consulting,Software and Consulting,Software und Beratung,Logiciels et conseil
+data_stress_test_sectors,technology,Telecommunications,Telecommunications,Telekommunikation,Télécommunications
+data_stress_test_sectors,technology,Utilities,Utilities,Versorgungsunternehmen,Services publics
+data_stress_test_sectors,technology,NA,NA,NA,NA
+data_stress_test_sectors,asset_class,Bonds,Bonds,Unternehmensanleihen,Obligations
+data_stress_test_sectors,asset_class,Equity,Equity,Aktien,Équité
+data_company_bubble,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_company_bubble,ald_sector,Coal,Coal,Kohle,Charbon
+data_company_bubble,ald_sector,Oil&Gas,Oil&Gas,Öl&Gas,Pétrole et gaz
+data_company_bubble,ald_sector,Power,Power,Energie,Power
+data_company_bubble,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_company_bubble,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_key_bars_company,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_key_bars_company,ald_sector,Coal,Coal,Kohle,Charbon
+data_key_bars_company,ald_sector,Oil&Gas,Oil&Gas,Öl&Gas,Pétrole et gaz
+data_key_bars_company,ald_sector,Power,Power,Energie,Power
+data_key_bars_company,ald_sector,Aviation,Aviation,Luftfahrt,Aviation
+data_key_bars_company,ald_sector,Cement,Cement,Zement,Ciment
+data_key_bars_company,ald_sector,Shipping,Shipping,Schifffahrt,Expédition
+data_key_bars_company,ald_sector,Steel,Steel,Stahl,Acier
+data_key_bars_company,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_key_bars_company,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_key_bars_company,technology,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+data_key_bars_company,technology,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+data_key_bars_company,technology,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+data_key_bars_company,technology,Coal,Coal,Kohle,Charbon
+data_key_bars_company,technology,Gas,Gas,Gas,Gaz
+data_key_bars_company,technology,Oil,Oil,Öl,Pétrole
+data_key_bars_company,technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_key_bars_company,technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_key_bars_company,technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_key_bars_company,technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_key_bars_company,technology,OilCap,Oil Power,Öl-Power,Pétrole
+data_key_bars_company,technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_key_bars_company,technology,Electric_HDV,HDV: Electric,HDV: Elektrisches,HDV : Électrique
+data_key_bars_company,technology,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+data_key_bars_company,technology,Hybrid_HDV,HDV: Hybrid,HDV: Hybridantrieb,HDV: Hybride
+data_key_bars_company,technology,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor,HDV : ICE
+data_key_bars_company,technology,Freight,Freight,Fracht,Fret
+data_key_bars_company,technology,Mix,Mix,Mischen,Mix
+data_key_bars_company,technology,Other,Other,Andere,Autres
+data_key_bars_company,technology,Passenger,Passenger,Passagier,Passager
+data_key_bars_portfolio,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_key_bars_portfolio,ald_sector,Coal,Coal,Kohle,Charbon
+data_key_bars_portfolio,ald_sector,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_key_bars_portfolio,ald_sector,Power,Power,Energie,Power
+data_key_bars_portfolio,ald_sector,Aviation,Aviation,Luftfahrt,Aviation
+data_key_bars_portfolio,ald_sector,Cement,Cement,Zement,Ciment
+data_key_bars_portfolio,ald_sector,Shipping,Shipping,Schifffahrt,Expédition
+data_key_bars_portfolio,ald_sector,Steel,Steel,Stahl,Acier
+data_key_bars_portfolio,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_key_bars_portfolio,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_key_bars_portfolio,technology,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+data_key_bars_portfolio,technology,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+data_key_bars_portfolio,technology,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+data_key_bars_portfolio,technology,Coal,Coal,Kohle,Charbon
+data_key_bars_portfolio,technology,Gas,Gas,Gas,Gaz
+data_key_bars_portfolio,technology,Oil,Oil,Öl,Pétrole
+data_key_bars_portfolio,technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_key_bars_portfolio,technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_key_bars_portfolio,technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_key_bars_portfolio,technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_key_bars_portfolio,technology,OilCap,Oil Power,Öl-Power,Pétrole
+data_key_bars_portfolio,technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_key_bars_portfolio,technology,Electric_HDV,HDV: Electric,HDV: Elektrisches,HDV : Électrique
+data_key_bars_portfolio,technology,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+data_key_bars_portfolio,technology,Hybrid_HDV,HDV: Hybrid,HDV: Hybridantrieb,HDV : Hybride
+data_key_bars_portfolio,technology,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor,HDV : ICE
+data_key_bars_portfolio,technology,Freight,Freight,Fracht,Fret
+data_key_bars_portfolio,technology,Mix,Mix,Mischen,Mix
+data_key_bars_portfolio,technology,Other,Other,Andere,Autres
+data_key_bars_portfolio,technology,Passenger,Passenger,Passagier,Passager
+data_key_bars_portfolio,id,Portfolio,Portfolio,Portfolio,Portefeuille
+data_key_bars_portfolio,id,Aligned Portfolio,Aligned Portfolio,Ausgerichtetes Portfolio,Portefeuille aligné
+data_peercomparison,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_peercomparison,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_peer_bubbles,ald_sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_peer_bubbles,ald_sector,Coal,Coal,Kohle,Charbon
+data_peer_bubbles,ald_sector,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_peer_bubbles,ald_sector,Power,Power,Energie,Power
+data_peer_bubbles,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_peer_bubbles,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_peer_bubbles,peer_group,Pension Fund,Pension Fund,Pensionsfonds,Fonds de pension
+data_peer_bubbles,peer_group,Asset Manager,Asset Manager,Vermögensverwalter,Gestionnaire d'actifs
+data_peer_bubbles,peer_group,Banking,Banking,Bankwesen,Banque
+data_peer_bubbles,peer_group,Insurance,Insurance,Versicherung,Assurance
+data_peer_bubbles,peer_group,Meta Investor,Meta Investor,Meta-Investor,Méta-investisseur
+data_peer_bubbles,peer_group,Others,Others,Anderen,Autres
+data_peer_bubbles,peer_group,Pension Funds and Insurances,Pension Funds and Insurances,Pensionsfonds und Versicherung,Fonds de pension et assurances
+data_peer_bubbles,peer_group,Banks and Asset Managers,Banks and Asset Managers,Banken und Vermögensverwalter,Banques et gestionnaires d'actifs
+data_peer_table,Asset Class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_peer_table,Asset Class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_peer_table,Sector,Automotive,Automotive,Automobilindustrie,Automobile
+data_peer_table,Sector,Coal,Coal,Kohle,Charbon
+data_peer_table,Sector,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_peer_table,Sector,Power,Power,Energie,Power
+data_peer_table,Technology,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+data_peer_table,Technology,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+data_peer_table,Technology,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+data_peer_table,Technology,Coal,Coal,Kohle,Charbon
+data_peer_table,Technology,Gas,Gas,Gas,Gaz
+data_peer_table,Technology,Oil,Oil,Öl,Pétrole
+data_peer_table,Technology,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_peer_table,Technology,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_peer_table,Technology,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_peer_table,Technology,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_peer_table,Technology,OilCap,Oil Power,Öl-Power,Pétrole
+data_peer_table,Technology,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_peer_table,Technology,Coal Power,Coal Power,Kohlekraft,L'énergie du charbon
+data_peer_table,Technology,Gas Power,Gas Power,Gaskraft,L'énergie du gaz
+data_peer_table,Technology,Hydro Power,Hydropower,Wasserkraft,L'énergie hydraulique
+data_peer_table,Technology,Nuclear Power,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_peer_table,Technology,Oil Power,Oil Power,Öl-Power,Pétrole
+data_peer_table,Technology,Renewables Power,Renewables,Erneuerbare Energien,Les énergies renouvelables
