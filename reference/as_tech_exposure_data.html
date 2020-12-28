@@ -118,16 +118,13 @@
     </div>
 
     <pre class="usage"><span class='fu'>as_tech_exposure_data</span><span class='op'>(</span>
-  <span class='va'>investor_name</span>,
-  <span class='va'>portfolio_name</span>,
-  <span class='va'>start_year</span>,
-  <span class='va'>peer_group</span>,
   <span class='va'>equity_results_portfolio</span>,
   <span class='va'>bonds_results_portfolio</span>,
   <span class='va'>indices_equity_results_portfolio</span>,
   <span class='va'>indices_bonds_results_portfolio</span>,
-  <span class='va'>peers_equity_results_portfolio</span>,
-  <span class='va'>peers_bonds_results_portfolio</span>,
+  <span class='va'>investor_name</span>,
+  <span class='va'>portfolio_name</span>,
+  <span class='va'>start_year</span>,
   green_techs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"RenewablesCap"</span>, <span class='st'>"HydroCap"</span>, <span class='st'>"NuclearCap"</span>, <span class='st'>"Hybrid"</span>, <span class='st'>"Electric"</span>,
     <span class='st'>"FuelCell"</span>, <span class='st'>"Hybrid_HDV"</span>, <span class='st'>"Electric_HDV"</span>, <span class='st'>"FuelCell_HDV"</span>, <span class='st'>"Ac-Electric Arc Furnace"</span>,
     <span class='st'>"Dc-Electric Arc Furnace"</span><span class='op'>)</span>,
@@ -145,22 +142,6 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>investor_name</th>
-      <td><p>investor_name</p></td>
-    </tr>
-    <tr>
-      <th>portfolio_name</th>
-      <td><p>portfolio_name</p></td>
-    </tr>
-    <tr>
-      <th>start_year</th>
-      <td><p>start_year</p></td>
-    </tr>
-    <tr>
-      <th>peer_group</th>
-      <td><p>peer_group</p></td>
-    </tr>
-    <tr>
       <th>equity_results_portfolio</th>
       <td><p>equity_results_portfolio</p></td>
     </tr>
@@ -177,12 +158,16 @@
       <td><p>indices_bonds_results_portfolio</p></td>
     </tr>
     <tr>
-      <th>peers_equity_results_portfolio</th>
-      <td><p>peers_equity_results_portfolio</p></td>
+      <th>investor_name</th>
+      <td><p>investor_name</p></td>
     </tr>
     <tr>
-      <th>peers_bonds_results_portfolio</th>
-      <td><p>peers_bonds_results_portfolio</p></td>
+      <th>portfolio_name</th>
+      <td><p>portfolio_name</p></td>
+    </tr>
+    <tr>
+      <th>start_year</th>
+      <td><p>start_year</p></td>
     </tr>
     <tr>
       <th>green_techs</th>
