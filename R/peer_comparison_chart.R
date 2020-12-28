@@ -49,8 +49,6 @@ peer_comparison_chart <-
 #' @param start_year start_year
 #' @param equity_results_portfolio equity_results_portfolio
 #' @param bonds_results_portfolio bonds_results_portfolio
-#' @param indices_equity_results_portfolio indices_equity_results_portfolio
-#' @param indices_bonds_results_portfolio indices_bonds_results_portfolio
 #' @param peers_equity_results_portfolio peers_equity_results_portfolio
 #' @param peers_bonds_results_portfolio peers_bonds_results_portfolio
 #' @param select_scenario select_scenario
@@ -75,8 +73,6 @@ as_peer_comparison_data <-
     start_year,
     equity_results_portfolio,
     bonds_results_portfolio,
-    indices_equity_results_portfolio,
-    indices_bonds_results_portfolio,
     peers_equity_results_user,
     peers_bonds_results_user,
     select_scenario,
