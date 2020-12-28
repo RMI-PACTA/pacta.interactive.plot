@@ -52,25 +52,15 @@ load(system.file("example-data/test.rda", package = "r2dii.interactive"))
 
 tech_exposure <-
   as_tech_exposure_data(
-    investor_name = investor_name,
-    portfolio_name = portfolio_name,
-    start_year = start_year,
-    peer_group = peer_group,
     equity_results_portfolio = equity_results_portfolio,
     bonds_results_portfolio = bonds_results_portfolio,
     indices_equity_results_portfolio = indices_equity_results_portfolio,
     indices_bonds_results_portfolio = indices_bonds_results_portfolio,
-    peers_equity_results_portfolio = peers_equity_results_portfolio,
-    peers_bonds_results_portfolio = peers_bonds_results_portfolio,
-    green_techs = green_techs,
-    select_scenario = select_scenario,
-    select_scenario_auto = select_scenario_auto,
-    select_scenario_shipping = select_scenario_shipping,
-    select_scenario_other = select_scenario_other,
-    all_tech_levels = all_tech_levels,
-    equity_market_levels = equity_market_levels,
-    dataframe_translations = dataframe_translations,
-    language_select = "EN"
+    select_scenario = "WEO2019_SDS",
+    select_scenario_auto = "ETP2017_B2DS",
+    select_scenario_shipping = "SBTI_SBTI",
+    select_scenario_other = "ETP2017_B2DS",
+    equity_market_levels = c("Global Market", "Developed Market", "Emerging Market")
   )
 
 tech_exposure_chart(tech_exposure)
@@ -85,20 +75,10 @@ load(system.file("example-data/test.rda", package = "r2dii.interactive"))
 
 trajectory_alignment_data <-
   as_trajectory_alignment_data(
-    investor_name = investor_name,
-    portfolio_name = portfolio_name,
-    peer_group = peer_group,
     equity_results_portfolio = equity_results_portfolio,
     bonds_results_portfolio = bonds_results_portfolio,
     indices_equity_results_portfolio = indices_equity_results_portfolio,
     indices_bonds_results_portfolio = indices_bonds_results_portfolio,
-    peers_equity_results_portfolio = peers_equity_results_portfolio,
-    peers_bonds_results_portfolio = peers_bonds_results_portfolio,
-    tech_roadmap_sectors = tech_roadmap_sectors,
-    scen_geo_levels = scen_geo_levels,
-    all_tech_levels = all_tech_levels,
-    dataframe_translations = dataframe_translations,
-    language_select = "EN"
   )
 
 trajectory_alignment_chart(trajectory_alignment_data)
@@ -113,22 +93,18 @@ load(system.file("example-data/test.rda", package = "r2dii.interactive"))
 
 peer_comparison_data <-
   as_peer_comparison_data(
-    investor_name = investor_name,
-    portfolio_name = portfolio_name,
-    peer_group = peer_group,
-    start_year = start_year,
     equity_results_portfolio = equity_results_portfolio,
     bonds_results_portfolio = bonds_results_portfolio,
-    indices_equity_results_portfolio = indices_equity_results_portfolio,
-    indices_bonds_results_portfolio = indices_bonds_results_portfolio,
     peers_equity_results_user = peers_equity_results_user,
     peers_bonds_results_user = peers_bonds_results_user,
-    select_scenario = select_scenario,
-    select_scenario_auto = select_scenario_auto,
-    select_scenario_shipping = select_scenario_shipping,
-    select_scenario_other = select_scenario_other,
-    dataframe_translations = dataframe_translations,
-    language_select = "EN"
+    investor_name = "Test",
+    portfolio_name = "TestPortfolio_Input",
+    start_year = 2020,
+    peer_group = "pensionfund",
+    select_scenario = "WEO2019_SDS",
+    select_scenario_auto = "ETP2017_B2DS",
+    select_scenario_shipping = "SBTI_SBTI",
+    select_scenario_other = "ETP2017_B2DS"
   )
 
 peer_comparison_chart(peer_comparison_data)
