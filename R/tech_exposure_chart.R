@@ -92,6 +92,13 @@ as_tech_exposure_data <-
   ) {
     .data <- NULL
 
+    if (missing(all_tech_levels)) {
+      all_tech_levels <- all_tech_levels_default
+    }
+    if (missing(dataframe_translations)) {
+      dataframe_translations <- dataframe_translations_default
+    }
+
     portfolio <-
       list(`Listed Equity` = equity_results_portfolio,
            `Corporate Bonds` = bonds_results_portfolio) %>%

@@ -17,9 +17,7 @@ test_that("as_tech_exposure_data() works", {
       select_scenario_auto = select_scenario_auto,
       select_scenario_shipping = select_scenario_shipping,
       select_scenario_other = select_scenario_other,
-      all_tech_levels = all_tech_levels_default,
       equity_market_levels = equity_market_levels,
-      dataframe_translations = dataframe_translations_default,
       language_select = "EN"
     )
 
@@ -40,9 +38,7 @@ test_that("as_tech_exposure_data() works", {
       select_scenario_auto = select_scenario_auto,
       select_scenario_shipping = select_scenario_shipping,
       select_scenario_other = select_scenario_other,
-      all_tech_levels = all_tech_levels_default,
       equity_market_levels = equity_market_levels,
-      dataframe_translations = dataframe_translations_default,
       language_select = "EN"
     )
     , NA)
