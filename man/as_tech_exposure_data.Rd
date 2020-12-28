@@ -13,8 +13,6 @@ as_tech_exposure_data(
   bonds_results_portfolio,
   indices_equity_results_portfolio,
   indices_bonds_results_portfolio,
-  peers_equity_results_portfolio,
-  peers_bonds_results_portfolio,
   green_techs = c("RenewablesCap", "HydroCap", "NuclearCap", "Hybrid", "Electric",
     "FuelCell", "Hybrid_HDV", "Electric_HDV", "FuelCell_HDV", "Ac-Electric Arc Furnace",
     "Dc-Electric Arc Furnace"),
@@ -44,10 +42,6 @@ as_tech_exposure_data(
 \item{indices_equity_results_portfolio}{indices_equity_results_portfolio}
 
 \item{indices_bonds_results_portfolio}{indices_bonds_results_portfolio}
-
-\item{peers_equity_results_portfolio}{peers_equity_results_portfolio}
-
-\item{peers_bonds_results_portfolio}{peers_bonds_results_portfolio}
 
 \item{green_techs}{green_techs}
 

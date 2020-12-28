@@ -50,8 +50,6 @@ tech_exposure_chart <-
 #' @param bonds_results_portfolio bonds_results_portfolio
 #' @param indices_equity_results_portfolio indices_equity_results_portfolio
 #' @param indices_bonds_results_portfolio indices_bonds_results_portfolio
-#' @param peers_equity_results_portfolio peers_equity_results_portfolio
-#' @param peers_bonds_results_portfolio peers_bonds_results_portfolio
 #' @param green_techs green_techs
 #' @param select_scenario select_scenario
 #' @param select_scenario_auto select_scenario_auto
@@ -78,8 +76,6 @@ as_tech_exposure_data <-
     bonds_results_portfolio,
     indices_equity_results_portfolio,
     indices_bonds_results_portfolio,
-    peers_equity_results_portfolio,
-    peers_bonds_results_portfolio,
     green_techs = c('RenewablesCap', 'HydroCap', 'NuclearCap', 'Hybrid', 'Electric', "FuelCell", "Hybrid_HDV", "Electric_HDV", "FuelCell_HDV","Ac-Electric Arc Furnace","Dc-Electric Arc Furnace"),
     select_scenario,
     select_scenario_auto,
@@ -132,18 +128,8 @@ as_tech_exposure_data <-
       dplyr::filter(.data$asset_class == 'Listed Equity' & .data$ald_sector %in% equity_sectors |
                       .data$asset_class == 'Corporate Bonds' & .data$ald_sector %in% bonds_sectors)
 
-    peers <-
-      list(`Listed Equity` = peers_equity_results_portfolio,
-           `Corporate Bonds` = peers_bonds_results_portfolio) %>%
-      dplyr::bind_rows(.id = 'asset_class') %>%
-      dplyr::as_tibble() %>%
-      dplyr::filter(.data$asset_class %in% asset_classes) %>%
-      dplyr::filter(.data$asset_class == 'Listed Equity' & .data$ald_sector %in% equity_sectors |
-                      .data$asset_class == 'Corporate Bonds' & .data$ald_sector %in% bonds_sectors) %>%
-      dplyr::filter(investor_name == !!peer_group)
-
     techexposure_data <-
-      dplyr::bind_rows(portfolio, peers, indices) %>%
+      dplyr::bind_rows(portfolio, indices) %>%
       dplyr::filter(.data$allocation == 'portfolio_weight') %>%
       dplyr::filter(.data$scenario == dplyr::if_else(.data$ald_sector == "Automotive", select_scenario_auto,
                                                dplyr::if_else(.data$ald_sector == "Shipping", select_scenario_shipping,
