@@ -5,29 +5,20 @@
 \title{Convert raw data into a trajectory alignment data frame}
 \usage{
 as_trajectory_alignment_data(
-  investor_name,
-  portfolio_name,
-  peer_group,
   equity_results_portfolio,
   bonds_results_portfolio,
   indices_equity_results_portfolio,
   indices_bonds_results_portfolio,
-  peers_equity_results_portfolio,
-  peers_bonds_results_portfolio,
+  investor_name,
+  portfolio_name,
   tech_roadmap_sectors,
   scen_geo_levels,
   all_tech_levels,
   dataframe_translations,
-  language_select = "EN"
+  language_select = "en"
 )
 }
 \arguments{
-\item{investor_name}{investor_name}
-
-\item{portfolio_name}{portfolio_name}
-
-\item{peer_group}{peer_group}
-
 \item{equity_results_portfolio}{equity_results_portfolio}
 
 \item{bonds_results_portfolio}{bonds_results_portfolio}
@@ -36,9 +27,9 @@ as_trajectory_alignment_data(
 
 \item{indices_bonds_results_portfolio}{indices_bonds_results_portfolio}
 
-\item{peers_equity_results_portfolio}{peers_equity_results_portfolio}
+\item{investor_name}{investor_name}
 
-\item{peers_bonds_results_portfolio}{peers_bonds_results_portfolio}
+\item{portfolio_name}{portfolio_name}
 
 \item{tech_roadmap_sectors}{tech_roadmap_sectors}
 

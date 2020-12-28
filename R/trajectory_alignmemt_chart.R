@@ -43,15 +43,12 @@ trajectory_alignment_chart <-
 
 #' Convert raw data into a trajectory alignment data frame
 #'
-#' @param investor_name investor_name
-#' @param portfolio_name portfolio_name
-#' @param peer_group peer_group
 #' @param equity_results_portfolio equity_results_portfolio
 #' @param bonds_results_portfolio bonds_results_portfolio
 #' @param indices_equity_results_portfolio indices_equity_results_portfolio
 #' @param indices_bonds_results_portfolio indices_bonds_results_portfolio
-#' @param peers_equity_results_portfolio peers_equity_results_portfolio
-#' @param peers_bonds_results_portfolio peers_bonds_results_portfolio
+#' @param investor_name investor_name
+#' @param portfolio_name portfolio_name
 #' @param tech_roadmap_sectors tech_roadmap_sectors
 #' @param scen_geo_levels scen_geo_levels
 #' @param all_tech_levels all_tech_levels
@@ -67,27 +64,47 @@ trajectory_alignment_chart <-
 
 as_trajectory_alignment_data <-
   function(
-    investor_name,
-    portfolio_name,
-    peer_group,
     equity_results_portfolio,
     bonds_results_portfolio,
     indices_equity_results_portfolio,
     indices_bonds_results_portfolio,
-    peers_equity_results_portfolio,
-    peers_bonds_results_portfolio,
+    investor_name,
+    portfolio_name,
     tech_roadmap_sectors,
     scen_geo_levels,
     all_tech_levels,
     dataframe_translations,
-    language_select = "EN"
+    language_select = "en"
   ) {
     .data <- NULL
 
-    portfolio <-
+    if (missing(tech_roadmap_sectors)) {
+      tech_roadmap_sectors <- tech_roadmap_sectors_default
+    }
+    if (missing(scen_geo_levels)) {
+      scen_geo_levels <- scen_geo_levels_default
+    }
+    if (missing(all_tech_levels)) {
+      all_tech_levels <- all_tech_levels_default
+    }
+    if (missing(dataframe_translations)) {
+      dataframe_translations <- dataframe_translations_default
+    }
+
+    full_portfolio <-
       list(`Listed Equity` = equity_results_portfolio,
            `Corporate Bonds` = bonds_results_portfolio) %>%
-      bind_rows(.id = 'asset_class') %>%
+      bind_rows(.id = 'asset_class')
+
+    if (missing(investor_name)) {
+      investor_name <- full_portfolio$investor_name[[1]]
+    }
+    if (missing(portfolio_name)) {
+      portfolio_name <- full_portfolio$portfolio_name[[1]]
+    }
+
+    portfolio <-
+      full_portfolio %>%
       filter(investor_name == !!investor_name,
              portfolio_name == !!portfolio_name) %>%
       filter(.data$ald_sector %in% !!tech_roadmap_sectors) %>%
@@ -136,23 +153,7 @@ as_trajectory_alignment_data <-
       pull(.data$technology) %>%
       unique()
 
-
-    peers <-
-      list(`Listed Equity` = peers_equity_results_portfolio,
-           `Corporate Bonds` = peers_bonds_results_portfolio) %>%
-      bind_rows(.id = 'asset_class') %>%
-      filter(.data$ald_sector %in% !!tech_roadmap_sectors) %>%
-      filter(.data$asset_class %in% !!asset_classes) %>%
-      filter(.data$asset_class == 'Listed Equity' & .data$equity_market %in% !!equity_markets |
-               .data$asset_class == 'Corporate Bonds' & .data$equity_market %in% !!bonds_markets) %>%
-      filter(.data$asset_class == 'Listed Equity' & .data$technology %in% !!equity_techs |
-               .data$asset_class == 'Corporate Bonds' & .data$technology %in% !!bonds_techs) %>%
-      filter(.data$asset_class == 'Listed Equity' & .data$scenario_geography %in% !!equity_scenario_geography |
-               .data$asset_class == 'Corporate Bonds' & .data$scenario_geography %in% !!bonds_scenario_geography) %>%
-      filter(.data$investor_name == !!peer_group)
-
-
-    indices <-
+    benchmark_data <-
       list(`Listed Equity` = indices_equity_results_portfolio,
            `Corporate Bonds` = indices_bonds_results_portfolio) %>%
       bind_rows(.id = 'asset_class') %>%
@@ -164,9 +165,6 @@ as_trajectory_alignment_data <-
                .data$asset_class == 'Corporate Bonds' & .data$technology %in% !!bonds_techs) %>%
       filter(.data$asset_class == 'Listed Equity' & .data$scenario_geography %in% !!equity_scenario_geography |
                .data$asset_class == 'Corporate Bonds' & .data$scenario_geography %in% !!bonds_scenario_geography)
-
-
-    benchmark_data <- bind_rows(peers, indices)
 
     data_trajectory_alignment <-
       list(portfolio = portfolio,
