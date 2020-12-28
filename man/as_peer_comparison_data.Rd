@@ -11,10 +11,8 @@ as_peer_comparison_data(
   start_year,
   equity_results_portfolio,
   bonds_results_portfolio,
-  indices_equity_results_portfolio,
-  indices_bonds_results_portfolio,
-  peers_equity_results_portfolio,
-  peers_bonds_results_portfolio,
+  peers_equity_results_user,
+  peers_bonds_results_user,
   select_scenario,
   select_scenario_auto,
   select_scenario_shipping,
@@ -36,13 +34,9 @@ as_peer_comparison_data(
 
 \item{bonds_results_portfolio}{bonds_results_portfolio}
 
-\item{indices_equity_results_portfolio}{indices_equity_results_portfolio}
+\item{peers_equity_results_user}{peers_equity_results_user}
 
-\item{indices_bonds_results_portfolio}{indices_bonds_results_portfolio}
-
-\item{peers_equity_results_portfolio}{peers_equity_results_portfolio}
-
-\item{peers_bonds_results_portfolio}{peers_bonds_results_portfolio}
+\item{peers_bonds_results_user}{peers_bonds_results_user}
 
 \item{select_scenario}{select_scenario}
 

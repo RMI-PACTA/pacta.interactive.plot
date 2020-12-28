@@ -49,8 +49,8 @@ peer_comparison_chart <-
 #' @param start_year start_year
 #' @param equity_results_portfolio equity_results_portfolio
 #' @param bonds_results_portfolio bonds_results_portfolio
-#' @param peers_equity_results_portfolio peers_equity_results_portfolio
-#' @param peers_bonds_results_portfolio peers_bonds_results_portfolio
+#' @param peers_equity_results_user peers_equity_results_user
+#' @param peers_bonds_results_user peers_bonds_results_user
 #' @param select_scenario select_scenario
 #' @param select_scenario_auto select_scenario_auto
 #' @param select_scenario_shipping select_scenario_shipping
