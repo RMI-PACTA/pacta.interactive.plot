@@ -27,6 +27,7 @@ choose_dictionary_language <-
   function(data, language) {
     .data <- NULL
     language <- tolower(language)
+    stopifnot(language %in% names(data))
 
     key_values <- data %>%
       dplyr::transmute(
