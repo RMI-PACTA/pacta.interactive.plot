@@ -84,6 +84,11 @@ as_peer_comparison_data <-
   ) {
     .data <- NULL
 
+
+    if (missing(dataframe_translations)) {
+      dataframe_translations <- dataframe_translations_default
+    }
+
     high_carbon_vars <-
       c("High-carbon Power Production", "High-carbon Transportion", "Fossil Fuels", "High-carbon Industry")
 
