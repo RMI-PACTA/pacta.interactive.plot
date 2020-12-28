@@ -5,14 +5,13 @@
 \title{Convert raw data into a tech exposure data frame}
 \usage{
 as_tech_exposure_data(
-  investor_name,
-  portfolio_name,
-  start_year,
-  peer_group,
   equity_results_portfolio,
   bonds_results_portfolio,
   indices_equity_results_portfolio,
   indices_bonds_results_portfolio,
+  investor_name,
+  portfolio_name,
+  start_year,
   green_techs = c("RenewablesCap", "HydroCap", "NuclearCap", "Hybrid", "Electric",
     "FuelCell", "Hybrid_HDV", "Electric_HDV", "FuelCell_HDV", "Ac-Electric Arc Furnace",
     "Dc-Electric Arc Furnace"),
@@ -27,14 +26,6 @@ as_tech_exposure_data(
 )
 }
 \arguments{
-\item{investor_name}{investor_name}
-
-\item{portfolio_name}{portfolio_name}
-
-\item{start_year}{start_year}
-
-\item{peer_group}{peer_group}
-
 \item{equity_results_portfolio}{equity_results_portfolio}
 
 \item{bonds_results_portfolio}{bonds_results_portfolio}
@@ -42,6 +33,12 @@ as_tech_exposure_data(
 \item{indices_equity_results_portfolio}{indices_equity_results_portfolio}
 
 \item{indices_bonds_results_portfolio}{indices_bonds_results_portfolio}
+
+\item{investor_name}{investor_name}
+
+\item{portfolio_name}{portfolio_name}
+
+\item{start_year}{start_year}
 
 \item{green_techs}{green_techs}
 

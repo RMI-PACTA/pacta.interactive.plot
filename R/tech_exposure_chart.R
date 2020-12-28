@@ -42,14 +42,13 @@ tech_exposure_chart <-
 
 #' Convert raw data into a tech exposure data frame
 #'
-#' @param investor_name investor_name
-#' @param portfolio_name portfolio_name
-#' @param start_year start_year
-#' @param peer_group peer_group
 #' @param equity_results_portfolio equity_results_portfolio
 #' @param bonds_results_portfolio bonds_results_portfolio
 #' @param indices_equity_results_portfolio indices_equity_results_portfolio
 #' @param indices_bonds_results_portfolio indices_bonds_results_portfolio
+#' @param investor_name investor_name
+#' @param portfolio_name portfolio_name
+#' @param start_year start_year
 #' @param green_techs green_techs
 #' @param select_scenario select_scenario
 #' @param select_scenario_auto select_scenario_auto
@@ -68,15 +67,14 @@ tech_exposure_chart <-
 
 as_tech_exposure_data <-
   function(
-    investor_name,
-    portfolio_name,
-    start_year,
-    peer_group,
     equity_results_portfolio,
     bonds_results_portfolio,
     indices_equity_results_portfolio,
     indices_bonds_results_portfolio,
-    green_techs = c('RenewablesCap', 'HydroCap', 'NuclearCap', 'Hybrid', 'Electric', "FuelCell", "Hybrid_HDV", "Electric_HDV", "FuelCell_HDV","Ac-Electric Arc Furnace","Dc-Electric Arc Furnace"),
+    investor_name,
+    portfolio_name,
+    start_year,
+    green_techs = c("RenewablesCap", "HydroCap", "NuclearCap", "Hybrid", "Electric", "FuelCell", "Hybrid_HDV", "Electric_HDV", "FuelCell_HDV", "Ac-Electric Arc Furnace", "Dc-Electric Arc Furnace"),
     select_scenario,
     select_scenario_auto,
     select_scenario_shipping,
@@ -95,10 +93,23 @@ as_tech_exposure_data <-
       dataframe_translations <- dataframe_translations_default
     }
 
-    portfolio <-
+    full_portfolio <-
       list(`Listed Equity` = equity_results_portfolio,
            `Corporate Bonds` = bonds_results_portfolio) %>%
-      dplyr::bind_rows(.id = 'asset_class') %>%
+      dplyr::bind_rows(.id = 'asset_class')
+
+    if (missing(investor_name)) {
+      investor_name <- full_portfolio$investor_name[[1]]
+    }
+    if (missing(portfolio_name)) {
+      portfolio_name <- full_portfolio$portfolio_name[[1]]
+    }
+    if (missing(start_year)) {
+      start_year <- min(full_portfolio$year, na.rm = TRUE)
+    }
+
+    portfolio <-
+      full_portfolio %>%
       dplyr::filter(investor_name == !!investor_name,
                     portfolio_name == !!portfolio_name) %>%
       dplyr::filter(!is.na(.data$ald_sector))
