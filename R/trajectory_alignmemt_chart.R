@@ -51,6 +51,7 @@ trajectory_alignment_chart <-
 #' @param portfolio_name portfolio_name
 #' @param tech_roadmap_sectors tech_roadmap_sectors
 #' @param scen_geo_levels scen_geo_levels
+#' @param year_horizon number of years to include from the start year (single integer/numeric)
 #' @param all_tech_levels all_tech_levels
 #' @param dataframe_translations dataframe_translations
 #' @param language_select two letter code for language (single string; default = "EN")
@@ -73,6 +74,7 @@ as_trajectory_alignment_data <-
     tech_roadmap_sectors,
     scen_geo_levels,
     all_tech_levels,
+    year_horizon = 5,
     dataframe_translations,
     language_select = "en"
   ) {
@@ -188,7 +190,7 @@ as_trajectory_alignment_data <-
       pivot_wider(names_from = .data$scenario, values_from = .data$scen_alloc_wt_tech_prod) %>%
       pivot_longer(cols = -(1:11), names_to = 'scenario', values_to = 'value',
                    values_drop_na = TRUE) %>%
-      mutate(value = if_else(.data$year > min(.data$year + 5) & .data$value == 0, NA_real_, .data$value)) %>%
+      mutate(value = if_else(.data$year > min(.data$year + !!year_horizon) & .data$value == 0, NA_real_, .data$value)) %>%
       filter(!is.na(.data$value)) %>%
       filter(.data$scenario == "production" | !.data$benchmark) %>%
       mutate(scenario = sub(".*_", "", .data$scenario),
