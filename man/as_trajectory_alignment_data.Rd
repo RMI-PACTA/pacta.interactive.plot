@@ -14,6 +14,7 @@ as_trajectory_alignment_data(
   tech_roadmap_sectors,
   scen_geo_levels,
   all_tech_levels,
+  year_horizon = 5,
   dataframe_translations,
   language_select = "en"
 )
@@ -36,6 +37,8 @@ as_trajectory_alignment_data(
 \item{scen_geo_levels}{scen_geo_levels}
 
 \item{all_tech_levels}{all_tech_levels}
+
+\item{year_horizon}{number of years to include from the start year (single integer/numeric)}
 
 \item{dataframe_translations}{dataframe_translations}
 
