@@ -1,0 +1,24 @@
+---
+title: "Trajectory Alignment interactive chart"
+output: rmarkdown::html_vignette
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(r2dii.interactive)
+
+load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+
+trajectory_alignment_data <-
+  as_trajectory_alignment_data(
+    equity_results_portfolio = equity_results_portfolio,
+    bonds_results_portfolio = bonds_results_portfolio,
+    indices_equity_results_portfolio = indices_equity_results_portfolio,
+    indices_bonds_results_portfolio = indices_bonds_results_portfolio,
+  )
+
+trajectory_alignment_chart(trajectory_alignment_data)
+```

@@ -1,0 +1,29 @@
+---
+title: "Technology Exposure interactive chart"
+output: rmarkdown::html_vignette
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(r2dii.interactive)
+
+load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+
+tech_exposure <-
+  as_tech_exposure_data(
+    equity_results_portfolio = equity_results_portfolio,
+    bonds_results_portfolio = bonds_results_portfolio,
+    indices_equity_results_portfolio = indices_equity_results_portfolio,
+    indices_bonds_results_portfolio = indices_bonds_results_portfolio,
+    select_scenario = "WEO2019_SDS",
+    select_scenario_auto = "ETP2017_B2DS",
+    select_scenario_shipping = "SBTI_SBTI",
+    select_scenario_other = "ETP2017_B2DS",
+    equity_market_levels = c("Global Market", "Developed Market", "Emerging Market")
+  )
+
+tech_exposure_chart(tech_exposure)
+```
