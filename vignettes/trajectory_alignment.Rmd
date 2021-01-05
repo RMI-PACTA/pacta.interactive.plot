@@ -1,6 +1,10 @@
 ---
 title: "Trajectory Alignment interactive chart"
 output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Trajectory Alignment interactive chart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}

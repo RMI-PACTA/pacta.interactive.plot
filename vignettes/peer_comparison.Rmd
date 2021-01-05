@@ -1,6 +1,10 @@
 ---
 title: "Peer Comparison interactive chart"
 output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Peer Comparison interactive chart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}

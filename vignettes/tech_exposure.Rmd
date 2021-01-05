@@ -1,6 +1,10 @@
 ---
 title: "Technology Exposure interactive chart"
 output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Technology Exposure interactive chart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
