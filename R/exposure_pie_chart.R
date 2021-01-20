@@ -82,19 +82,19 @@ as_exposure_pie_data <-
 
     data_exposure_pie <-
       audit_file %>%
-      filter(investor_name == !!investor_name &
-               portfolio_name == !!portfolio_name) %>%
-      filter(asset_type %in% c('Bonds', 'Equity')) %>%
-      filter(valid_input == TRUE) %>%
-      mutate(across(c(bics_sector, financial_sector), as.character)) %>%
-      mutate(sector = if_else(!has_ald_in_fin_sector,
-                              "Other", financial_sector)) %>%
-      group_by(sector) %>%
-      summarise(value = sum(value_usd, na.rm = TRUE), .groups = 'drop') %>%
-      mutate(exploded = sector %in% twodi_sectors) %>%
-      arrange(desc(exploded), sector) %>%
-      rename(key = sector) %>%
-      filter(!is.na(key))
+      filter(.data$investor_name == !!investor_name &
+               .data$portfolio_name == !!portfolio_name) %>%
+      filter(.data$asset_type %in% c('Bonds', 'Equity')) %>%
+      filter(.data$valid_input == TRUE) %>%
+      mutate(across(c(.data$bics_sector, .data$financial_sector), as.character)) %>%
+      mutate(sector = if_else(!.data$has_ald_in_fin_sector,
+                              "Other", .data$financial_sector)) %>%
+      group_by(.data$sector) %>%
+      summarise(value = sum(.data$value_usd, na.rm = TRUE), .groups = 'drop') %>%
+      mutate(exploded = .data$sector %in% twodi_sectors) %>%
+      arrange(desc(.data$exploded), .data$sector) %>%
+      rename(key = .data$sector) %>%
+      filter(!is.na(.data$key))
 
     dictionary <-
       choose_dictionary_language(dataframe_translations,
