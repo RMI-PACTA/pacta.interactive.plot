@@ -56,7 +56,6 @@ exposure_pie_chart <-
 #' The `as_exposure_pie_data` function converts raw data into a exposure pie data frame
 #'
 #' @import dplyr
-#' @import tidyr
 #' @export
 
 as_exposure_pie_data <-
