@@ -15,33 +15,17 @@ as_exposure_pie_data(
 )
 }
 \arguments{
+\item{audit_file}{audit_file}
+
 \item{investor_name}{investor_name}
 
 \item{portfolio_name}{portfolio_name}
 
+\item{twodi_sectors}{twodi_sectors}
+
 \item{dataframe_translations}{dataframe_translations}
 
 \item{language_select}{two letter code for language (single string; default = "EN")}
-
-\item{peer_group}{peer_group}
-
-\item{start_year}{start_year}
-
-\item{equity_results_portfolio}{equity_results_portfolio}
-
-\item{bonds_results_portfolio}{bonds_results_portfolio}
-
-\item{peers_equity_results_user}{peers_equity_results_user}
-
-\item{peers_bonds_results_user}{peers_bonds_results_user}
-
-\item{select_scenario}{select_scenario}
-
-\item{select_scenario_auto}{select_scenario_auto}
-
-\item{select_scenario_shipping}{select_scenario_shipping}
-
-\item{select_scenario_other}{select_scenario_other}
 }
 \description{
 The \code{as_exposure_pie_data} function converts raw data into a exposure pie data frame
