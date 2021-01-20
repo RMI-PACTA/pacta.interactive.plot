@@ -84,7 +84,6 @@ as_exposure_pie_data <-
       audit_file %>%
       filter(.data$investor_name == !!investor_name &
                .data$portfolio_name == !!portfolio_name) %>%
-      filter(.data$asset_type %in% c('Bonds', 'Equity')) %>%
       filter(.data$valid_input == TRUE) %>%
       mutate(across(c(.data$bics_sector, .data$financial_sector), as.character)) %>%
       mutate(sector = if_else(!.data$has_ald_in_fin_sector,
