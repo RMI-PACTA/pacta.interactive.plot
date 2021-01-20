@@ -45,18 +45,10 @@ exposure_pie_chart <-
 
 #' Convert raw data into a exposure pie data frame
 #'
+#' @param audit_file audit_file
 #' @param investor_name investor_name
 #' @param portfolio_name portfolio_name
-#' @param peer_group peer_group
-#' @param start_year start_year
-#' @param equity_results_portfolio equity_results_portfolio
-#' @param bonds_results_portfolio bonds_results_portfolio
-#' @param peers_equity_results_user peers_equity_results_user
-#' @param peers_bonds_results_user peers_bonds_results_user
-#' @param select_scenario select_scenario
-#' @param select_scenario_auto select_scenario_auto
-#' @param select_scenario_shipping select_scenario_shipping
-#' @param select_scenario_other select_scenario_other
+#' @param twodi_sectors twodi_sectors
 #' @param dataframe_translations dataframe_translations
 #' @param language_select two letter code for language (single string; default = "EN")
 #'
