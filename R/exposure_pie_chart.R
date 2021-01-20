@@ -25,7 +25,7 @@ exposure_pie_chart <-
         system.file("js/text_dropdown_jiggle.js", package = "r2dii.interactive"),
         system.file("css/2dii_gitbook_style.css", package = "r2dii.interactive"),
         system.file("css/hide_styles.css", package = "r2dii.interactive")
-        )
+      )
 
     op <- options(r2d3.shadow = FALSE)
     on.exit(options(op), add = TRUE)
@@ -60,13 +60,12 @@ exposure_pie_chart <-
 
 as_exposure_pie_data <-
   function(
-    audit_file,
-    investor_name,
-    portfolio_name,
-    twodi_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel", "Cement", "Aviation"),
-    dataframe_translations,
-    language_select = "EN"
-  ) {
+           audit_file,
+           investor_name,
+           portfolio_name,
+           twodi_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel", "Cement", "Aviation"),
+           dataframe_translations,
+           language_select = "EN") {
     .data <- NULL
 
     if (missing(dataframe_translations)) {
@@ -83,13 +82,14 @@ as_exposure_pie_data <-
     data_exposure_pie <-
       audit_file %>%
       filter(.data$investor_name == !!investor_name &
-               .data$portfolio_name == !!portfolio_name) %>%
+        .data$portfolio_name == !!portfolio_name) %>%
       filter(.data$valid_input == TRUE) %>%
       mutate(across(c(.data$bics_sector, .data$financial_sector), as.character)) %>%
       mutate(sector = if_else(!.data$has_ald_in_fin_sector,
-                              "Other", .data$financial_sector)) %>%
+        "Other", .data$financial_sector
+      )) %>%
       group_by(.data$sector) %>%
-      summarise(value = sum(.data$value_usd, na.rm = TRUE), .groups = 'drop') %>%
+      summarise(value = sum(.data$value_usd, na.rm = TRUE), .groups = "drop") %>%
       mutate(exploded = .data$sector %in% twodi_sectors) %>%
       arrange(desc(.data$exploded), .data$sector) %>%
       rename(key = .data$sector) %>%
@@ -97,7 +97,8 @@ as_exposure_pie_data <-
 
     dictionary <-
       choose_dictionary_language(dataframe_translations,
-                                 language = language_select)
+        language = language_select
+      )
 
     translate_df_contents(data_exposure_pie, dictionary)
   }

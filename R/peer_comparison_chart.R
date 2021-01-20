@@ -23,7 +23,7 @@ peer_comparison_chart <-
         system.file("js/text_dropdown_jiggle.js", package = "r2dii.interactive"),
         system.file("css/2dii_gitbook_style.css", package = "r2dii.interactive"),
         system.file("css/hide_styles.css", package = "r2dii.interactive")
-        )
+      )
 
     op <- options(r2d3.shadow = FALSE)
     on.exit(options(op), add = TRUE)
@@ -67,21 +67,20 @@ peer_comparison_chart <-
 
 as_peer_comparison_data <-
   function(
-    investor_name,
-    portfolio_name,
-    peer_group,
-    start_year,
-    equity_results_portfolio,
-    bonds_results_portfolio,
-    peers_equity_results_user,
-    peers_bonds_results_user,
-    select_scenario,
-    select_scenario_auto,
-    select_scenario_shipping,
-    select_scenario_other,
-    dataframe_translations,
-    language_select = "EN"
-  ) {
+           investor_name,
+           portfolio_name,
+           peer_group,
+           start_year,
+           equity_results_portfolio,
+           bonds_results_portfolio,
+           peers_equity_results_user,
+           peers_bonds_results_user,
+           select_scenario,
+           select_scenario_auto,
+           select_scenario_shipping,
+           select_scenario_other,
+           dataframe_translations,
+           language_select = "EN") {
     .data <- NULL
 
 
@@ -94,10 +93,11 @@ as_peer_comparison_data <-
 
     equity_data <-
       equity_results_portfolio %>%
-      filter(.data$allocation == 'portfolio_weight',
-             .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
-             .data$equity_market %in% c("Global", "GlobalMarket"),
-             .data$year == !!start_year
+      filter(
+        .data$allocation == "portfolio_weight",
+        .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
+        .data$equity_market %in% c("Global", "GlobalMarket"),
+        .data$year == !!start_year
       ) %>%
       filter(.data$scenario == case_when(
         ald_sector == "Automotive" ~ select_scenario_auto,
@@ -106,41 +106,48 @@ as_peer_comparison_data <-
         TRUE ~ select_scenario
       )) %>%
       mutate(high_carbon_sector = case_when(
-        ald_sector %in% c('Oil&Gas', 'Coal') ~ 'Fossil Fuels',
-        technology %in% c('OilCap', 'CoalCap', 'GasCap') ~ 'High-carbon Power Production',
-        technology %in% c('ICE') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Shipping', 'Aviation') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Cement', 'Steel') ~ 'High-carbon Industry',
+        ald_sector %in% c("Oil&Gas", "Coal") ~ "Fossil Fuels",
+        technology %in% c("OilCap", "CoalCap", "GasCap") ~ "High-carbon Power Production",
+        technology %in% c("ICE") ~ "High-carbon Transportion",
+        ald_sector %in% c("Shipping", "Aviation") ~ "High-carbon Transportion",
+        ald_sector %in% c("Cement", "Steel") ~ "High-carbon Industry",
         TRUE ~ NA_character_
       )) %>%
       filter(!is.na(.data$high_carbon_sector)) %>%
       group_by(.data$investor_name, .data$portfolio_name, .data$high_carbon_sector) %>%
-      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = 'drop') %>%
-      mutate(this_portfolio =
-               .data$investor_name == !!investor_name &
-               .data$portfolio_name == !!portfolio_name) %>%
-      pivot_wider(names_from = .data$high_carbon_sector,
-                  values_from = .data$plan_carsten,
-                  values_fill = list(plan_carsten = 0)) %>%
+      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = "drop") %>%
+      mutate(
+        this_portfolio =
+          .data$investor_name == !!investor_name &
+            .data$portfolio_name == !!portfolio_name
+      ) %>%
+      pivot_wider(
+        names_from = .data$high_carbon_sector,
+        values_from = .data$plan_carsten,
+        values_fill = list(plan_carsten = 0)
+      ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
       select(-.data$investor_name, -.data$this_portfolio) %>%
       mutate(this_portfolio = .data$portfolio_name == !!portfolio_name) %>%
-      mutate(asset_class = 'Listed Equity') %>%
+      mutate(asset_class = "Listed Equity") %>%
       filter(.data$this_portfolio)
     if ("plan_carsten" %in% colnames(equity_data)) {
       equity_data <- equity_data %>% select(-.data$plan_carsten)
     }
-    if (any(equity_data$Total > 1)) { stop("Total Exceeds 1, check filters") }
+    if (any(equity_data$Total > 1)) {
+      stop("Total Exceeds 1, check filters")
+    }
 
     peers_equity_data <-
       peers_equity_results_user %>%
-      filter(.data$allocation == 'portfolio_weight',
-             .data$equity_market %in% c('Global','GlobalMarket'),
-             .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
-             .data$year == !!start_year,
-             .data$investor_name == !!peer_group
+      filter(
+        .data$allocation == "portfolio_weight",
+        .data$equity_market %in% c("Global", "GlobalMarket"),
+        .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
+        .data$year == !!start_year,
+        .data$investor_name == !!peer_group
       ) %>%
       filter(.data$scenario == case_when(
         ald_sector == "Automotive" ~ select_scenario_auto,
@@ -149,26 +156,28 @@ as_peer_comparison_data <-
         TRUE ~ select_scenario
       )) %>%
       mutate(high_carbon_sector = case_when(
-        ald_sector %in% c('Oil&Gas', 'Coal') ~ 'Fossil Fuels',
-        technology %in% c('OilCap', 'CoalCap', 'GasCap') ~ 'High-carbon Power Production',
-        technology %in% c('ICE') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Shipping', 'Aviation') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Cement', 'Steel') ~ 'High-carbon Industry',
+        ald_sector %in% c("Oil&Gas", "Coal") ~ "Fossil Fuels",
+        technology %in% c("OilCap", "CoalCap", "GasCap") ~ "High-carbon Power Production",
+        technology %in% c("ICE") ~ "High-carbon Transportion",
+        ald_sector %in% c("Shipping", "Aviation") ~ "High-carbon Transportion",
+        ald_sector %in% c("Cement", "Steel") ~ "High-carbon Industry",
         TRUE ~ NA_character_
       )) %>%
       filter(!is.na(.data$high_carbon_sector)) %>%
       group_by(.data$investor_name, .data$portfolio_name, .data$high_carbon_sector) %>%
-      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = 'drop') %>%
+      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = "drop") %>%
       mutate(this_portfolio = .data$portfolio_name == !!investor_name) %>%
       filter(.data$this_portfolio == FALSE) %>%
-      pivot_wider(names_from = .data$high_carbon_sector,
-                  values_from = .data$plan_carsten,
-                  values_fill = list(plan_carsten = 0)) %>%
+      pivot_wider(
+        names_from = .data$high_carbon_sector,
+        values_from = .data$plan_carsten,
+        values_fill = list(plan_carsten = 0)
+      ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
       select(-.data$investor_name) %>%
-      mutate(asset_class = 'Listed Equity') %>%
+      mutate(asset_class = "Listed Equity") %>%
       group_by(.data$portfolio_name) %>%
       mutate(g = cur_group_id()) %>%
       ungroup() %>%
@@ -177,14 +186,17 @@ as_peer_comparison_data <-
     if ("plan_carsten" %in% colnames(peers_equity_data)) {
       peers_equity_data <- peers_equity_data %>% select(-.data$plan_carsten)
     }
-    if (any(peers_equity_data$Total > 1)) { stop("Total Exceeds 1, check filters") }
+    if (any(peers_equity_data$Total > 1)) {
+      stop("Total Exceeds 1, check filters")
+    }
 
 
     bonds_data <-
       bonds_results_portfolio %>%
-      filter(.data$allocation == 'portfolio_weight',
-             .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
-             .data$year == !!start_year
+      filter(
+        .data$allocation == "portfolio_weight",
+        .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
+        .data$year == !!start_year
       ) %>%
       filter(.data$scenario == case_when(
         ald_sector == "Automotive" ~ select_scenario_auto,
@@ -193,40 +205,47 @@ as_peer_comparison_data <-
         TRUE ~ select_scenario
       )) %>%
       mutate(high_carbon_sector = case_when(
-        ald_sector %in% c('Oil&Gas', 'Coal') ~ 'Fossil Fuels',
-        technology %in% c('OilCap', 'CoalCap', 'GasCap') ~ 'High-carbon Power Production',
-        technology %in% c('ICE') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Shipping', 'Aviation') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Cement', 'Steel') ~ 'High-carbon Industry',
+        ald_sector %in% c("Oil&Gas", "Coal") ~ "Fossil Fuels",
+        technology %in% c("OilCap", "CoalCap", "GasCap") ~ "High-carbon Power Production",
+        technology %in% c("ICE") ~ "High-carbon Transportion",
+        ald_sector %in% c("Shipping", "Aviation") ~ "High-carbon Transportion",
+        ald_sector %in% c("Cement", "Steel") ~ "High-carbon Industry",
         TRUE ~ NA_character_
       )) %>%
       filter(!is.na(.data$high_carbon_sector)) %>%
       group_by(.data$investor_name, .data$portfolio_name, .data$high_carbon_sector) %>%
-      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = 'drop') %>%
-      mutate(this_portfolio =
-               .data$investor_name == !!investor_name &
-               .data$portfolio_name == !!portfolio_name) %>%
-      pivot_wider(names_from = .data$high_carbon_sector,
-                  values_from = .data$plan_carsten,
-                  values_fill = list(plan_carsten = 0)) %>%
+      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = "drop") %>%
+      mutate(
+        this_portfolio =
+          .data$investor_name == !!investor_name &
+            .data$portfolio_name == !!portfolio_name
+      ) %>%
+      pivot_wider(
+        names_from = .data$high_carbon_sector,
+        values_from = .data$plan_carsten,
+        values_fill = list(plan_carsten = 0)
+      ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
       select(-.data$investor_name, -.data$this_portfolio) %>%
       mutate(this_portfolio = .data$portfolio_name == !!portfolio_name) %>%
-      mutate(asset_class = 'Corporate Bonds') %>%
+      mutate(asset_class = "Corporate Bonds") %>%
       filter(.data$this_portfolio)
     if ("plan_carsten" %in% colnames(bonds_data)) {
       bonds_data <- bonds_data %>% select(-.data$plan_carsten)
     }
-    if (any(bonds_data$Total > 1)) { stop("Total Exceeds 1, check filters") }
+    if (any(bonds_data$Total > 1)) {
+      stop("Total Exceeds 1, check filters")
+    }
 
     peers_bonds_data <-
       peers_bonds_results_user %>%
-      filter(.data$allocation == 'portfolio_weight',
-             .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
-             .data$year == !!start_year,
-             .data$investor_name == !!peer_group
+      filter(
+        .data$allocation == "portfolio_weight",
+        .data$scenario_geography == if_else(.data$ald_sector == "Power", "GlobalAggregate", "Global"),
+        .data$year == !!start_year,
+        .data$investor_name == !!peer_group
       ) %>%
       filter(.data$scenario == case_when(
         ald_sector == "Automotive" ~ select_scenario_auto,
@@ -235,26 +254,28 @@ as_peer_comparison_data <-
         TRUE ~ select_scenario
       )) %>%
       mutate(high_carbon_sector = case_when(
-        ald_sector %in% c('Oil&Gas', 'Coal') ~ 'Fossil Fuels',
-        technology %in% c('OilCap', 'CoalCap', 'GasCap') ~ 'High-carbon Power Production',
-        technology %in% c('ICE') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Shipping', 'Aviation') ~ 'High-carbon Transportion',
-        ald_sector %in% c('Cement', 'Steel') ~ 'High-carbon Industry',
+        ald_sector %in% c("Oil&Gas", "Coal") ~ "Fossil Fuels",
+        technology %in% c("OilCap", "CoalCap", "GasCap") ~ "High-carbon Power Production",
+        technology %in% c("ICE") ~ "High-carbon Transportion",
+        ald_sector %in% c("Shipping", "Aviation") ~ "High-carbon Transportion",
+        ald_sector %in% c("Cement", "Steel") ~ "High-carbon Industry",
         TRUE ~ NA_character_
       )) %>%
       filter(!is.na(.data$high_carbon_sector)) %>%
       group_by(.data$investor_name, .data$portfolio_name, .data$high_carbon_sector) %>%
-      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = 'drop') %>%
+      summarise(plan_carsten = sum(.data$plan_carsten, na.rm = TRUE), .groups = "drop") %>%
       mutate(this_portfolio = .data$portfolio_name == !!investor_name) %>%
       filter(.data$this_portfolio == FALSE) %>%
-      pivot_wider(names_from = .data$high_carbon_sector,
-                  values_from = .data$plan_carsten,
-                  values_fill = list(plan_carsten = 0)) %>%
+      pivot_wider(
+        names_from = .data$high_carbon_sector,
+        values_from = .data$plan_carsten,
+        values_fill = list(plan_carsten = 0)
+      ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
       select(-.data$investor_name) %>%
-      mutate(asset_class = 'Corporate Bonds') %>%
+      mutate(asset_class = "Corporate Bonds") %>%
       group_by(.data$portfolio_name) %>%
       mutate(g = cur_group_id()) %>%
       ungroup() %>%
@@ -263,7 +284,9 @@ as_peer_comparison_data <-
     if ("plan_carsten" %in% colnames(peers_bonds_data)) {
       peers_bonds_data <- peers_bonds_data %>% select(-.data$plan_carsten)
     }
-    if (any(peers_bonds_data$Total > 1)) { stop("Total Exceeds 1, check filters") }
+    if (any(peers_bonds_data$Total > 1)) {
+      stop("Total Exceeds 1, check filters")
+    }
 
     equity_data <- bind_rows(equity_data, peers_equity_data)
 
@@ -283,7 +306,7 @@ as_peer_comparison_data <-
       choose_dictionary_language(
         dataframe_translations,
         language = language_select
-        )
+      )
 
     data_peercomparison <- translate_df_contents(data_peercomparison, dictionary)
 
