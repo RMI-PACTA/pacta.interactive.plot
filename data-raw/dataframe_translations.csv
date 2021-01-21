@@ -165,63 +165,63 @@ techexposure_future_data,val_type,Portfolio,Portfolio,Portfolio,Portefeuille
 techexposure_future_data,val_type,Aligned Portfolio,Aligned Portfolio,Ausgerichtetes Portfolio,Portefeuille aligné
 techexposure_future_data,val_type,Aligned Benchmark,Aligned Benchmark,Ausgerichteter Benchmark,Repère aligné
 techexposure_future_data,val_type,Benchmark,Benchmark,Benchmark,Benchmark
-data_map,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
-data_map,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
-data_map,option,Gas,Gas,Gas,Gaz
-data_map,option,Oil,Oil,Öl,Pétrole
-data_map,option,All Power,All Power,Alle Energie,Tout pouvoir
-data_map,option,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
-data_map,option,GasCap,Gas Power,Gaskraft,L'énergie du gaz
-data_map,option,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
-data_map,option,All Automotive,All Automotive,Alle Automobilindustrie,Tous les secteurs de l'automobile
-data_map,option,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
-data_map,option,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
-data_map,option,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
-data_map,option,OilCap,Oil Power,Öl-Power,Pétrole
-data_map,option,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
-data_map,option,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
-data_map,option,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor Fahrzeuge,HDV : ICE
-data_map,option,FuelCell,LDV: Fuel Cell,LDV: Brennstoffzellen,LDV: Pile à combustible
-data_map,option,Electric_HDV,HDV: Electric,HDV: Elektrische Fahrzeuge,HDV : Électrique
-data_map,option,Hybrid_HDV,HDV: Hybrid,HDV: Hybrid Fahrzeuge,HDV : Hybride
-data_map,option,Coal,Coal,Kohle,Charbon
-data_map,option,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
-data_map,option,Oil and Condensate,Oil and Condensate,Öl und Kondensat,Pétrole et condensats
-data_map,option,All Coal,All Coal,Alle Kohle,Tout le charbon
-data_map,option,Metallurgical,Metallurgical,Metallurgische Kohle,Métallurgie
-data_map,option,Thermal,Thermal,Thermische Kohle,Thermique
-data_map,option,Thermal & Metallurgical,Thermal & Metallurgical,Thermische und Metallurgische Kohle,Thermique et métallurgique
-data_map,option,Aviation,Aviation,Luftfahrt,Aviation
-data_map,option,All Aviation,All Aviation,Alle Luftfahrt,Aviation
-data_map,option,Freight,Freight,Freight,Fracht
-data_map,option,Passenger,Passenger,Passenger,Passagier
-data_map,option,Cement,Cement,Zement,Ciment
-data_map,option,All Cement,All Cement,Alle Zement,Ciment
-data_map,option,Grinding,Grinding,Schleifen,Broyage
-data_map,option,Integrated Facility,Integrated Facility,Integrierte Anlage,Facilité intégrée
-data_map,option,Steel,Steel,Stahl,Acier
-data_map,option,All Steel,All Steel,Alle Stahl,Acier
-data_map,option,Ac-Electric Arc Furnace,Ac-Electric Arc Furnace,AC-Elektrolichtbogenofen,AC - Four à arc électrique
-data_map,option,Dc-Electric Arc Furnace,Dc-Electric Arc Furnace,DC-Elektrolichtbogenofen,DC - Four à arc électrique
-data_map,option,Bof Shop,Basic Oxygen Furnace,LD-Verfahren,Procédé LD
-data_map,option,Open Hearth Meltshop,Open hearth furnace,Schmelzbetrieb mit offenem Herd,Procédé Martin-Siemens
-data_map,unit,m3 per day,m3 per day,Kubikmeter pro Tag,m3 par jour
-data_map,unit,boe per day,boe per day,Barrel Öläquivalent pro Tag,boe par jour
-data_map,unit,MW,MW,MW,MW
-data_map,unit,cars produced,cars produced,produzierte Autos,voitures produites
-data_map,unit,vehicles produced,cars produced,produzierte Autos,voitures produites
-data_map,unit,GJ,GJ,GJ,GJ
-data_map,unit,tons of coal,tons of coal,Tonnen Kohle,tonnes de charbon
-data_map,unit,tons of steel,tons of steel,Tonnen Stahl,tonnes de Acier
-data_map,unit,tons of cement,tons of cement,Tonnen Zement,tonnes de Ciment
-data_map,unit,active planes,active planes,aktive Flugzeuge,avions actifs
-data_map,group,Automotive,Automotive,Automobilindustrie,Automobile
-data_map,group,Coal,Coal,Kohle,Charbon
-data_map,group,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
-data_map,group,Power,Power,Energie,Power
-data_map,group,Aviation,Aviation,Luftfahrt,Aviation
-data_map,group,Cement,Cement,Zement,Ciment
-data_map,group,Steel,Steel,Stahl,Acier
+data_exposure_map,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
+data_exposure_map,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
+data_exposure_map,option,Gas,Gas,Gas,Gaz
+data_exposure_map,option,Oil,Oil,Öl,Pétrole
+data_exposure_map,option,All Power,All Power,Alle Energie,Tout pouvoir
+data_exposure_map,option,HydroCap,Hydropower,Wasserkraft,L'énergie hydraulique
+data_exposure_map,option,GasCap,Gas Power,Gaskraft,L'énergie du gaz
+data_exposure_map,option,RenewablesCap,Renewables,Erneuerbare Energien,Les énergies renouvelables
+data_exposure_map,option,All Automotive,All Automotive,Alle Automobilindustrie,Tous les secteurs de l'automobile
+data_exposure_map,option,ICE,LDV: ICE,LDV: Verbrennungsmotor,LDV : ICE
+data_exposure_map,option,Hybrid,LDV: Hybrid,LDV: Hybrid,LDV : Hybride
+data_exposure_map,option,CoalCap,Coal Power,Kohlekraft,L'énergie du charbon
+data_exposure_map,option,OilCap,Oil Power,Öl-Power,Pétrole
+data_exposure_map,option,Electric,LDV: Electric,LDV: Elektrische,LDV : Électrique
+data_exposure_map,option,FuelCell_HDV,HDV: Fuel Cell,HDV: Brennstoffzellen,HDV : Pile à combustible
+data_exposure_map,option,ICE_HDV,HDV: ICE,HDV: Verbrennungsmotor Fahrzeuge,HDV : ICE
+data_exposure_map,option,FuelCell,LDV: Fuel Cell,LDV: Brennstoffzellen,LDV: Pile à combustible
+data_exposure_map,option,Electric_HDV,HDV: Electric,HDV: Elektrische Fahrzeuge,HDV : Électrique
+data_exposure_map,option,Hybrid_HDV,HDV: Hybrid,HDV: Hybrid Fahrzeuge,HDV : Hybride
+data_exposure_map,option,Coal,Coal,Kohle,Charbon
+data_exposure_map,option,NuclearCap,Nuclear Power,Kernenergie,L'énergie nucléaire
+data_exposure_map,option,Oil and Condensate,Oil and Condensate,Öl und Kondensat,Pétrole et condensats
+data_exposure_map,option,All Coal,All Coal,Alle Kohle,Tout le charbon
+data_exposure_map,option,Metallurgical,Metallurgical,Metallurgische Kohle,Métallurgie
+data_exposure_map,option,Thermal,Thermal,Thermische Kohle,Thermique
+data_exposure_map,option,Thermal & Metallurgical,Thermal & Metallurgical,Thermische und Metallurgische Kohle,Thermique et métallurgique
+data_exposure_map,option,Aviation,Aviation,Luftfahrt,Aviation
+data_exposure_map,option,All Aviation,All Aviation,Alle Luftfahrt,Aviation
+data_exposure_map,option,Freight,Freight,Freight,Fracht
+data_exposure_map,option,Passenger,Passenger,Passenger,Passagier
+data_exposure_map,option,Cement,Cement,Zement,Ciment
+data_exposure_map,option,All Cement,All Cement,Alle Zement,Ciment
+data_exposure_map,option,Grinding,Grinding,Schleifen,Broyage
+data_exposure_map,option,Integrated Facility,Integrated Facility,Integrierte Anlage,Facilité intégrée
+data_exposure_map,option,Steel,Steel,Stahl,Acier
+data_exposure_map,option,All Steel,All Steel,Alle Stahl,Acier
+data_exposure_map,option,Ac-Electric Arc Furnace,Ac-Electric Arc Furnace,AC-Elektrolichtbogenofen,AC - Four à arc électrique
+data_exposure_map,option,Dc-Electric Arc Furnace,Dc-Electric Arc Furnace,DC-Elektrolichtbogenofen,DC - Four à arc électrique
+data_exposure_map,option,Bof Shop,Basic Oxygen Furnace,LD-Verfahren,Procédé LD
+data_exposure_map,option,Open Hearth Meltshop,Open hearth furnace,Schmelzbetrieb mit offenem Herd,Procédé Martin-Siemens
+data_exposure_map,unit,m3 per day,m3 per day,Kubikmeter pro Tag,m3 par jour
+data_exposure_map,unit,boe per day,boe per day,Barrel Öläquivalent pro Tag,boe par jour
+data_exposure_map,unit,MW,MW,MW,MW
+data_exposure_map,unit,cars produced,cars produced,produzierte Autos,voitures produites
+data_exposure_map,unit,vehicles produced,cars produced,produzierte Autos,voitures produites
+data_exposure_map,unit,GJ,GJ,GJ,GJ
+data_exposure_map,unit,tons of coal,tons of coal,Tonnen Kohle,tonnes de charbon
+data_exposure_map,unit,tons of steel,tons of steel,Tonnen Stahl,tonnes de Acier
+data_exposure_map,unit,tons of cement,tons of cement,Tonnen Zement,tonnes de Ciment
+data_exposure_map,unit,active planes,active planes,aktive Flugzeuge,avions actifs
+data_exposure_map,group,Automotive,Automotive,Automobilindustrie,Automobile
+data_exposure_map,group,Coal,Coal,Kohle,Charbon
+data_exposure_map,group,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_exposure_map,group,Power,Power,Energie,Power
+data_exposure_map,group,Aviation,Aviation,Luftfahrt,Aviation
+data_exposure_map,group,Cement,Cement,Zement,Ciment
+data_exposure_map,group,Steel,Steel,Stahl,Acier
 data_greenbrown_bubble,asset_class,Corporate Bonds,Corporate Bonds,Unternehmensanleihen,Obligations d'entreprises
 data_greenbrown_bubble,asset_class,Listed Equity,Listed Equity,Aktien,Actions cotées
 data_greenbrown_bubble,equity_market,Global Market,Global Market,Globaler Markt,Marché mondial
