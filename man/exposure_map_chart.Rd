@@ -9,9 +9,7 @@ exposure_map_chart(.data, width = NULL, height = NULL, ...)
 \arguments{
 \item{.data}{an exposure map data frame}
 
-\item{width}{width of exported htmlwidget in pixels (single integer value; default == NULL)}
-
-\item{height}{height of exported htmlwidget in pixels (single integer value; default == NULL)}
+\item{width, height}{width and height of exported htmlwidget in pixels (single integer value; default == NULL)}
 
 \item{...}{other options passed on to r2d3::r2d3() (see details)}
 }

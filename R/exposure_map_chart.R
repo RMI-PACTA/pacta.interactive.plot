@@ -1,8 +1,7 @@
 #' Create an interactive exposure map chart in an htmlwidget
 #'
 #' @param .data an exposure map data frame
-#' @param width width of exported htmlwidget in pixels (single integer value; default == NULL)
-#' @param height height of exported htmlwidget in pixels (single integer value; default == NULL)
+#' @param width,height width and height of exported htmlwidget in pixels (single integer value; default == NULL)
 #' @param ... other options passed on to r2d3::r2d3() (see details)
 #'
 #' @description
