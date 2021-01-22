@@ -24,7 +24,8 @@ test_that("as_tech_exposure_data() works", {
       select_scenario_shipping = select_scenario_shipping,
       select_scenario_other = select_scenario_other,
       equity_market_levels = equity_market_levels
-    )
-    , NA)
+    ),
+    NA
+  )
   expect_s3_class(tech_exposure, "data.frame")
 })
