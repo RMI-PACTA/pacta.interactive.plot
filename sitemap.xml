@@ -4,6 +4,9 @@
     <loc>https://2degreesinvesting.github.io/r2dii.interactive/index.html</loc>
   </url>
   <url>
+    <loc>https://2degreesinvesting.github.io/r2dii.interactive/reference/as_exposure_map_data.html</loc>
+  </url>
+  <url>
     <loc>https://2degreesinvesting.github.io/r2dii.interactive/reference/as_peer_comparison_data.html</loc>
   </url>
   <url>
@@ -11,6 +14,9 @@
   </url>
   <url>
     <loc>https://2degreesinvesting.github.io/r2dii.interactive/reference/as_trajectory_alignment_data.html</loc>
+  </url>
+  <url>
+    <loc>https://2degreesinvesting.github.io/r2dii.interactive/reference/exposure_map_chart.html</loc>
   </url>
   <url>
     <loc>https://2degreesinvesting.github.io/r2dii.interactive/reference/peer_comparison_chart.html</loc>
