@@ -46,7 +46,8 @@ all_tech_levels_default <-
 
 dataframe_translations_default <-
   readr::read_csv("data-raw/dataframe_translations.csv",
-                  col_types = readr::cols(.default = "c"))
+    col_types = readr::cols(.default = "c")
+  )
 
 
 usethis::use_data(

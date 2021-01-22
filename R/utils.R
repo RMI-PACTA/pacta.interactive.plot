@@ -5,11 +5,13 @@ to_json <-
            obj_name,
            pretty = FALSE,
            auto_unbox = TRUE,
-           na = 'null',
+           na = "null",
            digits = NA,
            ...) {
-    jsonlite::toJSON(x, pretty = pretty, auto_unbox = auto_unbox, na = na,
-                     digits = digits, ...)
+    jsonlite::toJSON(x,
+      pretty = pretty, auto_unbox = auto_unbox, na = na,
+      digits = digits, ...
+    )
   }
 
 
@@ -59,9 +61,11 @@ translate_df_contents <-
     dictionary_subset <-
       dictionary %>%
       dplyr::filter(.data$id_data == data_object_name) %>%
-      dplyr::transmute(.data$id_column,
-                       .data$translate_key,
-                       .data$translate_value)
+      dplyr::transmute(
+        .data$id_column,
+        .data$translate_key,
+        .data$translate_value
+      )
 
     columns <- unique(dictionary_subset$id_column)
 
@@ -92,14 +96,18 @@ translate_column_contents <-
       dplyr::select(-.data$id_column)
 
     suffix <- ""
-    if (!inplace) { suffix <- "_translation" }
+    if (!inplace) {
+      suffix <- "_translation"
+    }
     new_column <- paste0(column, suffix)
 
     data %>%
       dplyr::left_join(dictionary_column,
-                by = rlang::set_names("translate_key", column)) %>%
+        by = rlang::set_names("translate_key", column)
+      ) %>%
       dplyr::mutate(!!new_column := ifelse(is.na(.data$translate_value),
-                                    .data[[!!column]],
-                                    .data$translate_value)) %>%
+        .data[[!!column]],
+        .data$translate_value
+      )) %>%
       dplyr::select(-.data$translate_value)
   }

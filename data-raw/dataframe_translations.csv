@@ -15,44 +15,25 @@ data_included_table,Asset Class,Funds - Listed Equity,Funds - Listed Equity,Fond
 data_included_table,Asset Class,Funds - Unknown,Funds - Unknown,Fonds - Unbekannt,Fonds - Inconnu
 data_included_table,Included,Yes,Yes,Ja,Oui
 data_included_table,Included,No,No,Nein,Non
-data_value_pie_equity,key,Automotive,Automotive,Automobilindustrie,Automobile
-data_value_pie_equity,key,Aviation,Aviation,Luftfahrt,Aviation
-data_value_pie_equity,key,Cement,Cement,Zement,Ciment
-data_value_pie_equity,key,Coal,Coal,Kohle,Charbon
-data_value_pie_equity,key,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
-data_value_pie_equity,key,Power,Power,Energie,Power
-data_value_pie_equity,key,Shipping,Shipping,Schifffahrt,Expédition
-data_value_pie_equity,key,Steel,Steel,Stahl,Acier
-data_value_pie_equity,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
-data_value_pie_equity,key,Energy,Energy,Energie,Énergie
-data_value_pie_equity,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
-data_value_pie_equity,key,Communications,Communications,Mitteilungen,Communications
-data_value_pie_equity,key,Consumer Disrectionary,Consumer Disrectionary,Konsumentenverweigerer,Consommation discrète
-data_value_pie_equity,key,Industrials,Industrials,Industrielle,Industrie
-data_value_pie_equity,key,Financials,Financials,Finanzen,Finances
-data_value_pie_equity,key,Utilities,Utilities,Versorgungsunternehmen,Utilities
-data_value_pie_equity,key,Materials,Materials,Materialien,Matériel
-data_value_pie_equity,key,Technology,Technology,Technologie,Technologie
-data_value_pie_equity,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
-data_value_pie_bonds,key,Automotive,Automotive,Automobilindustrie,Automobile
-data_value_pie_bonds,key,Aviation,Aviation,Luftfahrt,Aviation
-data_value_pie_bonds,key,Cement,Cement,Zement,Ciment
-data_value_pie_bonds,key,Coal,Coal,Kohle,Charbon
-data_value_pie_bonds,key,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
-data_value_pie_bonds,key,Power,Power,Energie,Power
-data_value_pie_bonds,key,Shipping,Shipping,Schifffahrt,Expédition
-data_value_pie_bonds,key,Steel,Steel,Stahl,Acier
-data_value_pie_bonds,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
-data_value_pie_bonds,key,Energy,Energy,Energie,Énergie
-data_value_pie_bonds,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
-data_value_pie_bonds,key,Communications,Communications,Mitteilungen,Communications
-data_value_pie_bonds,key,Consumer Disrectionary,Consumer Disrectionary,Konsumentenverweigerer,Consommation discrète
-data_value_pie_bonds,key,Industrials,Industrials,Industrielle,Industrie
-data_value_pie_bonds,key,Financials,Financials,Finanzen,Finances
-data_value_pie_bonds,key,Utilities,Utilities,Versorgungsunternehmen,Utilities
-data_value_pie_bonds,key,Materials,Materials,Materialien,Matériel
-data_value_pie_bonds,key,Technology,Technology,Technologie,Technologie
-data_value_pie_bonds,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
+data_exposure_pie,key,Automotive,Automotive,Automobilindustrie,Automobile
+data_exposure_pie,key,Aviation,Aviation,Luftfahrt,Aviation
+data_exposure_pie,key,Cement,Cement,Zement,Ciment
+data_exposure_pie,key,Coal,Coal,Kohle,Charbon
+data_exposure_pie,key,Oil&Gas,Oil & Gas,Öl & Gas,Pétrole et gaz
+data_exposure_pie,key,Power,Power,Energie,Power
+data_exposure_pie,key,Shipping,Shipping,Schifffahrt,Expédition
+data_exposure_pie,key,Steel,Steel,Stahl,Acier
+data_exposure_pie,key,Consumer Staples,Consumer Staples,Basiskonsumgüter,Consommation de base
+data_exposure_pie,key,Energy,Energy,Energie,Énergie
+data_exposure_pie,key,Unclassifiable,Unclassifiable,Nicht klassifizierbar,Inclassable
+data_exposure_pie,key,Communications,Communications,Mitteilungen,Communications
+data_exposure_pie,key,Consumer Disrectionary,Consumer Disrectionary,Konsumentenverweigerer,Consommation discrète
+data_exposure_pie,key,Industrials,Industrials,Industrielle,Industrie
+data_exposure_pie,key,Financials,Financials,Finanzen,Finances
+data_exposure_pie,key,Utilities,Utilities,Versorgungsunternehmen,Utilities
+data_exposure_pie,key,Materials,Materials,Materialien,Matériel
+data_exposure_pie,key,Technology,Technology,Technologie,Technologie
+data_exposure_pie,key,Health Care,Health Care,Gesundheitspflege,Soins de santé
 data_emissions_pie_equity,key,Automotive,Automotive,Automobilindustrie,Automobile
 data_emissions_pie_equity,key,Aviation,Aviation,Luftfahrt,Aviation
 data_emissions_pie_equity,key,Cement,Cement,Zement,Ciment
