@@ -29,4 +29,5 @@ Imports:
     magrittr,
     r2d3,
     rlang,
-    tidyr
+    tidyr,
+    countrycode
