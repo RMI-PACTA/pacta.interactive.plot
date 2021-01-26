@@ -1,4 +1,6 @@
 r2d3.onRender(function(data, div, width, height, options) {
+  options = options || {};
+
   let labels = {
     title: options.title || "Financial exposure to climate relevant sectors",
     comment: options.comment || [" of the portfolio", "in PACTA sectors"],
