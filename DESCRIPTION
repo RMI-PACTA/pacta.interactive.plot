@@ -30,4 +30,5 @@ Imports:
     r2d3,
     rlang,
     tidyr,
-    countrycode
+    countrycode,
+    jquerylib
