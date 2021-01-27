@@ -21,7 +21,7 @@ exposure_pie_chart <-
         system.file("js/d3-array.v2.min.js", package = "r2dii.interactive"),
         system.file("js/d3-scale.v3.min.js", package = "r2dii.interactive"),
         system.file("js/d3-scale-chromatic.v1.min.js", package = "r2dii.interactive"),
-        system.file("js/jquery-3.5.1.js", package = "r2dii.interactive"),
+        jquerylib::jquery_core(major_version = 3),
         system.file("js/text_dropdown_jiggle.js", package = "r2dii.interactive"),
         system.file("css/2dii_gitbook_style.css", package = "r2dii.interactive"),
         system.file("css/hide_styles.css", package = "r2dii.interactive")
