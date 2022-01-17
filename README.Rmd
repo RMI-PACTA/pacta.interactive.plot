@@ -18,9 +18,11 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
+[![test-coverage](https://github.com/2DegreesInvesting/r2dii.interactive/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions/workflows/test-coverage.yaml)
 [![Codecov test coverage](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive?branch=master)
 [![R-CMD-check](https://github.com/2DegreesInvesting/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions)
+[![r2dii.interactive status badge](https://2degreesinvesting.r-universe.dev/badges/r2dii.interactive)](https://2degreesinvesting.r-universe.dev)
+[![CRAN status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
 <!-- badges: end -->
 
 The goal of r2dii.interactive is to ...
