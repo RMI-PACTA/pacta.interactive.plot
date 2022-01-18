@@ -7,12 +7,14 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
-[![r2dii.interactive status badge](https://2degreesinvesting.r-universe.dev/badges/r2dii.interactive)](https://2degreesinvesting.r-universe.dev)
+[![test-coverage](https://github.com/2DegreesInvesting/r2dii.interactive/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions/workflows/test-coverage.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive?branch=master)
 [![R-CMD-check](https://github.com/2DegreesInvesting/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions)
+[![r2dii.interactive status
+badge](https://2degreesinvesting.r-universe.dev/badges/r2dii.interactive)](https://2degreesinvesting.r-universe.dev)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
 <!-- badges: end -->
 
 The goal of r2dii.interactive is to …
@@ -36,7 +38,7 @@ devtools::install_github("2DegreesInvesting/r2dii.interactive")
 
 ## Example
 
-This is a basic example usage of tech\_exposure\_chart():
+This is a basic example usage of tech_exposure_chart():
 
 ``` r
 library(r2dii.interactive)
@@ -59,7 +61,7 @@ tech_exposure <-
 tech_exposure_chart(tech_exposure)
 ```
 
-This is a basic example usage of trajectory\_alignment\_chart():
+This is a basic example usage of trajectory_alignment_chart():
 
 ``` r
 library(r2dii.interactive)
@@ -77,7 +79,7 @@ trajectory_alignment_data <-
 trajectory_alignment_chart(trajectory_alignment_data)
 ```
 
-This is a basic example usage of peer\_comparison\_chart():
+This is a basic example usage of peer_comparison_chart():
 
 ``` r
 library(r2dii.interactive)
