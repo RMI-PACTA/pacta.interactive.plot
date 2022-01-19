@@ -34,3 +34,5 @@ Imports:
     tidyr,
     countrycode,
     jquerylib
+Config/Needs/website: r2diitemplate
+Remotes: 2DegreesInvesting/r2diitemplate
