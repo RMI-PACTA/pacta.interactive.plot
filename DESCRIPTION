@@ -1,12 +1,14 @@
 Package: r2dii.interactive
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person(given = "CJ",
            family = "Yetman",
            role = c("aut", "cre"),
            email = "cj@cjyetman.com",
-           comment = c(ORCID = "0000-0001-5099-9500"))
+           comment = c(ORCID = "0000-0001-5099-9500")),
+    person("2 Degrees Investing Initiative", , , "contact@2degrees-investing.org", role = c("cph", "fnd"))
+  )
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Suggests: 
