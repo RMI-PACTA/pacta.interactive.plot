@@ -29,5 +29,5 @@ tech_exposure <-
     equity_market_levels = c("Global Market", "Developed Market", "Emerging Market")
   )
 
-tech_exposure_chart(tech_exposure)
+tech_exposure_chart(tech_exposure, height = 800)
 ```
