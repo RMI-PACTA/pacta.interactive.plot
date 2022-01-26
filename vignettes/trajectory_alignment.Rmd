@@ -24,5 +24,5 @@ trajectory_alignment_data <-
     indices_bonds_results_portfolio = indices_bonds_results_portfolio,
   )
 
-trajectory_alignment_chart(trajectory_alignment_data)
+trajectory_alignment_chart(trajectory_alignment_data, height = 500)
 ```
