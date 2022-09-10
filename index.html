@@ -11,9 +11,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="deps/_IBM%20Plex%20Sans-0.4.0/font.css" rel="stylesheet">
-<link href="deps/_Corben-0.4.0/font.css" rel="stylesheet">
+<link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="deps/IBM_Plex_Sans-0.4.2/font.css" rel="stylesheet">
+<link href="deps/Corben-0.4.2/font.css" rel="stylesheet">
 <!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="What the Package Does (One Line, Title Case)">
@@ -73,7 +73,6 @@
 <div class="page-header"><h1 id="r2diiinteractive">r2dii.interactive<a class="anchor" aria-label="anchor" href="#r2diiinteractive"></a>
 </h1></div>
 <!-- badges: start -->
-
 <p>The goal of r2dii.interactive is to …</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -84,72 +83,71 @@ You can install the released version of r2dii.interactive from [CRAN](https://CR
 ``` r
 install.packages("r2dii.interactive")
 ```
--->
-<p>You can install the development version of r2dii.interactive from <a href="https://github.com/2DegreesInvesting/r2dii.interactive" class="external-link">GitHub</a> with:</p>
+--><p>You can install the development version of r2dii.interactive from <a href="https://github.com/2DegreesInvesting/r2dii.interactive" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"2DegreesInvesting/r2dii.interactive"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"2DegreesInvesting/r2dii.interactive"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>This is a basic example usage of tech_exposure_chart():</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span>
-
-<span class="va">tech_exposure</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="reference/as_tech_exposure_data.html">as_tech_exposure_data</a></span><span class="op">(</span>
-    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,
-    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,
-    indices_equity_results_portfolio <span class="op">=</span> <span class="va">indices_equity_results_portfolio</span>,
-    indices_bonds_results_portfolio <span class="op">=</span> <span class="va">indices_bonds_results_portfolio</span>,
-    select_scenario <span class="op">=</span> <span class="st">"WEO2019_SDS"</span>,
-    select_scenario_auto <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>,
-    select_scenario_shipping <span class="op">=</span> <span class="st">"SBTI_SBTI"</span>,
-    select_scenario_other <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>,
-    equity_market_levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Global Market"</span>, <span class="st">"Developed Market"</span>, <span class="st">"Emerging Market"</span><span class="op">)</span>
-  <span class="op">)</span>
-
-<span class="fu"><a href="reference/tech_exposure_chart.html">tech_exposure_chart</a></span><span class="op">(</span><span class="va">tech_exposure</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tech_exposure</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="reference/as_tech_exposure_data.html">as_tech_exposure_data</a></span><span class="op">(</span></span>
+<span>    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,</span>
+<span>    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,</span>
+<span>    indices_equity_results_portfolio <span class="op">=</span> <span class="va">indices_equity_results_portfolio</span>,</span>
+<span>    indices_bonds_results_portfolio <span class="op">=</span> <span class="va">indices_bonds_results_portfolio</span>,</span>
+<span>    select_scenario <span class="op">=</span> <span class="st">"WEO2019_SDS"</span>,</span>
+<span>    select_scenario_auto <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>,</span>
+<span>    select_scenario_shipping <span class="op">=</span> <span class="st">"SBTI_SBTI"</span>,</span>
+<span>    select_scenario_other <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>,</span>
+<span>    equity_market_levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Global Market"</span>, <span class="st">"Developed Market"</span>, <span class="st">"Emerging Market"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/tech_exposure_chart.html">tech_exposure_chart</a></span><span class="op">(</span><span class="va">tech_exposure</span><span class="op">)</span></span></code></pre></div>
 <p>This is a basic example usage of trajectory_alignment_chart():</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span>
-
-<span class="va">trajectory_alignment_data</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="reference/as_trajectory_alignment_data.html">as_trajectory_alignment_data</a></span><span class="op">(</span>
-    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,
-    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,
-    indices_equity_results_portfolio <span class="op">=</span> <span class="va">indices_equity_results_portfolio</span>,
-    indices_bonds_results_portfolio <span class="op">=</span> <span class="va">indices_bonds_results_portfolio</span>,
-  <span class="op">)</span>
-
-<span class="fu"><a href="reference/trajectory_alignment_chart.html">trajectory_alignment_chart</a></span><span class="op">(</span><span class="va">trajectory_alignment_data</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">trajectory_alignment_data</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="reference/as_trajectory_alignment_data.html">as_trajectory_alignment_data</a></span><span class="op">(</span></span>
+<span>    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,</span>
+<span>    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,</span>
+<span>    indices_equity_results_portfolio <span class="op">=</span> <span class="va">indices_equity_results_portfolio</span>,</span>
+<span>    indices_bonds_results_portfolio <span class="op">=</span> <span class="va">indices_bonds_results_portfolio</span>,</span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/trajectory_alignment_chart.html">trajectory_alignment_chart</a></span><span class="op">(</span><span class="va">trajectory_alignment_data</span><span class="op">)</span></span></code></pre></div>
 <p>This is a basic example usage of peer_comparison_chart():</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span>
-
-<span class="va">peer_comparison_data</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="reference/as_peer_comparison_data.html">as_peer_comparison_data</a></span><span class="op">(</span>
-    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,
-    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,
-    peers_equity_results_user <span class="op">=</span> <span class="va">peers_equity_results_user</span>,
-    peers_bonds_results_user <span class="op">=</span> <span class="va">peers_bonds_results_user</span>,
-    investor_name <span class="op">=</span> <span class="st">"Test"</span>,
-    portfolio_name <span class="op">=</span> <span class="st">"TestPortfolio_Input"</span>,
-    start_year <span class="op">=</span> <span class="fl">2020</span>,
-    peer_group <span class="op">=</span> <span class="st">"pensionfund"</span>,
-    select_scenario <span class="op">=</span> <span class="st">"WEO2019_SDS"</span>,
-    select_scenario_auto <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>,
-    select_scenario_shipping <span class="op">=</span> <span class="st">"SBTI_SBTI"</span>,
-    select_scenario_other <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>
-  <span class="op">)</span>
-
-<span class="fu"><a href="reference/peer_comparison_chart.html">peer_comparison_chart</a></span><span class="op">(</span><span class="va">peer_comparison_data</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://2degreesinvesting.github.io/r2dii.interactive">r2dii.interactive</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"example-data/test.rda"</span>, package <span class="op">=</span> <span class="st">"r2dii.interactive"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">peer_comparison_data</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="reference/as_peer_comparison_data.html">as_peer_comparison_data</a></span><span class="op">(</span></span>
+<span>    equity_results_portfolio <span class="op">=</span> <span class="va">equity_results_portfolio</span>,</span>
+<span>    bonds_results_portfolio <span class="op">=</span> <span class="va">bonds_results_portfolio</span>,</span>
+<span>    peers_equity_results_user <span class="op">=</span> <span class="va">peers_equity_results_user</span>,</span>
+<span>    peers_bonds_results_user <span class="op">=</span> <span class="va">peers_bonds_results_user</span>,</span>
+<span>    investor_name <span class="op">=</span> <span class="st">"Test"</span>,</span>
+<span>    portfolio_name <span class="op">=</span> <span class="st">"TestPortfolio_Input"</span>,</span>
+<span>    start_year <span class="op">=</span> <span class="fl">2020</span>,</span>
+<span>    peer_group <span class="op">=</span> <span class="st">"pensionfund"</span>,</span>
+<span>    select_scenario <span class="op">=</span> <span class="st">"WEO2019_SDS"</span>,</span>
+<span>    select_scenario_auto <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span>,</span>
+<span>    select_scenario_shipping <span class="op">=</span> <span class="st">"SBTI_SBTI"</span>,</span>
+<span>    select_scenario_other <span class="op">=</span> <span class="st">"ETP2017_B2DS"</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/peer_comparison_chart.html">peer_comparison_chart</a></span><span class="op">(</span><span class="va">peer_comparison_data</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -173,6 +171,7 @@ install.packages("r2dii.interactive")
 <ul class="list-unstyled">
 <li><a href="CONTRIBUTING.html">Contributing guide</a></li>
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+<li><a href="SUPPORT.html">Getting help</a></li>
 </ul>
 </div>
 
