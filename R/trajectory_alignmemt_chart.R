@@ -191,11 +191,11 @@ as_trajectory_alignment_data <-
         ald_sector == "Steel" ~ "t/a"
       )) %>%
       mutate(source = sub("_.*", "", .data$scenario)) %>%
-      select(.data$benchmark, .data$portfolio_name, .data$asset_class, .data$equity_market, .data$source, .data$scenario_geography, .data$allocation,
-        .data$ald_sector, .data$technology, .data$scenario, .data$year, .data$unit,
-        production = .data$plan_alloc_wt_tech_prod, .data$scen_alloc_wt_tech_prod
+      select("benchmark", "portfolio_name", "asset_class", "equity_market", "source", "scenario_geography", "allocation",
+        "ald_sector", "technology", "scenario", "year", "unit",
+        production = "plan_alloc_wt_tech_prod", "scen_alloc_wt_tech_prod"
       ) %>%
-      pivot_wider(names_from = .data$scenario, values_from = .data$scen_alloc_wt_tech_prod) %>%
+      pivot_wider(names_from = "scenario", values_from = "scen_alloc_wt_tech_prod") %>%
       pivot_longer(
         cols = -(1:11), names_to = "scenario", values_to = "value",
         values_drop_na = TRUE

@@ -93,7 +93,7 @@ translate_column_contents <-
     dictionary_column <-
       dictionary %>%
       dplyr::filter(.data$id_column == column) %>%
-      dplyr::select(-.data$id_column)
+      dplyr::select(-"id_column")
 
     suffix <- ""
     if (!inplace) {
@@ -109,5 +109,5 @@ translate_column_contents <-
         .data[[!!column]],
         .data$translate_value
       )) %>%
-      dplyr::select(-.data$translate_value)
+      dplyr::select(-"translate_value")
   }
