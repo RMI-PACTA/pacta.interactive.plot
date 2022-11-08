@@ -7,10 +7,10 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![test-coverage](https://github.com/2DegreesInvesting/r2dii.interactive/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions/workflows/test-coverage.yaml)
+[![test-coverage](https://github.com/RMI-PACTA/r2dii.interactive/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/RMI-PACTA/r2dii.interactive/actions/workflows/test-coverage.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/2DegreesInvesting/r2dii.interactive?branch=master)
-[![R-CMD-check](https://github.com/2DegreesInvesting/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/2DegreesInvesting/r2dii.interactive/actions)
+coverage](https://codecov.io/gh/RMI-PACTA/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/r2dii.interactive?branch=master)
+[![R-CMD-check](https://github.com/RMI-PACTA/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/r2dii.interactive/actions)
 [![r2dii.interactive status
 badge](https://2degreesinvesting.r-universe.dev/badges/r2dii.interactive)](https://2degreesinvesting.r-universe.dev)
 [![CRAN
@@ -30,10 +30,10 @@ install.packages("r2dii.interactive")
 -->
 
 You can install the development version of r2dii.interactive from
-[GitHub](https://github.com/2DegreesInvesting/r2dii.interactive) with:
+[GitHub](https://github.com/RMI-PACTA/r2dii.interactive) with:
 
 ``` r
-devtools::install_github("2DegreesInvesting/r2dii.interactive")
+devtools::install_github("RMI-PACTA/r2dii.interactive")
 ```
 
 ## Example
