@@ -196,9 +196,9 @@ as_tech_exposure_data <-
         factor(.data$technology, levels = !!all_tech_levels), dplyr::desc(.data$green)
       ) %>%
       dplyr::select(
-        .data$asset_class, .data$equity_market, .data$portfolio_name, .data$this_portfolio, .data$ald_sector, .data$technology,
-        .data$plan_carsten, .data$sector_sum, .data$sector_prcnt, .data$cumsum, .data$sector_cumprcnt,
-        .data$green, .data$green_sum, .data$green_prcnt
+        "asset_class", "equity_market", "portfolio_name", "this_portfolio", "ald_sector", "technology",
+        "plan_carsten", "sector_sum", "sector_prcnt", "cumsum", "sector_cumprcnt",
+        "green", "green_sum", "green_prcnt"
       )
 
     dictionary <-

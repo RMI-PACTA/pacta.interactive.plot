@@ -84,7 +84,7 @@ as_exposure_pie_data <-
       filter(.data$investor_name == !!investor_name &
         .data$portfolio_name == !!portfolio_name) %>%
       filter(.data$valid_input == TRUE) %>%
-      mutate(across(c(.data$bics_sector, .data$financial_sector), as.character)) %>%
+      mutate(across(c("bics_sector", "financial_sector"), as.character)) %>%
       mutate(sector = if_else(!.data$has_ald_in_fin_sector,
         "Other", .data$financial_sector
       )) %>%
@@ -92,7 +92,7 @@ as_exposure_pie_data <-
       summarise(value = sum(.data$value_usd, na.rm = TRUE), .groups = "drop") %>%
       mutate(exploded = .data$sector %in% twodi_sectors) %>%
       arrange(desc(.data$exploded), .data$sector) %>%
-      rename(key = .data$sector) %>%
+      rename(key = "sector") %>%
       filter(!is.na(.data$key))
 
     dictionary <-

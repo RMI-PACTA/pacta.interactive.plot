@@ -83,7 +83,7 @@ as_exposure_map_data <-
       ) %>%
       filter(.data$year == start_year) %>%
       mutate(code = countrycode::countrycode(.data$ald_location, "iso2c", "iso3c", custom_match = c(XK = "XKX"))) %>%
-      rename(unit = .data$ald_production_unit)
+      rename(unit = "ald_production_unit")
 
     by_sector <-
       filtered %>%
