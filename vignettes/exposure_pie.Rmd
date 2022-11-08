@@ -1,0 +1,22 @@
+---
+title: "Exposure Pie interactive chart"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Exposure Pie interactive chart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(r2dii.interactive)
+
+load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+
+exposure_pie_data <- as_exposure_pie_data(audit_file)
+
+exposure_pie_chart(exposure_pie_data, options = list(default_class = "Listed Equity"))
+```
