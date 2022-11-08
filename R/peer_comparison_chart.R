@@ -122,19 +122,19 @@ as_peer_comparison_data <-
             .data$portfolio_name == !!portfolio_name
       ) %>%
       pivot_wider(
-        names_from = .data$high_carbon_sector,
-        values_from = .data$plan_carsten,
+        names_from = "high_carbon_sector",
+        values_from = "plan_carsten",
         values_fill = list(plan_carsten = 0)
       ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
-      select(-.data$investor_name, -.data$this_portfolio) %>%
+      select(-"investor_name", -"this_portfolio") %>%
       mutate(this_portfolio = .data$portfolio_name == !!portfolio_name) %>%
       mutate(asset_class = "Listed Equity") %>%
       filter(.data$this_portfolio)
     if ("plan_carsten" %in% colnames(equity_data)) {
-      equity_data <- equity_data %>% select(-.data$plan_carsten)
+      equity_data <- equity_data %>% select(-"plan_carsten")
     }
     if (any(equity_data$Total > 1)) {
       stop("Total Exceeds 1, check filters")
@@ -169,22 +169,22 @@ as_peer_comparison_data <-
       mutate(this_portfolio = .data$portfolio_name == !!investor_name) %>%
       filter(.data$this_portfolio == FALSE) %>%
       pivot_wider(
-        names_from = .data$high_carbon_sector,
-        values_from = .data$plan_carsten,
+        names_from = "high_carbon_sector",
+        values_from = "plan_carsten",
         values_fill = list(plan_carsten = 0)
       ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
-      select(-.data$investor_name) %>%
+      select(-"investor_name") %>%
       mutate(asset_class = "Listed Equity") %>%
       group_by(.data$portfolio_name) %>%
       mutate(g = cur_group_id()) %>%
       ungroup() %>%
       mutate(portfolio_name = as.character(.data$g)) %>%
-      select(-.data$g)
+      select(-"g")
     if ("plan_carsten" %in% colnames(peers_equity_data)) {
-      peers_equity_data <- peers_equity_data %>% select(-.data$plan_carsten)
+      peers_equity_data <- peers_equity_data %>% select(-"plan_carsten")
     }
     if (any(peers_equity_data$Total > 1)) {
       stop("Total Exceeds 1, check filters")
@@ -221,19 +221,19 @@ as_peer_comparison_data <-
             .data$portfolio_name == !!portfolio_name
       ) %>%
       pivot_wider(
-        names_from = .data$high_carbon_sector,
-        values_from = .data$plan_carsten,
+        names_from = "high_carbon_sector",
+        values_from = "plan_carsten",
         values_fill = list(plan_carsten = 0)
       ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
-      select(-.data$investor_name, -.data$this_portfolio) %>%
+      select(-"investor_name", -"this_portfolio") %>%
       mutate(this_portfolio = .data$portfolio_name == !!portfolio_name) %>%
       mutate(asset_class = "Corporate Bonds") %>%
       filter(.data$this_portfolio)
     if ("plan_carsten" %in% colnames(bonds_data)) {
-      bonds_data <- bonds_data %>% select(-.data$plan_carsten)
+      bonds_data <- bonds_data %>% select(-"plan_carsten")
     }
     if (any(bonds_data$Total > 1)) {
       stop("Total Exceeds 1, check filters")
@@ -267,22 +267,22 @@ as_peer_comparison_data <-
       mutate(this_portfolio = .data$portfolio_name == !!investor_name) %>%
       filter(.data$this_portfolio == FALSE) %>%
       pivot_wider(
-        names_from = .data$high_carbon_sector,
-        values_from = .data$plan_carsten,
+        names_from = "high_carbon_sector",
+        values_from = "plan_carsten",
         values_fill = list(plan_carsten = 0)
       ) %>%
       rowwise() %>%
       mutate(Total = sum(c_across(any_of(high_carbon_vars)), na.rm = TRUE)) %>%
       ungroup() %>%
-      select(-.data$investor_name) %>%
+      select(-"investor_name") %>%
       mutate(asset_class = "Corporate Bonds") %>%
       group_by(.data$portfolio_name) %>%
       mutate(g = cur_group_id()) %>%
       ungroup() %>%
       mutate(portfolio_name = as.character(.data$g)) %>%
-      select(-.data$g)
+      select(-"g")
     if ("plan_carsten" %in% colnames(peers_bonds_data)) {
-      peers_bonds_data <- peers_bonds_data %>% select(-.data$plan_carsten)
+      peers_bonds_data <- peers_bonds_data %>% select(-"plan_carsten")
     }
     if (any(peers_bonds_data$Total > 1)) {
       stop("Total Exceeds 1, check filters")
