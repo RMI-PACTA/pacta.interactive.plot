@@ -34,4 +34,4 @@ Imports:
     tidyr,
     countrycode,
     jquerylib
-Config/Needs/website: 2DegreesInvesting/r2diitemplate
+Config/Needs/website: rmi-pacta/pacta.pkgdown.template
