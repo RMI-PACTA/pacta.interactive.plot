@@ -12,7 +12,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 coverage](https://codecov.io/gh/RMI-PACTA/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/r2dii.interactive?branch=master)
 [![R-CMD-check](https://github.com/RMI-PACTA/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/r2dii.interactive/actions)
 [![r2dii.interactive status
-badge](https://2degreesinvesting.r-universe.dev/badges/r2dii.interactive)](https://2degreesinvesting.r-universe.dev)
+badge](https://RMI-PACTA.r-universe.dev/badges/r2dii.interactive)](https://RMI-PACTA.r-universe.dev)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
 <!-- badges: end -->
