@@ -1,4 +1,4 @@
-Package: r2dii.interactive
+Package: pacta.interactive.plot
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: c(
@@ -7,12 +7,14 @@ Authors@R: c(
            role = c("aut", "cre"),
            email = "cj@cjyetman.com",
            comment = c(ORCID = "0000-0001-5099-9500")),
-    person("2 Degrees Investing Initiative", , , "contact@2degrees-investing.org", role = c("cph", "fnd"))
+    person(given = "RMI",
+           role = c("cph", "fnd"),
+           email = "PACTA4investors@rmi.org")
   )
 Description: What the package does (one paragraph).
-URL: https://rmi-pacta.github.io/r2dii.interactive,
-     https://github.com/rmi-pacta/r2dii.interactive
-BugReports: https://github.com/rmi-pacta/r2dii.interactive/issues
+URL: https://rmi-pacta.github.io/pacta.interactive.plot,
+     https://github.com/rmi-pacta/pacta.interactive.plot
+BugReports: https://github.com/rmi-pacta/pacta.interactive.plot/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 3.5.0)

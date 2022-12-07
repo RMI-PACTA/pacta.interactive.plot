@@ -1,4 +1,4 @@
 library(testthat)
-library(r2dii.interactive)
+library(pacta.interactive.plot)
 
-test_check("r2dii.interactive")
+test_check("pacta.interactive.plot")
