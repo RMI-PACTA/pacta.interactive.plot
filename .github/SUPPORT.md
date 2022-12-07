@@ -1,6 +1,6 @@
-# Getting help with r2dii.interactive
+# Getting help with pacta.interactive.plot
 
-Thanks for using r2dii.interactive!
+Thanks for using pacta.interactive.plot!
 Before filing an issue, there are a few places to explore and pieces to put together to make the process as smooth as possible.
 
 ## Make a reprex
