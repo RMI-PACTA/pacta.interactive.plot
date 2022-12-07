@@ -16,13 +16,13 @@ exposure_map_chart <-
 
     dependencies <-
       list(
-        system.file("js/map.js", package = "r2dii.interactive"),
-        system.file("js/d3-geo-projection.v2.min.js", package = "r2dii.interactive"),
-        system.file("js/d3-array.v2.min.js", package = "r2dii.interactive"),
-        system.file("js/world.js", package = "r2dii.interactive"),
-        system.file("js/text_dropdown_jiggle.js", package = "r2dii.interactive"),
-        system.file("css/2dii_gitbook_style.css", package = "r2dii.interactive"),
-        system.file("css/hide_styles.css", package = "r2dii.interactive")
+        system.file("js/map.js", package = "pacta.interactive.plot"),
+        system.file("js/d3-geo-projection.v2.min.js", package = "pacta.interactive.plot"),
+        system.file("js/d3-array.v2.min.js", package = "pacta.interactive.plot"),
+        system.file("js/world.js", package = "pacta.interactive.plot"),
+        system.file("js/text_dropdown_jiggle.js", package = "pacta.interactive.plot"),
+        system.file("css/2dii_gitbook_style.css", package = "pacta.interactive.plot"),
+        system.file("css/hide_styles.css", package = "pacta.interactive.plot")
         )
 
     op <- options(r2d3.shadow = FALSE)
@@ -30,7 +30,7 @@ exposure_map_chart <-
 
     r2d3::r2d3(
       data = .data,
-      script = system.file("render_exposure_map.js", package = "r2dii.interactive"),
+      script = system.file("render_exposure_map.js", package = "pacta.interactive.plot"),
       dependencies = dependencies,
       d3_version = 4,
       width = width,

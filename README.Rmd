@@ -14,33 +14,33 @@ knitr::opts_chunk$set(
 )
 ```
 
-# r2dii.interactive
+# pacta.interactive.plot
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![test-coverage](https://github.com/RMI-PACTA/r2dii.interactive/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/RMI-PACTA/r2dii.interactive/actions/workflows/test-coverage.yaml)
-[![Codecov test coverage](https://codecov.io/gh/RMI-PACTA/r2dii.interactive/branch/master/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/r2dii.interactive?branch=master)
-[![R-CMD-check](https://github.com/RMI-PACTA/r2dii.interactive/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/r2dii.interactive/actions)
-[![r2dii.interactive status badge](https://2degreesinvesting.r-universe.dev/badges/r2dii.interactive)](https://2degreesinvesting.r-universe.dev)
-[![CRAN status](https://www.r-pkg.org/badges/version/r2dii.interactive)](https://CRAN.R-project.org/package=r2dii.interactive)
+[![test-coverage](https://github.com/RMI-PACTA/pacta.interactive.plot/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/RMI-PACTA/pacta.interactive.plot/actions/workflows/test-coverage.yaml)
+[![Codecov test coverage](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot/branch/master/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot?branch=master)
+[![R-CMD-check](https://github.com/RMI-PACTA/pacta.interactive.plot/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/pacta.interactive.plot/actions)
+[![pacta.interactive.plot status badge](https://2degreesinvesting.r-universe.dev/badges/pacta.interactive.plot)](https://2degreesinvesting.r-universe.dev)
+[![CRAN status](https://www.r-pkg.org/badges/version/pacta.interactive.plot)](https://CRAN.R-project.org/package=pacta.interactive.plot)
 <!-- badges: end -->
 
-The goal of r2dii.interactive is to ...
+The goal of pacta.interactive.plot is to ...
 
 ## Installation
 
 <!--
-You can install the released version of r2dii.interactive from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of pacta.interactive.plot from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("r2dii.interactive")
+install.packages("pacta.interactive.plot")
 ```
 -->
 
-You can install the development version of r2dii.interactive from [GitHub](https://github.com/RMI-PACTA/r2dii.interactive) with:
+You can install the development version of pacta.interactive.plot from [GitHub](https://github.com/RMI-PACTA/pacta.interactive.plot) with:
 
 ``` r
-devtools::install_github("RMI-PACTA/r2dii.interactive")
+devtools::install_github("RMI-PACTA/pacta.interactive.plot")
 ```
 
 ## Example
@@ -48,9 +48,9 @@ devtools::install_github("RMI-PACTA/r2dii.interactive")
 This is a basic example usage of tech_exposure_chart():
 
 ``` r
-library(r2dii.interactive)
+library(pacta.interactive.plot)
 
-load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+load(system.file("example-data/test.rda", package = "pacta.interactive.plot"))
 
 tech_exposure <-
   as_tech_exposure_data(
@@ -71,9 +71,9 @@ tech_exposure_chart(tech_exposure)
 This is a basic example usage of trajectory_alignment_chart():
 
 ``` r
-library(r2dii.interactive)
+library(pacta.interactive.plot)
 
-load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+load(system.file("example-data/test.rda", package = "pacta.interactive.plot"))
 
 trajectory_alignment_data <-
   as_trajectory_alignment_data(
@@ -89,9 +89,9 @@ trajectory_alignment_chart(trajectory_alignment_data)
 This is a basic example usage of peer_comparison_chart():
 
 ``` r
-library(r2dii.interactive)
+library(pacta.interactive.plot)
 
-load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+load(system.file("example-data/test.rda", package = "pacta.interactive.plot"))
 
 peer_comparison_data <-
   as_peer_comparison_data(

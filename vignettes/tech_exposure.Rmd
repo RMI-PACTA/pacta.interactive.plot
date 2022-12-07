@@ -12,9 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-library(r2dii.interactive)
+library(pacta.interactive.plot)
 
-load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+load(system.file("example-data/test.rda", package = "pacta.interactive.plot"))
 
 tech_exposure <-
   as_tech_exposure_data(

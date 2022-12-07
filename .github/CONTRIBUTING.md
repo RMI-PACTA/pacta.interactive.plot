@@ -1,6 +1,6 @@
-# Contributing to r2dii.interactive
+# Contributing to pacta.interactive.plot
 
-This outlines how to propose a change to r2dii.interactive. 
+This outlines how to propose a change to pacta.interactive.plot. 
 For more detailed info about contributing to this, and other tidyverse packages, please see the
 [**development contributing guide**](https://rstd.io/tidy-contrib). 
 
@@ -42,6 +42,6 @@ If you’ve found a bug, please file an issue that illustrates the bug with a mi
 
 ## Code of Conduct
 
-Please note that the r2dii.interactive project is released with a
+Please note that the pacta.interactive.plot project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 project you agree to abide by its terms.
