@@ -12,9 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-library(r2dii.interactive)
+library(pacta.interactive.plot)
 
-load(system.file("example-data/test.rda", package = "r2dii.interactive"))
+load(system.file("example-data/test.rda", package = "pacta.interactive.plot"))
 
 exposure_pie_data <- as_exposure_pie_data(audit_file)
 
