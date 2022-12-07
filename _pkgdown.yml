@@ -1,4 +1,4 @@
-url: https://2degreesinvesting.github.io/r2dii.interactive
+url: https://rmi-pacta.github.io/r2dii.interactive
 
 template:
-  package: r2diitemplate
+  package: pacta.pkgdown.template
