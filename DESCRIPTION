@@ -12,8 +12,9 @@ Authors@R: c(
            email = "PACTA4investors@rmi.org")
   )
 Description: What the package does (one paragraph).
-URL: https://RMI-PACTA.github.io/pacta.interactive.plot, https://github.com/RMI-PACTA/pacta.interactive.plot
-BugReports: https://github.com/RMI-PACTA/pacta.interactive.plot/issues
+URL: https://rmi-pacta.github.io/pacta.interactive.plot,
+     https://github.com/rmi-pacta/pacta.interactive.plot
+BugReports: https://github.com/rmi-pacta/pacta.interactive.plot/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 3.5.0)
