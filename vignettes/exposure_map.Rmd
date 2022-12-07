@@ -17,9 +17,9 @@ library(r2dii.interactive)
 load(system.file("example-data/test.rda", package = "r2dii.interactive"))
 
 results_map <-
-  bind_rows(
-    "Listed Equity" = ungroup(equity_results_map),
-    "Corporate Bonds" = ungroup(bonds_results_map),
+  dplyr::bind_rows(
+    "Listed Equity" = dplyr::ungroup(equity_results_map),
+    "Corporate Bonds" = dplyr::ungroup(bonds_results_map),
     .id = "asset_class"
   )
 
