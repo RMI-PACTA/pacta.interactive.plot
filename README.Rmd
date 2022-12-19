@@ -37,6 +37,12 @@ install.packages("pacta.interactive.plot")
 ```
 -->
 
+You can install the development version of pacta.interactive.plot from [R-universe](https://r-universe.dev) with:
+
+``` r
+install.packages("pacta.interactive.plot", repos = "https://rmi-pacta.r-universe.dev")
+```
+
 You can install the development version of pacta.interactive.plot from [GitHub](https://github.com/RMI-PACTA/pacta.interactive.plot) with:
 
 ``` r
