@@ -64,8 +64,7 @@ trajectory_alignment_chart <-
 #' @export
 
 as_trajectory_alignment_data <-
-  function(
-           equity_results_portfolio,
+  function(equity_results_portfolio,
            bonds_results_portfolio,
            indices_equity_results_portfolio,
            indices_bonds_results_portfolio,
