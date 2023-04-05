@@ -66,8 +66,7 @@ tech_exposure_chart <-
 #' @export
 
 as_tech_exposure_data <-
-  function(
-           equity_results_portfolio,
+  function(equity_results_portfolio,
            bonds_results_portfolio,
            indices_equity_results_portfolio,
            indices_bonds_results_portfolio,

@@ -66,8 +66,7 @@ peer_comparison_chart <-
 #' @export
 
 as_peer_comparison_data <-
-  function(
-           investor_name,
+  function(investor_name,
            portfolio_name,
            peer_group,
            start_year,
