@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pacta.interactive.plot
+# pacta.interactive.plot <a href="https://rmi-pacta.github.io/pacta.interactive.plot"><img src="man/figures/logo.png" align="right" height="31" /></a>
 
 <!-- badges: start -->
 
@@ -12,7 +12,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 coverage](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot/branch/master/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot?branch=master)
 [![R-CMD-check](https://github.com/RMI-PACTA/pacta.interactive.plot/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/pacta.interactive.plot/actions)
 [![pacta.interactive.plot status
-badge](https://RMI-PACTA.r-universe.dev/badges/pacta.interactive.plot)](https://RMI-PACTA.r-universe.dev)
+badge](https://rmi-pacta.r-universe.dev/badges/pacta.interactive.plot)](https://rmi-pacta.r-universe.dev)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/pacta.interactive.plot)](https://CRAN.R-project.org/package=pacta.interactive.plot)
 <!-- badges: end -->
@@ -23,11 +23,17 @@ The goal of pacta.interactive.plot is to …
 
 <!--
 You can install the released version of pacta.interactive.plot from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
+&#10;``` r
 install.packages("pacta.interactive.plot")
 ```
 -->
+
+You can install the development version of pacta.interactive.plot from
+[R-universe](https://r-universe.dev) with:
+
+``` r
+install.packages("pacta.interactive.plot", repos = "https://rmi-pacta.r-universe.dev")
+```
 
 You can install the development version of pacta.interactive.plot from
 [GitHub](https://github.com/RMI-PACTA/pacta.interactive.plot) with:
