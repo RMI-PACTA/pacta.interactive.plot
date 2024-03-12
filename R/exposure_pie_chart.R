@@ -59,8 +59,7 @@ exposure_pie_chart <-
 #' @export
 
 as_exposure_pie_data <-
-  function(
-           audit_file,
+  function(audit_file,
            investor_name,
            portfolio_name,
            twodi_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel", "Cement", "Aviation"),

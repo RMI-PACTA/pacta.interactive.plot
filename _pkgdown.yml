@@ -1,4 +1,4 @@
 url: https://rmi-pacta.github.io/pacta.interactive.plot
 
 template:
-  package: pacta.pkgdown.template
+  package: pacta.pkgdown.rmitemplate

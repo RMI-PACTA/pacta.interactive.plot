@@ -34,7 +34,7 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Config/Needs/website: rmi-pacta/pacta.pkgdown.template
+Config/Needs/website: rmi-pacta/pacta.pkgdown.rmitemplate
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr, rmarkdown

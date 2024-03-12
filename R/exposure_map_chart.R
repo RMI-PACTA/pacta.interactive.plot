@@ -23,7 +23,7 @@ exposure_map_chart <-
         system.file("js/text_dropdown_jiggle.js", package = "pacta.interactive.plot"),
         system.file("css/2dii_gitbook_style.css", package = "pacta.interactive.plot"),
         system.file("css/hide_styles.css", package = "pacta.interactive.plot")
-        )
+      )
 
     op <- options(r2d3.shadow = FALSE)
     on.exit(options(op), add = TRUE)
@@ -56,11 +56,10 @@ exposure_map_chart <-
 
 as_exposure_map_data <-
   function(
-    results_map,
-    start_year,
-    dataframe_translations,
-    language_select = "EN"
-  ) {
+      results_map,
+      start_year,
+      dataframe_translations,
+      language_select = "EN") {
     .data <- NULL
 
     if (missing(dataframe_translations)) {
@@ -71,14 +70,14 @@ as_exposure_map_data <-
       start_year <- min(results_map$year, na.rm = TRUE)
     }
 
-    sector_prefix <- 'All '
+    sector_prefix <- "All "
 
     filtered <-
       results_map %>%
       filter(
         .data$allocation == case_when(
-          .data$asset_class == 'Listed Equity' ~ 'ownership_weight',
-          .data$asset_class == 'Corporate Bonds' ~ 'portfolio_weight'
+          .data$asset_class == "Listed Equity" ~ "ownership_weight",
+          .data$asset_class == "Corporate Bonds" ~ "portfolio_weight"
         )
       ) %>%
       filter(.data$year == start_year) %>%
@@ -91,20 +90,21 @@ as_exposure_map_data <-
       filter(length(unique(.data$unit)) == 1L & length(unique(.data$technology)) > 1L) %>%
       mutate(option = paste0(sector_prefix, .data$ald_sector)) %>%
       group_by(.data$asset_class, .data$code, .data$option, .data$unit, group = .data$ald_sector) %>%
-      summarise(value = sum(.data$plan_alloc_wt_tech_prod, na.rm = TRUE), .groups = 'drop') %>%
+      summarise(value = sum(.data$plan_alloc_wt_tech_prod, na.rm = TRUE), .groups = "drop") %>%
       mutate(order = 1L)
 
     data_exposure_map <-
       filtered %>%
       group_by(.data$asset_class, .data$code, option = .data$technology, .data$unit, group = .data$ald_sector) %>%
-      summarise(value = sum(.data$plan_alloc_wt_tech_prod, na.rm = TRUE), .groups = 'drop') %>%
+      summarise(value = sum(.data$plan_alloc_wt_tech_prod, na.rm = TRUE), .groups = "drop") %>%
       mutate(order = 2L) %>%
       bind_rows(by_sector) %>%
       arrange(.data$asset_class, .data$code, .data$group, .data$order, .data$option)
 
     dictionary <-
       choose_dictionary_language(dataframe_translations,
-                                 language = language_select)
+        language = language_select
+      )
 
     translate_df_contents(data_exposure_map, dictionary)
   }
