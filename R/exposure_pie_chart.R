@@ -48,7 +48,7 @@ exposure_pie_chart <-
 #' @param audit_file audit_file
 #' @param investor_name investor_name
 #' @param portfolio_name portfolio_name
-#' @param twodi_sectors twodi_sectors
+#' @param pacta_sectors pacta_sectors
 #' @param dataframe_translations dataframe_translations
 #' @param language_select two letter code for language (single string; default = "EN")
 #'
@@ -62,7 +62,7 @@ as_exposure_pie_data <-
   function(audit_file,
            investor_name,
            portfolio_name,
-           twodi_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel", "Cement", "Aviation"),
+           pacta_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel", "Cement", "Aviation"),
            dataframe_translations,
            language_select = "EN") {
     .data <- NULL
@@ -89,7 +89,7 @@ as_exposure_pie_data <-
       )) %>%
       group_by(.data$sector) %>%
       summarise(value = sum(.data$value_usd, na.rm = TRUE), .groups = "drop") %>%
-      mutate(exploded = .data$sector %in% twodi_sectors) %>%
+      mutate(exploded = .data$sector %in% pacta_sectors) %>%
       arrange(desc(.data$exploded), .data$sector) %>%
       rename(key = "sector") %>%
       filter(!is.na(.data$key))
