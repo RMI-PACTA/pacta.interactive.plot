@@ -1,11 +1,11 @@
-pandoc: 2.19.2
-pkgdown: 2.0.7
+pandoc: 3.1.11
+pkgdown: 2.0.8
 pkgdown_sha: ~
 articles:
   peer_comparison: peer_comparison.html
   tech_exposure: tech_exposure.html
   trajectory_alignment: trajectory_alignment.html
-last_built: 2024-02-16T14:23Z
+last_built: 2024-04-11T10:38Z
 urls:
   reference: https://rmi-pacta.github.io/pacta.interactive.plot/reference
   article: https://rmi-pacta.github.io/pacta.interactive.plot/articles
