@@ -8,7 +8,7 @@ as_exposure_pie_data(
   audit_file,
   investor_name,
   portfolio_name,
-  twodi_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel",
+  pacta_sectors = c("Power", "Automotive", "Shipping", "Oil&Gas", "Coal", "Steel",
     "Cement", "Aviation"),
   dataframe_translations,
   language_select = "EN"
@@ -21,7 +21,7 @@ as_exposure_pie_data(
 
 \item{portfolio_name}{portfolio_name}
 
-\item{twodi_sectors}{twodi_sectors}
+\item{pacta_sectors}{pacta_sectors}
 
 \item{dataframe_translations}{dataframe_translations}
 
