@@ -4,17 +4,11 @@
 # pacta.interactive.plot <a href="https://rmi-pacta.github.io/pacta.interactive.plot"><img src="man/figures/logo.png" align="right" height="31" /></a>
 
 <!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![test-coverage](https://github.com/RMI-PACTA/pacta.interactive.plot/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/RMI-PACTA/pacta.interactive.plot/actions/workflows/test-coverage.yaml)
-[![Codecov test
-coverage](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot/branch/master/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot?branch=master)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R-CMD-check](https://github.com/RMI-PACTA/pacta.interactive.plot/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/pacta.interactive.plot/actions)
-[![pacta.interactive.plot status
-badge](https://rmi-pacta.r-universe.dev/badges/pacta.interactive.plot)](https://rmi-pacta.r-universe.dev)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/pacta.interactive.plot)](https://CRAN.R-project.org/package=pacta.interactive.plot)
+[![Codecov test coverage](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot/graph/badge.svg)](https://codecov.io/gh/RMI-PACTA/pacta.interactive.plot)
+[![CRAN status](https://www.r-pkg.org/badges/version/pacta.interactive.plot)](https://CRAN.R-project.org/package=pacta.interactive.plot)
+[![pacta.interactive.plot status badge](https://rmi-pacta.r-universe.dev/badges/pacta.interactive.plot)](https://rmi-pacta.r-universe.dev)
 <!-- badges: end -->
 
 The goal of pacta.interactive.plot is to …
