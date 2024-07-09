@@ -1,72 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/404.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/SUPPORT.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/peer_comparison.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/tech_exposure.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/trajectory_alignment.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/index.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_exposure_map_data.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_exposure_pie_data.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_peer_comparison_data.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_tech_exposure_data.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_trajectory_alignment_data.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/exposure_map_chart.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/exposure_pie_chart.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/peer_comparison_chart.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/tech_exposure_chart.html</loc>
-  </url>
-  <url>
-    <loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/trajectory_alignment_chart.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/404.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/CONTRIBUTING.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/LICENSE-text.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/LICENSE.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/SUPPORT.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/index.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/peer_comparison.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/tech_exposure.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/articles/trajectory_alignment.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/authors.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/index.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_exposure_map_data.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_exposure_pie_data.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_peer_comparison_data.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_tech_exposure_data.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/as_trajectory_alignment_data.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/exposure_map_chart.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/exposure_pie_chart.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/index.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/peer_comparison_chart.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/tech_exposure_chart.html</loc></url>
+<url><loc>https://rmi-pacta.github.io/pacta.interactive.plot/reference/trajectory_alignment_chart.html</loc></url>
 </urlset>
+
