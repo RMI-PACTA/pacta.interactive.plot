@@ -38,7 +38,7 @@ exposure_pie_chart <-
       width = width,
       height = height,
       container = "div",
-      ...
+      options = list(...)
     )
   }
 

@@ -36,7 +36,7 @@ exposure_map_chart <-
       width = width,
       height = height,
       container = "div",
-      ...
+      options = list(...)
     )
   }
 

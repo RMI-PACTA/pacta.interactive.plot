@@ -35,7 +35,7 @@ tech_exposure_chart <-
       width = width,
       height = height,
       container = "div",
-      ...
+      options = list(...)
     )
   }
 
