@@ -375,9 +375,7 @@ class techexposure {
       let unique_sectors = d3.map(legend_data, d => d.ald_sector_translation).keys();
       let sector_gap_legend = 25;
 
-      $.each(legend_data, function(index,item) {
-        legend_data[index]["sector_shift"] = unique_sectors.indexOf(item.ald_sector_translation);
-      })
+      legend_data.forEach((item) => { item["sector_shift"] = unique_sectors.indexOf(item.ald_sector_translation) });
 
       let tech_in_prev_sectors = [];
       tech_in_prev_sectors[0] = 0;
