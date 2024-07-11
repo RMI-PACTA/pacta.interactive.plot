@@ -1,6 +1,6 @@
 class techexposure {
 
-  constructor(container, data, labels,opts) {
+  constructor(container, data, labels, opts) {
     let container_div;
     if (typeof container === "string") {
       container_div = document.querySelector(container);
@@ -117,7 +117,7 @@ class techexposure {
       if (num < 0.1) {
         return "< 0.1%"
       }
-      return num + "%"      
+      return num + "%"
     }
 
     const tooltip = d3.select(chart_div)
@@ -153,7 +153,7 @@ class techexposure {
     function findLongestName(data) {
       let longest_name_length = d3.max(data, d=>d.technology_translation.length);
       let long_test_label = new Array(longest_name_length).join("a")
-      return long_test_label; 
+      return long_test_label;
     };
 
     function orderLegendDataIfPossible(legend_data_unordered, legend_order) {
@@ -360,9 +360,6 @@ class techexposure {
 
       let legend_data = orderLegendDataIfPossible(legend_data_unordered,legend_order);
 
-      window.subdata = subdata;
-      window.legend_data = legend_data;
-
       let legend_rects = legend_group.selectAll("rect").data([]);
       legend_rects.exit().remove();
 
@@ -424,8 +421,8 @@ class techexposure {
     
     function mouseover(d) {
       tooltip
-        .html(tech_id2name(d.technology) + "<br>" + 
-              num_format(d.plan_carsten) + hover_over_asset + 
+        .html(tech_id2name(d.technology) + "<br>" +
+              num_format(d.plan_carsten) + hover_over_asset +
               num_format(d.sector_prcnt) + hover_over_sec.before_sec + d.ald_sector + hover_over_sec.after_sec
              )
         .style("display", "inline-block")
@@ -434,8 +431,8 @@ class techexposure {
     
     function mouseover_green(d) {
       tooltip
-        .html(hover_over_low_carbon.before_sec + tech_id2name(d.ald_sector) + hover_over_low_carbon.after_sec + 
-              num_format(d.green_sum) + hover_over_asset + 
+        .html(hover_over_low_carbon.before_sec + tech_id2name(d.ald_sector) + hover_over_low_carbon.after_sec +
+              num_format(d.green_sum) + hover_over_asset +
               num_format(d.green_prcnt) + hover_over_sec.before_sec + d.ald_sector + hover_over_sec.after_sec
              )
         .style("display", "inline-block")
