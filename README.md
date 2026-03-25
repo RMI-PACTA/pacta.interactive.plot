@@ -3,6 +3,10 @@
 
 # pacta.interactive.plot <a href="https://rmi-pacta.github.io/pacta.interactive.plot"><img src="man/figures/logo.png" align="right" height="31" /></a>
 
+[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
+
+**This project is archived for future reference, but no new work is expected in this repository.**
+
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R-CMD-check](https://github.com/RMI-PACTA/pacta.interactive.plot/workflows/R-CMD-check/badge.svg)](https://github.com/RMI-PACTA/pacta.interactive.plot/actions)
