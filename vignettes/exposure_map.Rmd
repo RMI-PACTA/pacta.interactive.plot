@@ -1,0 +1,29 @@
+---
+title: "Exposure Map interactive chart"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Exposure Map interactive chart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(pacta.interactive.plot)
+
+load(system.file("example-data/test.rda", package = "pacta.interactive.plot"))
+
+results_map <-
+  dplyr::bind_rows(
+    "Listed Equity" = dplyr::ungroup(equity_results_map),
+    "Corporate Bonds" = dplyr::ungroup(bonds_results_map),
+    .id = "asset_class"
+  )
+
+exposure_map_data <- as_exposure_map_data(results_map)
+
+exposure_map_chart(exposure_map_data)
+```
